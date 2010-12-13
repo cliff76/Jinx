@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* JinxAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* JinxAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
+		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
+		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
+		28F335F11007B36200424DE2 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
+		AF8B614C12B469B400E0C7E4 /* libJinx-Core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8B614512B4697C00E0C7E4 /* libJinx-Core.a */; };
+		AF8B618F12B46C1900E0C7E4 /* libJinx-Core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8B614512B4697C00E0C7E4 /* libJinx-Core.a */; };
+		AF8B619612B46D3400E0C7E4 /* CCCJinxAppLoadLogicTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8B619512B46D3400E0C7E4 /* CCCJinxAppLoadLogicTest.m */; };
+		AF8B61A412B46DAF00E0C7E4 /* CCCJinxAppLoadLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = AF8B61A212B46DAF00E0C7E4 /* CCCJinxAppLoadLogic.h */; };
+		AF8B61A512B46DAF00E0C7E4 /* CCCJinxAppLoadLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8B61A312B46DAF00E0C7E4 /* CCCJinxAppLoadLogic.m */; };
+		AF8B629512B557A300E0C7E4 /* CCCChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8B629312B557A300E0C7E4 /* CCCChatViewController.m */; };
+		AF8B629612B557A300E0C7E4 /* CCCChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF8B629412B557A300E0C7E4 /* CCCChatViewController.xib */; };
+		AF8B62C812B55D8100E0C7E4 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8B62C612B55D8100E0C7E4 /* green.png */; };
+		AF8B62C912B55D8100E0C7E4 /* grey.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8B62C712B55D8100E0C7E4 /* grey.png */; };
+		AF8B62EC12B5859500E0C7E4 /* CCCChatBuddyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8B62EB12B5859500E0C7E4 /* CCCChatBuddyTest.m */; };
+		AF8B62F712B5860200E0C7E4 /* CCCChatBuddy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8B62F612B5860200E0C7E4 /* CCCChatBuddy.m */; };
+		AF8B638912B5A4FF00E0C7E4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8B638812B5A4FF00E0C7E4 /* Default.png */; };
+		AF8B638D12B5A66500E0C7E4 /* Jinx-backdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8B638C12B5A66500E0C7E4 /* Jinx-backdrop.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF8B614A12B469AE00E0C7E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF8B614412B4697C00E0C7E4 /* Jinx-Core */;
+			remoteInfo = "Jinx-Core";
+		};
+		AF8B618D12B46C1500E0C7E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF8B614412B4697C00E0C7E4 /* Jinx-Core */;
+			remoteInfo = "Jinx-Core";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* JinxAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JinxAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* JinxAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JinxAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* Jinx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jinx.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28A0AAE50D9B0CCF005BE974 /* Jinx_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jinx_Prefix.pch; sourceTree = "<group>"; };
+		28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		28F335F01007B36200424DE2 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Jinx-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Jinx-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		AF8B614512B4697C00E0C7E4 /* libJinx-Core.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libJinx-Core.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF8B615212B469CA00E0C7E4 /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF8B615312B469CA00E0C7E4 /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
+		AF8B619512B46D3400E0C7E4 /* CCCJinxAppLoadLogicTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCJinxAppLoadLogicTest.m; sourceTree = "<group>"; };
+		AF8B61A212B46DAF00E0C7E4 /* CCCJinxAppLoadLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCJinxAppLoadLogic.h; sourceTree = "<group>"; };
+		AF8B61A312B46DAF00E0C7E4 /* CCCJinxAppLoadLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCJinxAppLoadLogic.m; sourceTree = "<group>"; };
+		AF8B629212B557A300E0C7E4 /* CCCChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCChatViewController.h; sourceTree = "<group>"; };
+		AF8B629312B557A300E0C7E4 /* CCCChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCChatViewController.m; sourceTree = "<group>"; };
+		AF8B629412B557A300E0C7E4 /* CCCChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CCCChatViewController.xib; path = ../Classes/CCCChatViewController.xib; sourceTree = "<group>"; };
+		AF8B62C612B55D8100E0C7E4 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
+		AF8B62C712B55D8100E0C7E4 /* grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grey.png; sourceTree = "<group>"; };
+		AF8B62EB12B5859500E0C7E4 /* CCCChatBuddyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCChatBuddyTest.m; sourceTree = "<group>"; };
+		AF8B62F512B5860200E0C7E4 /* CCCChatBuddy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCChatBuddy.h; sourceTree = "<group>"; };
+		AF8B62F612B5860200E0C7E4 /* CCCChatBuddy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCChatBuddy.m; sourceTree = "<group>"; };
+		AF8B638812B5A4FF00E0C7E4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		AF8B638C12B5A66500E0C7E4 /* Jinx-backdrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Jinx-backdrop.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
+				AF8B614C12B469B400E0C7E4 /* libJinx-Core.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF8B614312B4697C00E0C7E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF8B614F12B469CA00E0C7E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF8B618F12B46C1900E0C7E4 /* libJinx-Core.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AF8B61A112B46DA300E0C7E4 /* Logic */,
+				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
+				28C286E00D94DF7D0034E888 /* RootViewController.m */,
+				1D3623240D0F684500981E51 /* JinxAppDelegate.h */,
+				1D3623250D0F684500981E51 /* JinxAppDelegate.m */,
+				AF8B629212B557A300E0C7E4 /* CCCChatViewController.h */,
+				AF8B629312B557A300E0C7E4 /* CCCChatViewController.m */,
+			);
+			name = Classes;
+			path = source/Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* Jinx.app */,
+				AF8B614512B4697C00E0C7E4 /* libJinx-Core.a */,
+				AF8B615212B469CA00E0C7E4 /* UnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				AF8B615E12B46A2500E0C7E4 /* UnitTests */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				28A0AAE50D9B0CCF005BE974 /* Jinx_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = Other;
+			path = source/Other;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AF8B62C512B55D6900E0C7E4 /* images */,
+				AF8B615312B469CA00E0C7E4 /* UnitTests-Info.plist */,
+				AF8B629412B557A300E0C7E4 /* CCCChatViewController.xib */,
+				28F335F01007B36200424DE2 /* RootViewController.xib */,
+				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* Jinx-Info.plist */,
+			);
+			name = Resources;
+			path = source/Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF8B615E12B46A2500E0C7E4 /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF8B619512B46D3400E0C7E4 /* CCCJinxAppLoadLogicTest.m */,
+				AF8B62EB12B5859500E0C7E4 /* CCCChatBuddyTest.m */,
+			);
+			name = UnitTests;
+			path = source/UnitTests;
+			sourceTree = "<group>";
+		};
+		AF8B61A112B46DA300E0C7E4 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				AF8B61A212B46DAF00E0C7E4 /* CCCJinxAppLoadLogic.h */,
+				AF8B61A312B46DAF00E0C7E4 /* CCCJinxAppLoadLogic.m */,
+				AF8B62F512B5860200E0C7E4 /* CCCChatBuddy.h */,
+				AF8B62F612B5860200E0C7E4 /* CCCChatBuddy.m */,
+			);
+			name = Logic;
+			sourceTree = "<group>";
+		};
+		AF8B62C512B55D6900E0C7E4 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				AF8B638C12B5A66500E0C7E4 /* Jinx-backdrop.png */,
+				AF8B638812B5A4FF00E0C7E4 /* Default.png */,
+				AF8B62C612B55D8100E0C7E4 /* green.png */,
+				AF8B62C712B55D8100E0C7E4 /* grey.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AF8B614112B4697C00E0C7E4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF8B61A412B46DAF00E0C7E4 /* CCCJinxAppLoadLogic.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* Jinx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Jinx" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF8B614B12B469AE00E0C7E4 /* PBXTargetDependency */,
+			);
+			name = Jinx;
+			productName = Jinx;
+			productReference = 1D6058910D05DD3D006BFB54 /* Jinx.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF8B614412B4697C00E0C7E4 /* Jinx-Core */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF8B614912B4699000E0C7E4 /* Build configuration list for PBXNativeTarget "Jinx-Core" */;
+			buildPhases = (
+				AF8B614112B4697C00E0C7E4 /* Headers */,
+				AF8B614212B4697C00E0C7E4 /* Sources */,
+				AF8B614312B4697C00E0C7E4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Jinx-Core";
+			productName = "Jinx-Core";
+			productReference = AF8B614512B4697C00E0C7E4 /* libJinx-Core.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AF8B615112B469CA00E0C7E4 /* UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF8B615612B469CB00E0C7E4 /* Build configuration list for PBXNativeTarget "UnitTests" */;
+			buildPhases = (
+				AF8B614D12B469CA00E0C7E4 /* Resources */,
+				AF8B614E12B469CA00E0C7E4 /* Sources */,
+				AF8B614F12B469CA00E0C7E4 /* Frameworks */,
+				AF8B615012B469CA00E0C7E4 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF8B618E12B46C1500E0C7E4 /* PBXTargetDependency */,
+			);
+			name = UnitTests;
+			productName = UnitTests;
+			productReference = AF8B615212B469CA00E0C7E4 /* UnitTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Jinx" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* Jinx */,
+				AF8B614412B4697C00E0C7E4 /* Jinx-Core */,
+				AF8B615112B469CA00E0C7E4 /* UnitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
+				28F335F11007B36200424DE2 /* RootViewController.xib in Resources */,
+				AF8B629612B557A300E0C7E4 /* CCCChatViewController.xib in Resources */,
+				AF8B62C812B55D8100E0C7E4 /* green.png in Resources */,
+				AF8B62C912B55D8100E0C7E4 /* grey.png in Resources */,
+				AF8B638912B5A4FF00E0C7E4 /* Default.png in Resources */,
+				AF8B638D12B5A66500E0C7E4 /* Jinx-backdrop.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF8B614D12B469CA00E0C7E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AF8B615012B469CA00E0C7E4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\" 1> /tmp/RunUnitTests.out\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* JinxAppDelegate.m in Sources */,
+				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
+				AF8B629512B557A300E0C7E4 /* CCCChatViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF8B614212B4697C00E0C7E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF8B61A512B46DAF00E0C7E4 /* CCCJinxAppLoadLogic.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF8B614E12B469CA00E0C7E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF8B619612B46D3400E0C7E4 /* CCCJinxAppLoadLogicTest.m in Sources */,
+				AF8B62EC12B5859500E0C7E4 /* CCCChatBuddyTest.m in Sources */,
+				AF8B62F712B5860200E0C7E4 /* CCCChatBuddy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF8B614B12B469AE00E0C7E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF8B614412B4697C00E0C7E4 /* Jinx-Core */;
+			targetProxy = AF8B614A12B469AE00E0C7E4 /* PBXContainerItemProxy */;
+		};
+		AF8B618E12B46C1500E0C7E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF8B614412B4697C00E0C7E4 /* Jinx-Core */;
+			targetProxy = AF8B618D12B46C1500E0C7E4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INFOPLIST_FILE = "source/Resources/Jinx-Info.plist";
+				PRODUCT_NAME = Jinx;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INFOPLIST_FILE = "source/Resources/Jinx-Info.plist";
+				PRODUCT_NAME = Jinx;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF8B614612B4697D00E0C7E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PREBINDING = NO;
+				PRODUCT_NAME = "Jinx-Core";
+			};
+			name = Debug;
+		};
+		AF8B614712B4697D00E0C7E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PREBINDING = NO;
+				PRODUCT_NAME = "Jinx-Core";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		AF8B615412B469CB00E0C7E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "source/Resources/UnitTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = UnitTests;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		AF8B615512B469CB00E0C7E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				INFOPLIST_FILE = "source/Resources/UnitTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = UnitTests;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PREFIX_HEADER = source/Other/Jinx_Prefix.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.1;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PREFIX_HEADER = source/Other/Jinx_Prefix.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Jinx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF8B614912B4699000E0C7E4 /* Build configuration list for PBXNativeTarget "Jinx-Core" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF8B614612B4697D00E0C7E4 /* Debug */,
+				AF8B614712B4697D00E0C7E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF8B615612B469CB00E0C7E4 /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF8B615412B469CB00E0C7E4 /* Debug */,
+				AF8B615512B469CB00E0C7E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Jinx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
