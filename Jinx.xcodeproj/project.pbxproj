@@ -25,9 +25,14 @@
 		AF8B62C812B55D8100E0C7E4 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8B62C612B55D8100E0C7E4 /* green.png */; };
 		AF8B62C912B55D8100E0C7E4 /* grey.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8B62C712B55D8100E0C7E4 /* grey.png */; };
 		AF8B62EC12B5859500E0C7E4 /* CCCChatBuddyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8B62EB12B5859500E0C7E4 /* CCCChatBuddyTest.m */; };
-		AF8B62F712B5860200E0C7E4 /* CCCChatBuddy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8B62F612B5860200E0C7E4 /* CCCChatBuddy.m */; };
 		AF8B638912B5A4FF00E0C7E4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8B638812B5A4FF00E0C7E4 /* Default.png */; };
 		AF8B638D12B5A66500E0C7E4 /* Jinx-backdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8B638C12B5A66500E0C7E4 /* Jinx-backdrop.png */; };
+		AF8B651C12B71E4300E0C7E4 /* CCCBasicChatRepositoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8B651B12B71E4300E0C7E4 /* CCCBasicChatRepositoryTest.m */; };
+		AF8B653912B71F1400E0C7E4 /* CCCBasicChatRepository.h in Headers */ = {isa = PBXBuildFile; fileRef = AF8B653712B71F1400E0C7E4 /* CCCBasicChatRepository.h */; };
+		AF8B653A12B71F1400E0C7E4 /* CCCBasicChatRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8B653812B71F1400E0C7E4 /* CCCBasicChatRepository.m */; };
+		AF8B653E12B71F4A00E0C7E4 /* CCCBuddyRepository.h in Headers */ = {isa = PBXBuildFile; fileRef = AF8B653D12B71F4A00E0C7E4 /* CCCBuddyRepository.h */; };
+		AF8B654A12B7226000E0C7E4 /* CCCChatBuddy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8B62F612B5860200E0C7E4 /* CCCChatBuddy.m */; };
+		AF8B654B12B7226200E0C7E4 /* CCCChatBuddy.h in Headers */ = {isa = PBXBuildFile; fileRef = AF8B62F512B5860200E0C7E4 /* CCCChatBuddy.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,15 +40,22 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AF8B614412B4697C00E0C7E4 /* Jinx-Core */;
+			remoteGlobalIDString = AF8B614412B4697C00E0C7E4;
 			remoteInfo = "Jinx-Core";
 		};
 		AF8B618D12B46C1500E0C7E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AF8B614412B4697C00E0C7E4 /* Jinx-Core */;
+			remoteGlobalIDString = AF8B614412B4697C00E0C7E4;
 			remoteInfo = "Jinx-Core";
+		};
+		AF8B652B12B71ECE00E0C7E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF8B615112B469CA00E0C7E4 /* UnitTests */;
+			remoteInfo = UnitTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -77,6 +89,10 @@
 		AF8B62F612B5860200E0C7E4 /* CCCChatBuddy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCChatBuddy.m; sourceTree = "<group>"; };
 		AF8B638812B5A4FF00E0C7E4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		AF8B638C12B5A66500E0C7E4 /* Jinx-backdrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Jinx-backdrop.png"; sourceTree = "<group>"; };
+		AF8B651B12B71E4300E0C7E4 /* CCCBasicChatRepositoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCBasicChatRepositoryTest.m; sourceTree = "<group>"; };
+		AF8B653712B71F1400E0C7E4 /* CCCBasicChatRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCBasicChatRepository.h; sourceTree = "<group>"; };
+		AF8B653812B71F1400E0C7E4 /* CCCBasicChatRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCBasicChatRepository.m; sourceTree = "<group>"; };
+		AF8B653D12B71F4A00E0C7E4 /* CCCBuddyRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCBuddyRepository.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +128,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AF8B653C12B71F2E00E0C7E4 /* Protocols */,
 				AF8B61A112B46DA300E0C7E4 /* Logic */,
 				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
 				28C286E00D94DF7D0034E888 /* RootViewController.m */,
@@ -186,6 +203,7 @@
 			children = (
 				AF8B619512B46D3400E0C7E4 /* CCCJinxAppLoadLogicTest.m */,
 				AF8B62EB12B5859500E0C7E4 /* CCCChatBuddyTest.m */,
+				AF8B651B12B71E4300E0C7E4 /* CCCBasicChatRepositoryTest.m */,
 			);
 			name = UnitTests;
 			path = source/UnitTests;
@@ -198,6 +216,8 @@
 				AF8B61A312B46DAF00E0C7E4 /* CCCJinxAppLoadLogic.m */,
 				AF8B62F512B5860200E0C7E4 /* CCCChatBuddy.h */,
 				AF8B62F612B5860200E0C7E4 /* CCCChatBuddy.m */,
+				AF8B653712B71F1400E0C7E4 /* CCCBasicChatRepository.h */,
+				AF8B653812B71F1400E0C7E4 /* CCCBasicChatRepository.m */,
 			);
 			name = Logic;
 			sourceTree = "<group>";
@@ -213,6 +233,14 @@
 			name = images;
 			sourceTree = "<group>";
 		};
+		AF8B653C12B71F2E00E0C7E4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AF8B653D12B71F4A00E0C7E4 /* CCCBuddyRepository.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -221,6 +249,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF8B61A412B46DAF00E0C7E4 /* CCCJinxAppLoadLogic.h in Headers */,
+				AF8B653912B71F1400E0C7E4 /* CCCBasicChatRepository.h in Headers */,
+				AF8B653E12B71F4A00E0C7E4 /* CCCBuddyRepository.h in Headers */,
+				AF8B654B12B7226200E0C7E4 /* CCCChatBuddy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +270,7 @@
 			);
 			dependencies = (
 				AF8B614B12B469AE00E0C7E4 /* PBXTargetDependency */,
+				AF8B652C12B71ECE00E0C7E4 /* PBXTargetDependency */,
 			);
 			name = Jinx;
 			productName = Jinx;
@@ -365,6 +397,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF8B61A512B46DAF00E0C7E4 /* CCCJinxAppLoadLogic.m in Sources */,
+				AF8B653A12B71F1400E0C7E4 /* CCCBasicChatRepository.m in Sources */,
+				AF8B654A12B7226000E0C7E4 /* CCCChatBuddy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,7 +408,7 @@
 			files = (
 				AF8B619612B46D3400E0C7E4 /* CCCJinxAppLoadLogicTest.m in Sources */,
 				AF8B62EC12B5859500E0C7E4 /* CCCChatBuddyTest.m in Sources */,
-				AF8B62F712B5860200E0C7E4 /* CCCChatBuddy.m in Sources */,
+				AF8B651C12B71E4300E0C7E4 /* CCCBasicChatRepositoryTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +424,11 @@
 			isa = PBXTargetDependency;
 			target = AF8B614412B4697C00E0C7E4 /* Jinx-Core */;
 			targetProxy = AF8B618D12B46C1500E0C7E4 /* PBXContainerItemProxy */;
+		};
+		AF8B652C12B71ECE00E0C7E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF8B615112B469CA00E0C7E4 /* UnitTests */;
+			targetProxy = AF8B652B12B71ECE00E0C7E4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

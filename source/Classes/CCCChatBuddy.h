@@ -7,13 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@protocol CCCBuddyRepository <NSObject>
--(NSDictionary*) loadRepliesForBuddy:(NSString*)buddy;
-@end
+#import "CCCBuddyRepository.h"
 
 @interface CCCChatBuddy : NSObject {
-	NSString *buddy;
+	NSString *buddyName;
 	id<CCCBuddyRepository> buddyRepository;
 	NSDictionary *replies;
 	int lastReply;
@@ -21,5 +18,5 @@
 
 - (id) initWithBuddy:(NSString*)aBuddy loadedFromRepository:(id<CCCBuddyRepository>)aRepository;
 -(NSString*) tellBuddy:(NSString*)message;
-
+@property (nonatomic, retain) NSString *buddyName;
 @end

@@ -8,14 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-
-@interface CCCChatViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
+@class CCCChatBuddy;
+@interface CCCChatViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>{
 	UITableView *tableView;
 	UITextField *messageToSend;
-	NSArray *messages;
+	NSMutableArray *messages;
+	UIToolbar *toolbar;
+	CCCChatBuddy *chatBuddy;
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
 @property (nonatomic, retain) IBOutlet UITextField *messageToSend;
+@property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
+@property (nonatomic, retain) CCCChatBuddy *chatBuddy;
+
+- (id)initWithBuddy:(NSString *)aChatBuddy andNibName:(NSString *)nibName bundle:(NSBundle *)nibBundle;
+- (void)addMessage:(NSString*) aNewMessage;
 
 @end

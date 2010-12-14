@@ -10,12 +10,13 @@
 
 
 @implementation CCCChatBuddy
+@synthesize buddyName;
 
 - (id) initWithBuddy:(NSString*)aBuddy loadedFromRepository:(id<CCCBuddyRepository>)aRepository
 {
 	self = [super init];
 	if (self != nil) {
-		buddy = [aBuddy retain];
+		buddyName = [aBuddy retain];
 		buddyRepository = [aRepository retain];
 		lastReply = -1;
 	}
@@ -24,7 +25,7 @@
 
 - (void) dealloc
 {
-	[buddy release];
+	[buddyName release];
 	[buddyRepository release];
 	[replies release];
 	[super dealloc];
@@ -32,8 +33,16 @@
 
 -(NSString*) tellBuddy:(NSString*)message
 {
-	if(! replies) replies = [[buddyRepository loadRepliesForBuddy:buddy] retain];
-	NSArray *potentialReplies = [replies objectForKey:@"arbitrary message"];
+	if(! replies) replies = [[buddyRepository loadRepliesForBuddy:buddyName] retain];
+	NSString *replyType;
+	if([message hasSuffix:@"?"]) {
+		replyType = @"interrogative message";
+	} else if([message hasSuffix:@"!"]) {
+		replyType = @"exclamatory message";
+	} else {
+		replyType = @"arbitrary message";		
+	}
+	NSArray *potentialReplies = [replies objectForKey:replyType];
 	int nextReply = (++lastReply < [potentialReplies count]) ? lastReply : 0;
 	lastReply = nextReply;
 	return (potentialReplies && [potentialReplies count] > 0) ? [potentialReplies objectAtIndex:nextReply] : @"I have nothing to say.";

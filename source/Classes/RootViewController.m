@@ -139,7 +139,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-	 CCCChatViewController *detailViewController = [[CCCChatViewController alloc] initWithNibName:@"CCCChatViewController" bundle:nil];
+	CCCChatViewController *detailViewController = [[CCCChatViewController alloc] initWithBuddy:[buddyList objectAtIndex:indexPath.row] 
+																					andNibName:@"CCCChatViewController" bundle:nil];
 	
      // ...
      // Pass the selected object to the new view controller.
@@ -168,7 +169,6 @@
 	self.buddyList = nil;
     [super dealloc];
 }
-
 
 @end
 
