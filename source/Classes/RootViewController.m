@@ -89,7 +89,6 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-
 /*
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -100,12 +99,11 @@
     [super viewDidAppear:animated];
 }
 */
-
+/*
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
 }
-
+*/
 /*
 - (void)viewDidDisappear:(BOOL)animated {
 	[super viewDidDisappear:animated];
@@ -218,6 +216,7 @@
 - (void)viewDidUnload {
     // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
     // For example: self.myOutlet = nil;
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
 }
 
 

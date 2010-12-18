@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CCCAudioPlayer.h"
 
-@class CCCAudioPlayer;
-@interface CCCCallScreen : UIViewController {
+@interface CCCCallScreen : UIViewController <CCCAudioPlaybackDelegate>{
 	NSString *chatBuddy;
+	NSMutableArray *audioPlayList;
 	CCCAudioPlayer *player;
 }
 

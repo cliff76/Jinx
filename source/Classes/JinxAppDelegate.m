@@ -100,7 +100,7 @@
 -(void) loadConversations
 {
 	NSString *lastConversation = readStringFromFile(JinxArchiveFileForLastChat);
-	NSLog(@"Last conversation was %@", lastConversation);
+	DLog(@"Last conversation was %@", lastConversation);
 	if ([lastConversation isEqualToString:@""]) {
 		return;
 	} else {

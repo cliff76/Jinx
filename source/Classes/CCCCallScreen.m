@@ -17,6 +17,12 @@
 	self = [super init];
 	if (self != nil) {
 		chatBuddy = [aChatBuddy retain];
+		audioPlayList = [[NSMutableArray alloc] initWithObjects:
+						 @"ringout", @"wav",
+						 @"ringout", @"wav",
+						 @"ringout", @"wav",
+						 [NSString stringWithFormat:@"%@Call", chatBuddy], @"aiff",
+						 nil];
 	}
 	return self;
 }
@@ -31,15 +37,27 @@
 }
 */
 
+-(void) playNextFromPlaylist
+{
+	NSString *nextAudio = [audioPlayList objectAtIndex:0];
+	NSString *nextAudioType = [audioPlayList objectAtIndex:1];
+	NSString *nextAudioFile = [[NSBundle bundleForClass:[CCCCallScreen class]] pathForResource:nextAudio ofType:nextAudioType];
+	[audioPlayList removeObjectAtIndex:0];
+	[audioPlayList removeObjectAtIndex:0];
+	DLog(@"Playing file %@...", nextAudioFile);
+	[player release];
+	player = [[CCCAudioPlayer alloc] initWithSource:
+			  [[[CCCAudioFileReader alloc] initWithFile:nextAudioFile] autorelease]
+			  ];
+	player.delegate = self;
+	[player startPlayback];
+}
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
+	[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     [super viewDidLoad];
-	NSString *ring = [[NSBundle bundleForClass:[CCCCallScreen class]] pathForResource:@"ringout" ofType:@"wav"];
-	player = [[CCCAudioPlayer alloc] initWithSource:
-			  [[[CCCAudioFileReader alloc] initWithFile:ring] autorelease]
-			  ];
-	[player startPlayback];
+	[self playNextFromPlaylist];
 }
 
 /*
@@ -65,9 +83,31 @@
 
 
 - (void)dealloc {
+    [[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
 	[chatBuddy release];
+	[audioPlayList release];
+	[player release];
     [super dealloc];
 }
 
+#pragma mark -
+#pragma mark CCCAudioPlaybackDelegate methods
+-(void) playbackStateDidChangeForPlayer:(CCCAudioPlayer*)audioPlayer
+{}
+
+-(void) playbackIsStoppingForPlayer:(CCCAudioPlayer*)audioPlayer
+{
+}
+
+-(void) playbackIsStartingForPlayer:(CCCAudioPlayer*)audioPlayer
+{
+}
+
+-(void) playbackDidStopForPlayer:(CCCAudioPlayer*)audioPlayer;
+{
+	if ([audioPlayList count] > 0) {
+		[self performSelector:@selector(playNextFromPlaylist) withObject:nil afterDelay:1.5];
+	}
+}
 
 @end

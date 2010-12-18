@@ -93,7 +93,7 @@ void CCCAudioQueueIsRunningCallback(void *inUserData, AudioQueueRef inAQ, AudioQ
 		
 	}
 	@catch (NSException * e) {
-		NSLog(@"**** Exception caught **** %@",e);
+		//DLog(@"**** Exception caught **** %@",e);
 	}
 	@finally {
 		[pool release];
@@ -102,15 +102,20 @@ void CCCAudioQueueIsRunningCallback(void *inUserData, AudioQueueRef inAQ, AudioQ
 
 -(void) stopAudioQueue:(bool) immediately
 {
+	//DLog(@"Stopping the queue...");
 	if([self isQueueRunning]) {
 		@try {
 			OSStatusCall( AudioQueueStop(playbackState.queue, immediately) );
 		}
 		@catch (NSException * e) {
-			NSLog(@"**** Exception stopping audio player **** %@", e);
+			//DLog(@"**** Exception stopping audio player **** %@", e);
 		}
+		//DLog(@"Stopped the queue!");
+	} else {
+		//DLog(@"Queue was not running!");
 	}
-  playbackState.isPlaying = false;
+
+	playbackState.isPlaying = false;
 }
 
 - (void)stopPlayback
@@ -149,7 +154,7 @@ void CCCAudioQueueIsRunningCallback(void *inUserData, AudioQueueRef inAQ, AudioQ
     CFRunLoopRunInMode(kCFRunLoopDefaultMode, 1.0, false);    
   }
   @catch (NSException * e) {
-    //NSLog(@"Ut-Oh...! Something brokeded!");
+    ////DLog(@"Ut-Oh...! Something brokeded!");
   }
 }
 
@@ -206,7 +211,7 @@ void CCCAudioQueueIsRunningCallback(void *inUserData, AudioQueueRef inAQ, AudioQ
 
 -(void) cleanUp
 {
-  //NSLog(@"cleanup of player...");
+  //DLog(@"cleanup of player...");
   NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
   if(playbackState.isInitialized) {
     playbackState.isInitialized = false;
@@ -221,8 +226,9 @@ void CCCAudioQueueIsRunningCallback(void *inUserData, AudioQueueRef inAQ, AudioQ
 {
   UInt32 bytesRead, numPackets = numPacketsToRead;
 	[(id<CCCAudioSource>)audioSource read: &numPackets packetsOfAudioDataInBuffer: inBuffer->mAudioData returningBytesRead:&bytesRead];
-	NSLog(@"Read %i bytes from audio file at currentPacket %i", bytesRead, playbackState.currentPacket);
+	//DLog(@"Read %i packets and %i bytes from audio file at currentPacket %i", numPackets, bytesRead, playbackState.currentPacket);
   if(numPackets) {
+	  //DLog(@"Feeding raw data to queue.");
     inBuffer->mAudioDataByteSize = bytesRead;
     playbackState.currentPacket += numPackets;
 		AudioStreamPacketDescription *packetDescriptors = NULL;
@@ -234,6 +240,7 @@ void CCCAudioQueueIsRunningCallback(void *inUserData, AudioQueueRef inAQ, AudioQ
     OSStatusCall( AudioQueueEnqueueBuffer(playbackState.queue, inBuffer, (packetDescriptors ? numPackets : 0), packetDescriptors) );
 		return YES;
   } else{
+	  //DLog(@"No more data to feed, we should stop the queue.");
 		return NO;
   }
 }
@@ -246,27 +253,43 @@ void CCCAudioQueueIsRunningCallback(void *inUserData, AudioQueueRef inAQ, AudioQ
 		//If we cannot provide output for the queue...
 		if(NO==[self provide: playbackState.numberOfPacketsToRead AudioOutputUsingQueue:outAQ forBuffer:inBuffer]) {
 			//And if we're currently in playback mode...
-			if([self isPlaying]) [self stopPlayback];//we need to stop playback
+			if([self isPlaying]) {
+//				[self stopPlayback];//we need to stop playback
+				@try {
+					OSStatusCall( AudioQueueStop(playbackState.queue, false) );
+				}
+				@catch (NSException * e) {
+					//DLog(@"**** Exception stopping audio player **** %@", e);
+				}
+				//DLog(@"All done playback.");
+			}else {
+				//DLog(@"we're all out of audio but we haven't stopped the queue. We probably should stop it to generate the final stop message.");
+			}
+
 		}
 	}
 	@catch (NSException * e) {
-		NSLog(@"**** Exception caught **** %@", e);
+		//DLog(@"**** Exception caught **** %@", e);
 		if([self isPlaying]) [self stopPlayback];//we need to stop playback
 	}
 }
 
 -(void) playbackStateDidChange
 {
-  //NSLog(@"Notifying delegate that playback state did change.");
+  //DLog(@"Notifying delegate that playback state did change.");
   [delegate playbackStateDidChangeForPlayer:self];
   UInt32 propertyValue; UInt32 propertySize = sizeof(propertyValue);
   AudioQueueGetProperty(playbackState.queue, kAudioQueueProperty_IsRunning, &propertyValue, &propertySize);
   if(0==propertyValue) {
-    //NSLog(@"Detected playback stopped will cleanup and notify listener.");
+    ////DLog(@"Detected playback stopped will cleanup and notify listener.");
     [self performSelector:@selector(cleanUp) withObject:nil];
-    [delegate playbackIsStoppingForPlayer:self];
-  }else {
-    //NSLog(@"Playback start detected.");
+	  //DLog(@"Queue is NOT running. Playback should be stopped");
+	  [delegate playbackDidStopForPlayer:self];
+  }else if(![self isPlaying]) {
+	  //DLog(@"Queue IS running, but player is not playing. Inconsistancy? Playback should be stopped?");
+	  //...
+  } else {
+    ////DLog(@"Playback start detected.");
   }
 }
 

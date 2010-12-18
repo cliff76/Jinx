@@ -65,10 +65,10 @@ SInt64 MQAudioFile_GetSizeProc (void  *inClientData)
 
 -(void) read:(UInt32*) packetsToRead packetsOfAudioDataInBuffer: (void*) outputBuffer returningBytesRead:(UInt32*)bytesRead
 {
-	NSLog(@"Reading %i packet(s) from audio file @ current packet %i", *packetsToRead, currentPacket);
+//	DLog(@"Reading %i packet(s) from audio file @ current packet %i", *packetsToRead, currentPacket);
   OSStatusCall( AudioFileReadPackets(fileHandle, false, bytesRead, packetDescriptors, currentPacket, packetsToRead, outputBuffer) );
 	currentPacket += *packetsToRead;
-	NSLog(@"Read %i bytes from audio file at currentPacket %i", *bytesRead, currentPacket);
+//	DLog(@"Read %i bytes from audio file at currentPacket %i", *bytesRead, currentPacket);
 }
 
 -(void) describePackets:(AudioStreamPacketDescription *)somePacketDescriptors
@@ -89,9 +89,9 @@ SInt64 MQAudioFile_GetSizeProc (void  *inClientData)
   theFileSize = [self readFileSize];
   audioFile = [[NSFileHandle fileHandleForReadingAtPath:filePath] retain];
 	NSAssert([[NSFileManager defaultManager] fileExistsAtPath:filePath], @"Should always have a file for playback!");
-  //NSLog(@"opening file %@", filePath);
+  //DLog(@"opening file %@", filePath);
   OSStatusCall( AudioFileOpenWithCallbacks(self, MQAudioFile_ReadProc, NULL, MQAudioFile_GetSizeProc, NULL, hint, &fileHandle) );
-  //NSLog(@"File %@ is open", filePath);
+  //DLog(@"File %@ is open", filePath);
 }
 
 -(BOOL) isAnError:(NSError*)error
@@ -101,8 +101,8 @@ SInt64 MQAudioFile_GetSizeProc (void  *inClientData)
 
 -(OSStatus) readFromPosition:(SInt64)position numberOfBytes:(UInt32)requestedBytesToRead intoBuffer:(void*)buffer returningActualCount:(UInt32*)actualCount
 {
-//	NSLog(@"Reading audio file...");
-//  NSLog(@"Audio file position %qi", [audioFile offsetInFile]);
+//	DLog(@"Reading audio file...");
+//  DLog(@"Audio file position %qi", [audioFile offsetInFile]);
   [audioFile seekToFileOffset:position];
   @try
   {
@@ -110,8 +110,8 @@ SInt64 MQAudioFile_GetSizeProc (void  *inClientData)
     *actualCount = [theData length];
     memcpy(buffer, [theData bytes], *actualCount);
     NSAssert(*actualCount >=0, @"Negative read count!");
-    //NSLog(@"Read %i", *actualCount);
-    //NSLog(@"Requested %i bytes. Read %i bytes for CoreAudio", requestedBytesToRead, *actualCount);
+    //DLog(@"Read %i", *actualCount);
+    //DLog(@"Requested %i bytes. Read %i bytes for CoreAudio", requestedBytesToRead, *actualCount);
   }
   @catch (NSException *ex)
   {
@@ -123,7 +123,7 @@ SInt64 MQAudioFile_GetSizeProc (void  *inClientData)
 
 -(SInt64) fileSize
 {
-  //NSLog(@"Returning file size to CoreAudio %i", theFileSize);
+  //DLog(@"Returning file size to CoreAudio %i", theFileSize);
   return theFileSize;
 }
 
@@ -133,7 +133,7 @@ SInt64 MQAudioFile_GetSizeProc (void  *inClientData)
   NSDictionary *attributes = (NSDictionary*)[[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:&error];
   NSNumber *theSize = [attributes objectForKey:NSFileSize];
   if(error && [self isAnError:error]) {
-    NSLog(@"Error caught determining the size of file %@ in %s Error: %@", filePath, _cmd, error);
+    DLog(@"Error caught determining the size of file %@ in %s Error: %@", filePath, _cmd, error);
     [NSException raise:@"MQFileSizeReadException" format:[error description], nil];
   }
   return [theSize integerValue];

@@ -43,6 +43,7 @@ typedef struct
 -(void) playbackStateDidChangeForPlayer:(CCCAudioPlayer*)audioPlayer;
 -(void) playbackIsStoppingForPlayer:(CCCAudioPlayer*)audioPlayer;
 -(void) playbackIsStartingForPlayer:(CCCAudioPlayer*)audioPlayer;
+-(void) playbackDidStopForPlayer:(CCCAudioPlayer*)audioPlayer;
 
 @end
 

@@ -128,10 +128,7 @@ static NSString *CellIdentifier = @"Cell";
     [super viewDidAppear:animated];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
-	[self saveConversation];
-}/*
+/*
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
 }
@@ -188,6 +185,20 @@ static NSString *CellIdentifier = @"Cell";
     // We must add a delay here, otherwise we'll swap in the new view
 	// too quickly and we'll get an animation glitch
     [self performSelector:@selector(updateView) withObject:nil afterDelay:0];
+}
+
+#pragma mark -
+#pragma mark Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Navigation logic may go here. Create and push another view controller.
+	/*
+	 <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     // ...
+     // Pass the selected object to the new view controller.
+	 [self.navigationController pushViewController:detailViewController animated:YES];
+	 [detailViewController release];
+	 */
 }
 
 #pragma mark -
@@ -341,22 +352,8 @@ static NSString *CellIdentifier = @"Cell";
 }
 -(void)onCallButton:(id)sender
 {
-	NSLog(@"Phone call...");
-	[self.navigationController pushViewController: [[CCCCallScreen alloc] init] animated:YES];
-}
-
-#pragma mark -
-#pragma mark Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller.
-	/*
-	 <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-	 [self.navigationController pushViewController:detailViewController animated:YES];
-	 [detailViewController release];
-	 */
+	DLog(@"Phone call...");
+	[self.navigationController pushViewController: [[CCCCallScreen alloc] initWithBuddy:chatBuddy.buddyName] animated:YES];
 }
 
 #pragma mark -
@@ -404,6 +401,8 @@ static NSString *CellIdentifier = @"Cell";
 - (void)viewDidUnload {
     // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
     // For example: self.myOutlet = nil;
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+	[self saveConversation];
 }
 
 

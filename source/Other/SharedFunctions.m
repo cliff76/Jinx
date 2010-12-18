@@ -11,7 +11,7 @@
 void raiseApplicationExceptionIfError(NSError *error, NSString* errorName, NSString *aDescription)
 {
 	if (error) {
-		NSLog(@"Error: %@", error);
+		DLog(@"Error: %@", error);
 		NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
 		NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:
 								  aDescription, kJinxNotificationApplicationErrorKeyFriendlyMessage,
