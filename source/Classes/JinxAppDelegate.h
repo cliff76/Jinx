@@ -12,6 +12,7 @@
     
     UIWindow *window;
     UINavigationController *navigationController;
+	NSString *currentConversation;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

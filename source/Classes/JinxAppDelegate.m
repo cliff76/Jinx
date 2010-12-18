@@ -6,9 +6,17 @@
 //  Copyright 2010 Craig Corp. All rights reserved.
 //
 
+#import "JinxApplicationGlobal.h"
 #import "JinxAppDelegate.h"
-#import "RootViewController.h"
+#import "CCCChatViewController.h"
 
+@interface JinxAppDelegate (PrivateMethods)
+
+-(void) loadConversations;
+-(void) saveCurrentConversation:(NSString*)aChatBuddy;
+-(void) newConversationStarted:(NSNotification*)notification;
+
+@end
 
 @implementation JinxAppDelegate
 
@@ -22,9 +30,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
     // Override point for customization after application launch.
-    
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newConversationStarted:) name:kJinxNotificationCoversationStarted object:nil];
     // Add the navigation controller's view to the window and display.
     [window addSubview:navigationController.view];
+	[self loadConversations];
     [window makeKeyAndVisible];
 
     return YES;
@@ -36,6 +45,7 @@
      Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
      Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
      */
+	[self saveCurrentConversation:currentConversation];
 }
 
 
@@ -85,6 +95,34 @@
 	[super dealloc];
 }
 
+#pragma mark -
+#pragma mark PrivateMethods
+-(void) loadConversations
+{
+	NSString *lastConversation = readStringFromFile(JinxArchiveFileForLastChat);
+	NSLog(@"Last conversation was %@", lastConversation);
+	if ([lastConversation isEqualToString:@""]) {
+		return;
+	} else {
+		[navigationController pushViewController:[[[CCCChatViewController alloc] initWithBuddy:lastConversation] autorelease] animated:YES];
+	}
+}
+
+-(void) saveCurrentConversation:(NSString*)aChatBuddy
+{
+	if (!aChatBuddy) {
+		return;
+	} else {
+		ensureDirectoryExistsAtPath(JinxArchivePath);
+		[[NSFileManager defaultManager] createFileAtPath:JinxArchiveFileForLastChat contents:[NSData data] attributes:nil];
+		writeStringToFile(aChatBuddy, JinxArchiveFileForLastChat);
+	}
+}
+
+-(void) newConversationStarted:(NSNotification*)notification
+{
+	currentConversation = [(NSDictionary*)[notification userInfo] objectForKey:kJinxNotificationKeyChatBuddyName];
+}
 
 @end
 

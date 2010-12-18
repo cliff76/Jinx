@@ -15,6 +15,8 @@
 	NSMutableArray *messages;
 	UIToolbar *toolbar;
 	CCCChatBuddy *chatBuddy;
+	BOOL isShowingLandscape;
+	BOOL isInEditMode;
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
@@ -22,7 +24,11 @@
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
 @property (nonatomic, retain) CCCChatBuddy *chatBuddy;
 
++ (CCCChatViewController*) chatViewForBuddy:(NSString*)aChatBuddy andConversation:(NSArray*)existingMessages;
+- (id)initWithBuddy:(NSString *)aChatBuddy;
+- (id)initWithBuddy:(NSString *)aChatBuddy andMessages:(NSArray*)existingMessages;
 - (id)initWithBuddy:(NSString *)aChatBuddy andNibName:(NSString *)nibName bundle:(NSBundle *)nibBundle;
 - (void)addMessage:(NSString*) aNewMessage;
+- (IBAction)onSendButton:(id)sender;
 
 @end

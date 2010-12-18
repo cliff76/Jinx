@@ -5,7 +5,7 @@
 //  Created by Clifton Craig on 12/12/10.
 //  Copyright 2010 Craig Corp. All rights reserved.
 //
-
+#import "JinxApplicationGlobal.h"
 #import "CCCChatViewController.h"
 #import "CCCChatBuddy.h"
 #import "CCCBasicChatRepository.h"
@@ -21,6 +21,10 @@ static NSString *CellIdentifier = @"Cell";
 -(UITableViewCell*) createReusableTableCellForChatMessageView:(UIView*) chatMessageView;
 -(void) addRawMessage:(NSString*)raw toMessageView:(UIView*)messageView;
 -(void) onMessageAdded;
+- (BOOL)textFieldShouldReturn:(UITextField *)textField;
+-(void) resizeView;
+-(void) saveConversation;
+-(void) loadConversationForBuddy:(NSString*)aChatBuddy;
 
 @end
 
@@ -29,12 +33,39 @@ static NSString *CellIdentifier = @"Cell";
 
 #pragma mark -
 #pragma mark Public API
+
++ (CCCChatViewController*) chatViewForBuddy:(NSString*)aChatBuddy andConversation:(NSArray*)existingMessages
+{
+	return [[[CCCChatViewController alloc] initWithBuddy:aChatBuddy andMessages:existingMessages] autorelease];
+}
+
+- (id)initWithBuddy:(NSString *)aChatBuddy
+{
+	return [self initWithBuddy:aChatBuddy andMessages:[NSArray array]];
+}
+
+- (id)initWithBuddy:(NSString *)aChatBuddy andMessages:(NSArray*)existingMessages
+{
+	self = [self initWithBuddy:aChatBuddy andNibName:@"CCCChatViewController" bundle:nil];
+	if (self != nil) {
+		[messages addObjectsFromArray:existingMessages];
+	}
+	return self;
+}
+
+
 - (id)initWithBuddy:(NSString *)aChatBuddy andNibName:(NSString *)nibName bundle:(NSBundle *)nibBundle
 {
 	self = [super initWithNibName:nibName bundle:nibBundle];
 	if (self != nil) {
+		messages = [[NSMutableArray  alloc] init];
 		self.chatBuddy = [[CCCChatBuddy alloc] initWithBuddy:aChatBuddy loadedFromRepository: [[[CCCBasicChatRepository alloc] init] autorelease] ];
 		self.navigationItem.title = [NSString stringWithFormat:@"Chat with %@...", self.chatBuddy.buddyName];
+		[[NSNotificationCenter defaultCenter] postNotificationName:kJinxNotificationCoversationStarted object:self userInfo:
+		 [NSDictionary dictionaryWithObjectsAndKeys:
+		  chatBuddy, kJinxNotificationKeyChatBuddy, chatBuddy.buddyName, kJinxNotificationKeyChatBuddyName, messages, kJinxNotificationKeyMessages,
+		  nil]];
+		[self loadConversationForBuddy:chatBuddy.buddyName];
 	}
 	return self;
 }
@@ -64,12 +95,19 @@ static NSString *CellIdentifier = @"Cell";
 	}
 }
 
+- (IBAction)onSendButton:(id)sender
+{
+	[self textFieldShouldReturn:messageToSend];
+}
+
 #pragma mark -
 #pragma mark View lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	messages = [[NSMutableArray  alloc] init];
+	[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:)
+												 name:UIDeviceOrientationDidChangeNotification object:nil];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -77,6 +115,7 @@ static NSString *CellIdentifier = @"Cell";
 - (void)viewWillAppear:(BOOL)animated {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) 
 												 name:UIKeyboardWillShowNotification object:self.view.window]; 
+	[self resizeView];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -84,7 +123,8 @@ static NSString *CellIdentifier = @"Cell";
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil]; 
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+	[self saveConversation];
 }/*
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
@@ -94,10 +134,56 @@ static NSString *CellIdentifier = @"Cell";
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	// Return YES for supported orientations.
-	return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+	return YES;
 }
 
+#pragma mark -
+#pragma mark Orientation methods
+-(void) resizeView
+{
+    UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
+    if (UIDeviceOrientationIsLandscape(deviceOrientation) || isShowingLandscape)
+	{
+		isShowingLandscape = YES;
+		[UIView beginAnimations:nil context:NULL];
+		[UIView setAnimationDuration:0.3];
+		CGFloat y = isInEditMode ? 62.0f: 224.0f;
+		toolbar.frame = CGRectMake(0, y, 480, 44);
+		tableView.frame = CGRectMake(0, 0, 480, y);
+		messageToSend.frame = CGRectMake(messageToSend.frame.origin.x, messageToSend.frame.origin.y, 390.0f, messageToSend.frame.size.height);
+		[UIView commitAnimations];
+	} else if (UIDeviceOrientationIsPortrait(deviceOrientation) || ! isShowingLandscape) {
+		isShowingLandscape = NO;
+		[UIView beginAnimations:nil context:NULL];
+		[UIView setAnimationDuration:0.3];	
+		CGFloat y = isInEditMode ? 156.0f: 372.0f;
+		toolbar.frame = CGRectMake(0, y, 320, 44);
+		tableView.frame = CGRectMake(0, 0, 320, y);
+		messageToSend.frame = CGRectMake(messageToSend.frame.origin.x, messageToSend.frame.origin.y, 234.0f, messageToSend.frame.size.height);
+		[UIView commitAnimations];
+	}
 
+}
+
+-(void) updateView
+{
+    UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
+    if (UIDeviceOrientationIsLandscape(deviceOrientation) && !isShowingLandscape)
+	{
+		isShowingLandscape = YES;
+		[self resizeView];
+	} else if (UIDeviceOrientationIsPortrait(deviceOrientation) && isShowingLandscape) {
+		isShowingLandscape = NO;
+		[self resizeView];
+	}
+}
+
+- (void)orientationChanged:(NSNotification *)notification
+{
+    // We must add a delay here, otherwise we'll swap in the new view
+	// too quickly and we'll get an animation glitch
+    [self performSelector:@selector(updateView) withObject:nil afterDelay:0];
+}
 
 #pragma mark -
 #pragma mark Table view data source
@@ -235,6 +321,20 @@ static NSString *CellIdentifier = @"Cell";
 	[tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
 }
 
+-(void) saveConversation
+{
+	@try { ensureDirectoryExistsAtPath(JinxArchivePath); }
+	@catch (NSException * e) { return; } //Errors are propgated to NSNotificationCenter for application-wide handling, it's safe to return here...
+	[NSKeyedArchiver archiveRootObject:messages toFile:JinxArchiveFileForBuddy(chatBuddy.buddyName)];
+}
+
+-(void) loadConversationForBuddy:(NSString*)aChatBuddy
+{
+	if ([[NSFileManager defaultManager] fileExistsAtPath:JinxArchiveFileForBuddy(chatBuddy.buddyName)]) {
+		[messages addObjectsFromArray:[NSKeyedUnarchiver unarchiveObjectWithFile:JinxArchiveFileForBuddy(chatBuddy.buddyName)]];
+	}
+}
+
 #pragma mark -
 #pragma mark Table view delegate
 
@@ -251,7 +351,8 @@ static NSString *CellIdentifier = @"Cell";
 
 #pragma mark -
 #pragma mark UITextField delegate methods
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+- (BOOL)textFieldShouldReturn:(UITextField *)textField 
+{
 //	[self addMessage:[NSString stringWithFormat:@"You: %@", textField.text]];
 	[self sendMessageToBuddy:textField.text];
 	textField.text = @"";
@@ -265,11 +366,13 @@ static NSString *CellIdentifier = @"Cell";
 }
 
 - (void)keyboardWillShow:(NSNotification *)notif {
-	[UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.3];	
-	toolbar.frame = CGRectMake(0, 156, 320, 44);
-	tableView.frame = CGRectMake(0, 0, 320, 156);	
-	[UIView commitAnimations];
+	isInEditMode = YES;
+	[self resizeView];
+//	[UIView beginAnimations:nil context:NULL];
+//    [UIView setAnimationDuration:0.3];	
+//	toolbar.frame = CGRectMake(0, 156, 320, 44);
+//	tableView.frame = CGRectMake(0, 0, 320, 156);	
+//	[UIView commitAnimations];
 	
 	if([messages count] > 0)
 	{
@@ -295,6 +398,8 @@ static NSString *CellIdentifier = @"Cell";
 
 
 - (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
 	[tableView release];
 	[messageToSend release];
 	[messages release];
