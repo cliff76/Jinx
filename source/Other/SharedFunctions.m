@@ -46,7 +46,7 @@ NSString* readStringFromFile(NSString *aFilePath)
 		return @"";
 	} else {
 		NSError *error = nil;
-		NSString *aString = [NSString stringWithContentsOfFile:aFilePath encoding:NSUTF8StringEncoding error:error];
+		NSString *aString = [NSString stringWithContentsOfFile:aFilePath encoding:NSUTF8StringEncoding error:&error];
 		raiseApplicationExceptionIfError(error, @"ConversationReadException", @"Jinx could not restore your prior conversation.");
 		return aString;
 	}

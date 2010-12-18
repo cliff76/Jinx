@@ -10,8 +10,12 @@
 
 @interface RootViewController : UITableViewController {
 	NSArray *buddyList;
+	UIImageView *backgroundImage;
+	UIImageView *backgroundImageLandscape;
 }
 
 @property (nonatomic, retain) NSArray *buddyList;
+@property (nonatomic, retain) IBOutlet UIImageView *backgroundImage;
+@property (nonatomic, retain) IBOutlet UIImageView *backgroundImageLandscape;
 
 @end

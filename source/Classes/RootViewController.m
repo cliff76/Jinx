@@ -10,8 +10,60 @@
 #import "CCCJinxAppLoadLogic.h"
 #import "CCCChatViewController.h"
 
+#define M_PI   3.14159265358979323846264338327950288   /* pi */
+// Our conversion definition
+#define DEGREES_TO_RADIANS(angle) ((angle / 180.0) * M_PI)
+
 @implementation RootViewController
-@synthesize buddyList;
+@synthesize buddyList, backgroundImage, backgroundImageLandscape;
+
+#pragma mark -
+#pragma mark Orientation Methods
+
+-(void) updateView
+{
+	CGFloat rotation = 0.0f;
+	BOOL isLandscape = NO;
+	switch ([UIDevice currentDevice].orientation) {
+		case UIDeviceOrientationLandscapeLeft:
+			rotation = 0.0;
+			isLandscape = YES;
+			break;
+		case UIDeviceOrientationLandscapeRight:
+			rotation = 180.0f;
+			isLandscape = YES;
+			break;
+		default:
+			break;
+	}
+	if (isLandscape) {
+		[UIView beginAnimations:@"switch-background" context:nil];
+		backgroundImage.alpha = 0.0f;
+		backgroundImageLandscape.alpha = 1.0f;
+		backgroundImageLandscape.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(rotation));
+		[UIView commitAnimations];
+	} else {
+		[UIView beginAnimations:@"switch-background" context:nil];
+		backgroundImage.alpha = 1.0f;
+		backgroundImageLandscape.alpha = 0.0f;
+		if( [UIDevice currentDevice].orientation == UIDeviceOrientationPortraitUpsideDown ) {
+			backgroundImage.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(-180.0f));
+			backgroundImage.frame = CGRectMake(0.0f, 0.0f, 320.0f, 460.0f);
+		} else {
+			backgroundImage.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(0.0f));
+			backgroundImage.frame = CGRectMake(0.0f, 20.0f, 320.0f, 460.0f);
+		}
+
+		[UIView commitAnimations];
+	}
+}
+
+- (void)orientationChanged:(NSNotification *)notification
+{
+    // We must add a delay here, otherwise we'll swap in the new view
+	// too quickly and we'll get an animation glitch
+    [self performSelector:@selector(updateView) withObject:nil afterDelay:0];
+}
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -29,7 +81,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+	[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:)
+												 name:UIDeviceOrientationDidChangeNotification object:nil];
+	
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -45,11 +100,12 @@
     [super viewDidAppear:animated];
 }
 */
-/*
+
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
 }
-*/
+
 /*
 - (void)viewDidDisappear:(BOOL)animated {
 	[super viewDidDisappear:animated];
@@ -59,7 +115,7 @@
  // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	// Return YES for supported orientations.
-	return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+	return YES;
 }
 
 #pragma mark -
