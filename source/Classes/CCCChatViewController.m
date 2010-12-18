@@ -9,6 +9,7 @@
 #import "CCCChatViewController.h"
 #import "CCCChatBuddy.h"
 #import "CCCBasicChatRepository.h"
+#import "CCCCallScreen.h"
 
 #define kCCCBallonViewTag 1
 #define kCCCLabelTag 2
@@ -108,6 +109,11 @@ static NSString *CellIdentifier = @"Cell";
 	[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:)
 												 name:UIDeviceOrientationDidChangeNotification object:nil];
+	UIBarButtonItem *callButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"telephone.png"]
+																  style:UIBarButtonItemStyleBordered target:self action:@selector(action:)];
+	callButton.action = @selector(onCallButton:);
+	self.navigationItem.rightBarButtonItem = callButton;
+	
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -162,7 +168,6 @@ static NSString *CellIdentifier = @"Cell";
 		messageToSend.frame = CGRectMake(messageToSend.frame.origin.x, messageToSend.frame.origin.y, 234.0f, messageToSend.frame.size.height);
 		[UIView commitAnimations];
 	}
-
 }
 
 -(void) updateView
@@ -333,6 +338,11 @@ static NSString *CellIdentifier = @"Cell";
 	if ([[NSFileManager defaultManager] fileExistsAtPath:JinxArchiveFileForBuddy(chatBuddy.buddyName)]) {
 		[messages addObjectsFromArray:[NSKeyedUnarchiver unarchiveObjectWithFile:JinxArchiveFileForBuddy(chatBuddy.buddyName)]];
 	}
+}
+-(void)onCallButton:(id)sender
+{
+	NSLog(@"Phone call...");
+	[self.navigationController pushViewController: [[CCCCallScreen alloc] init] animated:YES];
 }
 
 #pragma mark -
