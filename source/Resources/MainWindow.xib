@@ -657,7 +657,7 @@
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>{320, 480}</string>
-				<string>{320, 460}</string>
+				<string>{320, 480}</string>
 			</object>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">123</string>

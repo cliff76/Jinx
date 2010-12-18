@@ -15,6 +15,31 @@
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
 		28F335F11007B36200424DE2 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
+		AF5DBCD812BD219A0038295F /* SharedFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = AF5DBCD612BD219A0038295F /* SharedFunctions.h */; };
+		AF5DBCD912BD219A0038295F /* SharedFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5DBCD712BD219A0038295F /* SharedFunctions.m */; };
+		AF5DBCF012BD22250038295F /* CCCAudioFileReader.h in Headers */ = {isa = PBXBuildFile; fileRef = AF5DBCE412BD22250038295F /* CCCAudioFileReader.h */; };
+		AF5DBCF112BD22250038295F /* CCCAudioFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5DBCE512BD22250038295F /* CCCAudioFileReader.m */; };
+		AF5DBCF212BD22250038295F /* CCCAudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = AF5DBCE612BD22250038295F /* CCCAudioPlayer.h */; };
+		AF5DBCF312BD22250038295F /* CCCAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5DBCE712BD22250038295F /* CCCAudioPlayer.m */; };
+		AF5DBCF412BD22250038295F /* CCCAudioSource.h in Headers */ = {isa = PBXBuildFile; fileRef = AF5DBCE812BD22250038295F /* CCCAudioSource.h */; };
+		AF5DBCF512BD22250038295F /* CCCAudioSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = AF5DBCE912BD22250038295F /* CCCAudioSupport.h */; };
+		AF5DBCF612BD22250038295F /* CCCAudioSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5DBCEA12BD22250038295F /* CCCAudioSupport.m */; };
+		AF5DBCF912BD22250038295F /* JinxApplicationGlobal.h in Headers */ = {isa = PBXBuildFile; fileRef = AF5DBCEE12BD22250038295F /* JinxApplicationGlobal.h */; };
+		AF5DBCFA12BD22250038295F /* JinxNotifications.h in Headers */ = {isa = PBXBuildFile; fileRef = AF5DBCEF12BD22250038295F /* JinxNotifications.h */; };
+		AF5DBCFE12BD227B0038295F /* CCCCallScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */; };
+		AF5DBD1012BD22C00038295F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5DBD0F12BD22C00038295F /* AudioToolbox.framework */; };
+		AF5DBD1212BD22C00038295F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5DBD1112BD22C00038295F /* AVFoundation.framework */; };
+		AF5DBD2012BD25920038295F /* CallScreen1.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5DBD1912BD25920038295F /* CallScreen1.png */; };
+		AF5DBD2112BD25920038295F /* Clint.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AF5DBD1A12BD25920038295F /* Clint.tiff */; };
+		AF5DBD2212BD25920038295F /* Jinx-backdrop-landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5DBD1B12BD25920038295F /* Jinx-backdrop-landscape.png */; };
+		AF5DBD2312BD25920038295F /* JinxBubble.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5DBD1C12BD25920038295F /* JinxBubble.png */; };
+		AF5DBD2412BD25920038295F /* Leeza.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AF5DBD1D12BD25920038295F /* Leeza.tiff */; };
+		AF5DBD2512BD25920038295F /* Stuart.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AF5DBD1E12BD25920038295F /* Stuart.tiff */; };
+		AF5DBD2612BD25920038295F /* telephone.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5DBD1F12BD25920038295F /* telephone.png */; };
+		AF5DBD2E12BD25BC0038295F /* Clint.aiff in Resources */ = {isa = PBXBuildFile; fileRef = AF5DBD2A12BD25BC0038295F /* Clint.aiff */; };
+		AF5DBD2F12BD25BC0038295F /* LeezaCall.aiff in Resources */ = {isa = PBXBuildFile; fileRef = AF5DBD2B12BD25BC0038295F /* LeezaCall.aiff */; };
+		AF5DBD3012BD25BC0038295F /* ringout.wav in Resources */ = {isa = PBXBuildFile; fileRef = AF5DBD2C12BD25BC0038295F /* ringout.wav */; };
+		AF5DBD3112BD25BC0038295F /* Stuart.aiff in Resources */ = {isa = PBXBuildFile; fileRef = AF5DBD2D12BD25BC0038295F /* Stuart.aiff */; };
 		AF8B614C12B469B400E0C7E4 /* libJinx-Core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8B614512B4697C00E0C7E4 /* libJinx-Core.a */; };
 		AF8B618F12B46C1900E0C7E4 /* libJinx-Core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8B614512B4697C00E0C7E4 /* libJinx-Core.a */; };
 		AF8B619612B46D3400E0C7E4 /* CCCJinxAppLoadLogicTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8B619512B46D3400E0C7E4 /* CCCJinxAppLoadLogicTest.m */; };
@@ -54,7 +79,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AF8B615112B469CA00E0C7E4 /* UnitTests */;
+			remoteGlobalIDString = AF8B615112B469CA00E0C7E4;
 			remoteInfo = UnitTests;
 		};
 /* End PBXContainerItemProxy section */
@@ -73,6 +98,33 @@
 		28F335F01007B36200424DE2 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Jinx-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Jinx-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		AF5DBCD612BD219A0038295F /* SharedFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedFunctions.h; sourceTree = "<group>"; };
+		AF5DBCD712BD219A0038295F /* SharedFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedFunctions.m; sourceTree = "<group>"; };
+		AF5DBCE412BD22250038295F /* CCCAudioFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCAudioFileReader.h; sourceTree = "<group>"; };
+		AF5DBCE512BD22250038295F /* CCCAudioFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCAudioFileReader.m; sourceTree = "<group>"; };
+		AF5DBCE612BD22250038295F /* CCCAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCAudioPlayer.h; sourceTree = "<group>"; };
+		AF5DBCE712BD22250038295F /* CCCAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCAudioPlayer.m; sourceTree = "<group>"; };
+		AF5DBCE812BD22250038295F /* CCCAudioSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCAudioSource.h; sourceTree = "<group>"; };
+		AF5DBCE912BD22250038295F /* CCCAudioSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCAudioSupport.h; sourceTree = "<group>"; };
+		AF5DBCEA12BD22250038295F /* CCCAudioSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCAudioSupport.m; sourceTree = "<group>"; };
+		AF5DBCEB12BD22250038295F /* CCCCallScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCCallScreen.h; sourceTree = "<group>"; };
+		AF5DBCEC12BD22250038295F /* CCCCallScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCCallScreen.m; sourceTree = "<group>"; };
+		AF5DBCED12BD22250038295F /* CCCCallScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CCCCallScreen.xib; path = ../Classes/CCCCallScreen.xib; sourceTree = "<group>"; };
+		AF5DBCEE12BD22250038295F /* JinxApplicationGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JinxApplicationGlobal.h; sourceTree = "<group>"; };
+		AF5DBCEF12BD22250038295F /* JinxNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JinxNotifications.h; sourceTree = "<group>"; };
+		AF5DBD0F12BD22C00038295F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		AF5DBD1112BD22C00038295F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AF5DBD1912BD25920038295F /* CallScreen1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CallScreen1.png; sourceTree = "<group>"; };
+		AF5DBD1A12BD25920038295F /* Clint.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Clint.tiff; sourceTree = "<group>"; };
+		AF5DBD1B12BD25920038295F /* Jinx-backdrop-landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Jinx-backdrop-landscape.png"; sourceTree = "<group>"; };
+		AF5DBD1C12BD25920038295F /* JinxBubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JinxBubble.png; sourceTree = "<group>"; };
+		AF5DBD1D12BD25920038295F /* Leeza.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Leeza.tiff; sourceTree = "<group>"; };
+		AF5DBD1E12BD25920038295F /* Stuart.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Stuart.tiff; sourceTree = "<group>"; };
+		AF5DBD1F12BD25920038295F /* telephone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = telephone.png; sourceTree = "<group>"; };
+		AF5DBD2A12BD25BC0038295F /* Clint.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Clint.aiff; sourceTree = "<group>"; };
+		AF5DBD2B12BD25BC0038295F /* LeezaCall.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = LeezaCall.aiff; sourceTree = "<group>"; };
+		AF5DBD2C12BD25BC0038295F /* ringout.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ringout.wav; sourceTree = "<group>"; };
+		AF5DBD2D12BD25BC0038295F /* Stuart.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Stuart.aiff; sourceTree = "<group>"; };
 		AF8B614512B4697C00E0C7E4 /* libJinx-Core.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libJinx-Core.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8B615212B469CA00E0C7E4 /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8B615312B469CA00E0C7E4 /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
@@ -104,6 +156,8 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
 				AF8B614C12B469B400E0C7E4 /* libJinx-Core.a in Frameworks */,
+				AF5DBD1012BD22C00038295F /* AudioToolbox.framework in Frameworks */,
+				AF5DBD1212BD22C00038295F /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +182,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AF5DBCFB12BD22310038295F /* Audio */,
+				AF5DBCE312BD22010038295F /* Headers */,
 				AF8B653C12B71F2E00E0C7E4 /* Protocols */,
 				AF8B61A112B46DA300E0C7E4 /* Logic */,
 				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
@@ -136,6 +192,8 @@
 				1D3623250D0F684500981E51 /* JinxAppDelegate.m */,
 				AF8B629212B557A300E0C7E4 /* CCCChatViewController.h */,
 				AF8B629312B557A300E0C7E4 /* CCCChatViewController.m */,
+				AF5DBCEB12BD22250038295F /* CCCCallScreen.h */,
+				AF5DBCEC12BD22250038295F /* CCCCallScreen.m */,
 			);
 			name = Classes;
 			path = source/Classes;
@@ -160,6 +218,8 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				AF5DBD0F12BD22C00038295F /* AudioToolbox.framework */,
+				AF5DBD1112BD22C00038295F /* AVFoundation.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -167,6 +227,8 @@
 		29B97315FDCFA39411CA2CEA /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				AF5DBCD612BD219A0038295F /* SharedFunctions.h */,
+				AF5DBCD712BD219A0038295F /* SharedFunctions.m */,
 				28A0AAE50D9B0CCF005BE974 /* Jinx_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
@@ -177,8 +239,13 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AF5DBD2A12BD25BC0038295F /* Clint.aiff */,
+				AF5DBD2B12BD25BC0038295F /* LeezaCall.aiff */,
+				AF5DBD2C12BD25BC0038295F /* ringout.wav */,
+				AF5DBD2D12BD25BC0038295F /* Stuart.aiff */,
 				AF8B62C512B55D6900E0C7E4 /* images */,
 				AF8B615312B469CA00E0C7E4 /* UnitTests-Info.plist */,
+				AF5DBCED12BD22250038295F /* CCCCallScreen.xib */,
 				AF8B629412B557A300E0C7E4 /* CCCChatViewController.xib */,
 				28F335F01007B36200424DE2 /* RootViewController.xib */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
@@ -196,6 +263,29 @@
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF5DBCE312BD22010038295F /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				AF5DBCEE12BD22250038295F /* JinxApplicationGlobal.h */,
+				AF5DBCEF12BD22250038295F /* JinxNotifications.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		AF5DBCFB12BD22310038295F /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				AF5DBCE412BD22250038295F /* CCCAudioFileReader.h */,
+				AF5DBCE512BD22250038295F /* CCCAudioFileReader.m */,
+				AF5DBCE612BD22250038295F /* CCCAudioPlayer.h */,
+				AF5DBCE712BD22250038295F /* CCCAudioPlayer.m */,
+				AF5DBCE812BD22250038295F /* CCCAudioSource.h */,
+				AF5DBCE912BD22250038295F /* CCCAudioSupport.h */,
+				AF5DBCEA12BD22250038295F /* CCCAudioSupport.m */,
+			);
+			name = Audio;
 			sourceTree = "<group>";
 		};
 		AF8B615E12B46A2500E0C7E4 /* UnitTests */ = {
@@ -225,6 +315,13 @@
 		AF8B62C512B55D6900E0C7E4 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				AF5DBD1912BD25920038295F /* CallScreen1.png */,
+				AF5DBD1A12BD25920038295F /* Clint.tiff */,
+				AF5DBD1B12BD25920038295F /* Jinx-backdrop-landscape.png */,
+				AF5DBD1C12BD25920038295F /* JinxBubble.png */,
+				AF5DBD1D12BD25920038295F /* Leeza.tiff */,
+				AF5DBD1E12BD25920038295F /* Stuart.tiff */,
+				AF5DBD1F12BD25920038295F /* telephone.png */,
 				AF8B638C12B5A66500E0C7E4 /* Jinx-backdrop.png */,
 				AF8B638812B5A4FF00E0C7E4 /* Default.png */,
 				AF8B62C612B55D8100E0C7E4 /* green.png */,
@@ -252,6 +349,13 @@
 				AF8B653912B71F1400E0C7E4 /* CCCBasicChatRepository.h in Headers */,
 				AF8B653E12B71F4A00E0C7E4 /* CCCBuddyRepository.h in Headers */,
 				AF8B654B12B7226200E0C7E4 /* CCCChatBuddy.h in Headers */,
+				AF5DBCD812BD219A0038295F /* SharedFunctions.h in Headers */,
+				AF5DBCF012BD22250038295F /* CCCAudioFileReader.h in Headers */,
+				AF5DBCF212BD22250038295F /* CCCAudioPlayer.h in Headers */,
+				AF5DBCF412BD22250038295F /* CCCAudioSource.h in Headers */,
+				AF5DBCF512BD22250038295F /* CCCAudioSupport.h in Headers */,
+				AF5DBCF912BD22250038295F /* JinxApplicationGlobal.h in Headers */,
+				AF5DBCFA12BD22250038295F /* JinxNotifications.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +456,17 @@
 				AF8B62C912B55D8100E0C7E4 /* grey.png in Resources */,
 				AF8B638912B5A4FF00E0C7E4 /* Default.png in Resources */,
 				AF8B638D12B5A66500E0C7E4 /* Jinx-backdrop.png in Resources */,
+				AF5DBD2012BD25920038295F /* CallScreen1.png in Resources */,
+				AF5DBD2112BD25920038295F /* Clint.tiff in Resources */,
+				AF5DBD2212BD25920038295F /* Jinx-backdrop-landscape.png in Resources */,
+				AF5DBD2312BD25920038295F /* JinxBubble.png in Resources */,
+				AF5DBD2412BD25920038295F /* Leeza.tiff in Resources */,
+				AF5DBD2512BD25920038295F /* Stuart.tiff in Resources */,
+				AF5DBD2612BD25920038295F /* telephone.png in Resources */,
+				AF5DBD2E12BD25BC0038295F /* Clint.aiff in Resources */,
+				AF5DBD2F12BD25BC0038295F /* LeezaCall.aiff in Resources */,
+				AF5DBD3012BD25BC0038295F /* ringout.wav in Resources */,
+				AF5DBD3112BD25BC0038295F /* Stuart.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +504,7 @@
 				1D3623260D0F684500981E51 /* JinxAppDelegate.m in Sources */,
 				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
 				AF8B629512B557A300E0C7E4 /* CCCChatViewController.m in Sources */,
+				AF5DBCFE12BD227B0038295F /* CCCCallScreen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +515,10 @@
 				AF8B61A512B46DAF00E0C7E4 /* CCCJinxAppLoadLogic.m in Sources */,
 				AF8B653A12B71F1400E0C7E4 /* CCCBasicChatRepository.m in Sources */,
 				AF8B654A12B7226000E0C7E4 /* CCCChatBuddy.m in Sources */,
+				AF5DBCD912BD219A0038295F /* SharedFunctions.m in Sources */,
+				AF5DBCF112BD22250038295F /* CCCAudioFileReader.m in Sources */,
+				AF5DBCF312BD22250038295F /* CCCAudioPlayer.m in Sources */,
+				AF5DBCF612BD22250038295F /* CCCAudioSupport.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
