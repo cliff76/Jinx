@@ -9,10 +9,8 @@
 #import "RootViewController.h"
 #import "CCCJinxAppLoadLogic.h"
 #import "CCCChatViewController.h"
-
-#define M_PI   3.14159265358979323846264338327950288   /* pi */
-// Our conversion definition
-#define DEGREES_TO_RADIANS(angle) ((angle / 180.0) * M_PI)
+#import "CCCBuddySelectorCell.h"
+#import "JinxApplicationGlobal.h"
 
 @implementation RootViewController
 @synthesize buddyList, backgroundImage, backgroundImageLandscape;
@@ -74,9 +72,21 @@
 	if (self != nil) {
 		CCCJinxAppLoadLogic *appLoadLogic = [[CCCJinxAppLoadLogic alloc] init];
 		self.buddyList = appLoadLogic.buddyList;
+		self.tableView.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(-90.0f));
 		[appLoadLogic release];
 	}
 	return self;
+}
+
+-(void) scrollTo:(NSNumber*)row
+{
+	[self.tableView reloadData];
+	[self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:[row intValue] inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+}
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+{
+//	self.tableView.delegate = nil;
+//	[self performSelector:@selector(scrollTo:) withObject:[NSNumber numberWithInt:1] afterDelay:1.0];
 }
 
 - (void)viewDidLoad {
@@ -84,7 +94,9 @@
 	[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:)
 												 name:UIDeviceOrientationDidChangeNotification object:nil];
-	
+	self.tableView.delegate = self;
+	[self performSelector:@selector(scrollTo:) withObject:[NSNumber numberWithInt:2] afterDelay:0.0];
+
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -135,19 +147,22 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"Cell";
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+		NSString *buddyName = [self.buddyList objectAtIndex:indexPath.row];
+		cell = [[[CCCBuddySelectorCell alloc] initWithIndex:indexPath.row forBuddy:buddyName andStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+
     }
     
 	// Configure the cell.
-	cell.textLabel.textColor = [UIColor blackColor];
-	cell.textLabel.text = [self.buddyList objectAtIndex:indexPath.row];
 
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	return 150.0f;
+}
 
 /*
 // Override to support conditional editing of the table view.

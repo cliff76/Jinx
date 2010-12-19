@@ -10,6 +10,12 @@
 #import "CCCAudioPlayer.h"
 #import "CCCAudioFileReader.h"
 
+@interface CCCCallScreen (PrivateMethods)
+
+-(void) stopPhoneCall;
+
+@end
+
 @implementation CCCCallScreen
 
 - (id) initWithBuddy:(NSString*)aChatBuddy
@@ -39,6 +45,9 @@
 
 -(void) playNextFromPlaylist
 {
+	if (cancel) {
+		return;
+	}
 	NSString *nextAudio = [audioPlayList objectAtIndex:0];
 	NSString *nextAudioType = [audioPlayList objectAtIndex:1];
 	NSString *nextAudioFile = [[NSBundle bundleForClass:[CCCCallScreen class]] pathForResource:nextAudio ofType:nextAudioType];
@@ -53,6 +62,14 @@
 	[player startPlayback];
 }
 
+-(void) stopPhoneCall
+{
+	cancel = YES;
+	[player stopPlaybackImmediately];
+	[player release];
+	player = nil;
+}
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
 	[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
@@ -60,6 +77,15 @@
 	[self playNextFromPlaylist];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+	[super viewWillDisappear:animated];
+	[self stopPhoneCall];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+ [super viewDidDisappear:animated];
+}
+ 
 /*
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

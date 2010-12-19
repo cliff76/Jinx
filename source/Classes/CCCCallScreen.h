@@ -13,6 +13,7 @@
 	NSString *chatBuddy;
 	NSMutableArray *audioPlayList;
 	CCCAudioPlayer *player;
+	BOOL cancel;
 }
 
 @end

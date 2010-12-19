@@ -30,11 +30,8 @@
 		AF5DBD1012BD22C00038295F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5DBD0F12BD22C00038295F /* AudioToolbox.framework */; };
 		AF5DBD1212BD22C00038295F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5DBD1112BD22C00038295F /* AVFoundation.framework */; };
 		AF5DBD2012BD25920038295F /* CallScreen1.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5DBD1912BD25920038295F /* CallScreen1.png */; };
-		AF5DBD2112BD25920038295F /* Clint.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AF5DBD1A12BD25920038295F /* Clint.tiff */; };
 		AF5DBD2212BD25920038295F /* Jinx-backdrop-landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5DBD1B12BD25920038295F /* Jinx-backdrop-landscape.png */; };
 		AF5DBD2312BD25920038295F /* JinxBubble.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5DBD1C12BD25920038295F /* JinxBubble.png */; };
-		AF5DBD2412BD25920038295F /* Leeza.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AF5DBD1D12BD25920038295F /* Leeza.tiff */; };
-		AF5DBD2512BD25920038295F /* Stuart.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AF5DBD1E12BD25920038295F /* Stuart.tiff */; };
 		AF5DBD2612BD25920038295F /* telephone.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5DBD1F12BD25920038295F /* telephone.png */; };
 		AF5DBD2E12BD25BC0038295F /* ClintCall.aiff in Resources */ = {isa = PBXBuildFile; fileRef = AF5DBD2A12BD25BC0038295F /* ClintCall.aiff */; };
 		AF5DBD2F12BD25BC0038295F /* LeezaCall.aiff in Resources */ = {isa = PBXBuildFile; fileRef = AF5DBD2B12BD25BC0038295F /* LeezaCall.aiff */; };
@@ -59,6 +56,13 @@
 		AF8B653E12B71F4A00E0C7E4 /* CCCBuddyRepository.h in Headers */ = {isa = PBXBuildFile; fileRef = AF8B653D12B71F4A00E0C7E4 /* CCCBuddyRepository.h */; };
 		AF8B654A12B7226000E0C7E4 /* CCCChatBuddy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8B62F612B5860200E0C7E4 /* CCCChatBuddy.m */; };
 		AF8B654B12B7226200E0C7E4 /* CCCChatBuddy.h in Headers */ = {isa = PBXBuildFile; fileRef = AF8B62F512B5860200E0C7E4 /* CCCChatBuddy.h */; };
+		AFD3BF9A12BD7EB2009752CA /* CCCBuddySelectorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */; };
+		AFD3BFA512BD7FED009752CA /* Clint.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD3BFA212BD7FED009752CA /* Clint.png */; };
+		AFD3BFA612BD7FED009752CA /* Leeza.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD3BFA312BD7FED009752CA /* Leeza.png */; };
+		AFD3BFA712BD7FED009752CA /* Stuart.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD3BFA412BD7FED009752CA /* Stuart.png */; };
+		AFD3C08612BD9AC2009752CA /* StuartLabel.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD3C08512BD9AC2009752CA /* StuartLabel.png */; };
+		AFD3C08E12BD9D53009752CA /* ClintLabel.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD3C08C12BD9D53009752CA /* ClintLabel.png */; };
+		AFD3C08F12BD9D53009752CA /* LeezaLabel.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD3C08D12BD9D53009752CA /* LeezaLabel.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,11 +120,8 @@
 		AF5DBD0F12BD22C00038295F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		AF5DBD1112BD22C00038295F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AF5DBD1912BD25920038295F /* CallScreen1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CallScreen1.png; sourceTree = "<group>"; };
-		AF5DBD1A12BD25920038295F /* Clint.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Clint.tiff; sourceTree = "<group>"; };
 		AF5DBD1B12BD25920038295F /* Jinx-backdrop-landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Jinx-backdrop-landscape.png"; sourceTree = "<group>"; };
 		AF5DBD1C12BD25920038295F /* JinxBubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JinxBubble.png; sourceTree = "<group>"; };
-		AF5DBD1D12BD25920038295F /* Leeza.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Leeza.tiff; sourceTree = "<group>"; };
-		AF5DBD1E12BD25920038295F /* Stuart.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Stuart.tiff; sourceTree = "<group>"; };
 		AF5DBD1F12BD25920038295F /* telephone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = telephone.png; sourceTree = "<group>"; };
 		AF5DBD2A12BD25BC0038295F /* ClintCall.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = ClintCall.aiff; sourceTree = "<group>"; };
 		AF5DBD2B12BD25BC0038295F /* LeezaCall.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = LeezaCall.aiff; sourceTree = "<group>"; };
@@ -146,6 +147,14 @@
 		AF8B653712B71F1400E0C7E4 /* CCCBasicChatRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCBasicChatRepository.h; sourceTree = "<group>"; };
 		AF8B653812B71F1400E0C7E4 /* CCCBasicChatRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCBasicChatRepository.m; sourceTree = "<group>"; };
 		AF8B653D12B71F4A00E0C7E4 /* CCCBuddyRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCBuddyRepository.h; sourceTree = "<group>"; };
+		AFD3BF9812BD7EB2009752CA /* CCCBuddySelectorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCBuddySelectorCell.h; sourceTree = "<group>"; };
+		AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCBuddySelectorCell.m; sourceTree = "<group>"; };
+		AFD3BFA212BD7FED009752CA /* Clint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Clint.png; sourceTree = "<group>"; };
+		AFD3BFA312BD7FED009752CA /* Leeza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Leeza.png; sourceTree = "<group>"; };
+		AFD3BFA412BD7FED009752CA /* Stuart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Stuart.png; sourceTree = "<group>"; };
+		AFD3C08512BD9AC2009752CA /* StuartLabel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StuartLabel.png; sourceTree = "<group>"; };
+		AFD3C08C12BD9D53009752CA /* ClintLabel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ClintLabel.png; sourceTree = "<group>"; };
+		AFD3C08D12BD9D53009752CA /* LeezaLabel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LeezaLabel.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +192,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AFD3BF9612BD7E69009752CA /* UI */,
 				AF5DBCFB12BD22310038295F /* Audio */,
 				AF5DBCE312BD22010038295F /* Headers */,
 				AF8B653C12B71F2E00E0C7E4 /* Protocols */,
@@ -316,12 +326,15 @@
 		AF8B62C512B55D6900E0C7E4 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				AFD3C08C12BD9D53009752CA /* ClintLabel.png */,
+				AFD3C08D12BD9D53009752CA /* LeezaLabel.png */,
+				AFD3C08512BD9AC2009752CA /* StuartLabel.png */,
+				AFD3BFA212BD7FED009752CA /* Clint.png */,
+				AFD3BFA312BD7FED009752CA /* Leeza.png */,
+				AFD3BFA412BD7FED009752CA /* Stuart.png */,
 				AF5DBD1912BD25920038295F /* CallScreen1.png */,
-				AF5DBD1A12BD25920038295F /* Clint.tiff */,
 				AF5DBD1B12BD25920038295F /* Jinx-backdrop-landscape.png */,
 				AF5DBD1C12BD25920038295F /* JinxBubble.png */,
-				AF5DBD1D12BD25920038295F /* Leeza.tiff */,
-				AF5DBD1E12BD25920038295F /* Stuart.tiff */,
 				AF5DBD1F12BD25920038295F /* telephone.png */,
 				AF8B638C12B5A66500E0C7E4 /* Jinx-backdrop.png */,
 				AF8B638812B5A4FF00E0C7E4 /* Default.png */,
@@ -337,6 +350,15 @@
 				AF8B653D12B71F4A00E0C7E4 /* CCCBuddyRepository.h */,
 			);
 			name = Protocols;
+			sourceTree = "<group>";
+		};
+		AFD3BF9612BD7E69009752CA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AFD3BF9812BD7EB2009752CA /* CCCBuddySelectorCell.h */,
+				AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,17 +480,20 @@
 				AF8B638912B5A4FF00E0C7E4 /* Default.png in Resources */,
 				AF8B638D12B5A66500E0C7E4 /* Jinx-backdrop.png in Resources */,
 				AF5DBD2012BD25920038295F /* CallScreen1.png in Resources */,
-				AF5DBD2112BD25920038295F /* Clint.tiff in Resources */,
 				AF5DBD2212BD25920038295F /* Jinx-backdrop-landscape.png in Resources */,
 				AF5DBD2312BD25920038295F /* JinxBubble.png in Resources */,
-				AF5DBD2412BD25920038295F /* Leeza.tiff in Resources */,
-				AF5DBD2512BD25920038295F /* Stuart.tiff in Resources */,
 				AF5DBD2612BD25920038295F /* telephone.png in Resources */,
 				AF5DBD2E12BD25BC0038295F /* ClintCall.aiff in Resources */,
 				AF5DBD2F12BD25BC0038295F /* LeezaCall.aiff in Resources */,
 				AF5DBD3012BD25BC0038295F /* ringout.wav in Resources */,
 				AF5DBD3112BD25BC0038295F /* StuartCall.aiff in Resources */,
 				AF5DBD4E12BD2BE80038295F /* CCCCallScreen.xib in Resources */,
+				AFD3BFA512BD7FED009752CA /* Clint.png in Resources */,
+				AFD3BFA612BD7FED009752CA /* Leeza.png in Resources */,
+				AFD3BFA712BD7FED009752CA /* Stuart.png in Resources */,
+				AFD3C08612BD9AC2009752CA /* StuartLabel.png in Resources */,
+				AFD3C08E12BD9D53009752CA /* ClintLabel.png in Resources */,
+				AFD3C08F12BD9D53009752CA /* LeezaLabel.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +532,7 @@
 				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
 				AF8B629512B557A300E0C7E4 /* CCCChatViewController.m in Sources */,
 				AF5DBCFE12BD227B0038295F /* CCCCallScreen.m in Sources */,
+				AFD3BF9A12BD7EB2009752CA /* CCCBuddySelectorCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
