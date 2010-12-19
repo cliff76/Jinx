@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RootViewController : UITableViewController <UITableViewDelegate, UIScrollViewDelegate> {
+@interface RootViewController : UITableViewController <UITableViewDelegate> {
 	NSArray *buddyList;
 	UIImageView *backgroundImage;
 	UIImageView *backgroundImageLandscape;

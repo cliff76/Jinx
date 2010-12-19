@@ -63,6 +63,13 @@
 		AFD3C08612BD9AC2009752CA /* StuartLabel.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD3C08512BD9AC2009752CA /* StuartLabel.png */; };
 		AFD3C08E12BD9D53009752CA /* ClintLabel.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD3C08C12BD9D53009752CA /* ClintLabel.png */; };
 		AFD3C08F12BD9D53009752CA /* LeezaLabel.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD3C08D12BD9D53009752CA /* LeezaLabel.png */; };
+		AFD3C14F12BDB595009752CA /* CallScreen2.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD3C14E12BDB595009752CA /* CallScreen2.png */; };
+		AFD3C15212BDB71B009752CA /* BackgroundRotation.h in Headers */ = {isa = PBXBuildFile; fileRef = AFD3C15012BDB71B009752CA /* BackgroundRotation.h */; };
+		AFD3C15312BDB71B009752CA /* BackgroundRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD3C15112BDB71B009752CA /* BackgroundRotation.m */; };
+		AFD3C16A12BDBC86009752CA /* ClintAvatar.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD3C16712BDBC86009752CA /* ClintAvatar.png */; };
+		AFD3C16B12BDBC86009752CA /* LeezaAvatar.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD3C16812BDBC86009752CA /* LeezaAvatar.png */; };
+		AFD3C16C12BDBC86009752CA /* StuartAvatar.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD3C16912BDBC86009752CA /* StuartAvatar.png */; };
+		AFD3C16E12BDBE21009752CA /* YouAvatar.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD3C16D12BDBE21009752CA /* YouAvatar.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +162,13 @@
 		AFD3C08512BD9AC2009752CA /* StuartLabel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StuartLabel.png; sourceTree = "<group>"; };
 		AFD3C08C12BD9D53009752CA /* ClintLabel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ClintLabel.png; sourceTree = "<group>"; };
 		AFD3C08D12BD9D53009752CA /* LeezaLabel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LeezaLabel.png; sourceTree = "<group>"; };
+		AFD3C14E12BDB595009752CA /* CallScreen2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CallScreen2.png; sourceTree = "<group>"; };
+		AFD3C15012BDB71B009752CA /* BackgroundRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundRotation.h; sourceTree = "<group>"; };
+		AFD3C15112BDB71B009752CA /* BackgroundRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundRotation.m; sourceTree = "<group>"; };
+		AFD3C16712BDBC86009752CA /* ClintAvatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ClintAvatar.png; sourceTree = "<group>"; };
+		AFD3C16812BDBC86009752CA /* LeezaAvatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LeezaAvatar.png; sourceTree = "<group>"; };
+		AFD3C16912BDBC86009752CA /* StuartAvatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StuartAvatar.png; sourceTree = "<group>"; };
+		AFD3C16D12BDBE21009752CA /* YouAvatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YouAvatar.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -326,6 +340,11 @@
 		AF8B62C512B55D6900E0C7E4 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				AFD3C16D12BDBE21009752CA /* YouAvatar.png */,
+				AFD3C16712BDBC86009752CA /* ClintAvatar.png */,
+				AFD3C16812BDBC86009752CA /* LeezaAvatar.png */,
+				AFD3C16912BDBC86009752CA /* StuartAvatar.png */,
+				AFD3C14E12BDB595009752CA /* CallScreen2.png */,
 				AFD3C08C12BD9D53009752CA /* ClintLabel.png */,
 				AFD3C08D12BD9D53009752CA /* LeezaLabel.png */,
 				AFD3C08512BD9AC2009752CA /* StuartLabel.png */,
@@ -357,6 +376,8 @@
 			children = (
 				AFD3BF9812BD7EB2009752CA /* CCCBuddySelectorCell.h */,
 				AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */,
+				AFD3C15012BDB71B009752CA /* BackgroundRotation.h */,
+				AFD3C15112BDB71B009752CA /* BackgroundRotation.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -379,6 +400,7 @@
 				AF5DBCF512BD22250038295F /* CCCAudioSupport.h in Headers */,
 				AF5DBCF912BD22250038295F /* JinxApplicationGlobal.h in Headers */,
 				AF5DBCFA12BD22250038295F /* JinxNotifications.h in Headers */,
+				AFD3C15212BDB71B009752CA /* BackgroundRotation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +516,11 @@
 				AFD3C08612BD9AC2009752CA /* StuartLabel.png in Resources */,
 				AFD3C08E12BD9D53009752CA /* ClintLabel.png in Resources */,
 				AFD3C08F12BD9D53009752CA /* LeezaLabel.png in Resources */,
+				AFD3C14F12BDB595009752CA /* CallScreen2.png in Resources */,
+				AFD3C16A12BDBC86009752CA /* ClintAvatar.png in Resources */,
+				AFD3C16B12BDBC86009752CA /* LeezaAvatar.png in Resources */,
+				AFD3C16C12BDBC86009752CA /* StuartAvatar.png in Resources */,
+				AFD3C16E12BDBE21009752CA /* YouAvatar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +574,7 @@
 				AF5DBCF112BD22250038295F /* CCCAudioFileReader.m in Sources */,
 				AF5DBCF312BD22250038295F /* CCCAudioPlayer.m in Sources */,
 				AF5DBCF612BD22250038295F /* CCCAudioSupport.m in Sources */,
+				AFD3C15312BDB71B009752CA /* BackgroundRotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

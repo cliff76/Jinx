@@ -9,6 +9,7 @@
 #import "CCCCallScreen.h"
 #import "CCCAudioPlayer.h"
 #import "CCCAudioFileReader.h"
+#import "BackgroundRotation.h"
 
 @interface CCCCallScreen (PrivateMethods)
 
@@ -17,6 +18,7 @@
 @end
 
 @implementation CCCCallScreen
+@synthesize backgroundImage, backgroundImageLandscape, buddyLabel;
 
 - (id) initWithBuddy:(NSString*)aChatBuddy
 {
@@ -43,6 +45,22 @@
 }
 */
 
+#pragma mark -
+#pragma mark Orientation Methods
+
+-(void) updateView
+{
+	[[[[BackgroundRotation alloc] initWithBackgroundsForPortrait:backgroundImage andLandscape:backgroundImageLandscape] autorelease] updateViews];
+}
+
+- (void)orientationChanged:(NSNotification *)notification
+{
+    // We must add a delay here, otherwise we'll swap in the new view
+	// too quickly and we'll get an animation glitch
+    [self performSelector:@selector(updateView) withObject:nil afterDelay:0];
+}
+
+#pragma mark -
 -(void) playNextFromPlaylist
 {
 	if (cancel) {
@@ -69,11 +87,19 @@
 	[player release];
 	player = nil;
 }
+#define ImageAvatarNameForBuddy(buddyName) ([NSString stringWithFormat:@"%@Avatar.png", buddyName])
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-	[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     [super viewDidLoad];
+	self.buddyLabel.text = chatBuddy;
+	UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:ImageAvatarNameForBuddy(chatBuddy)]];
+	imageView.frame = CGRectMake(50, 264, 125, 125);
+	[self.view addSubview:imageView];
+	[imageView release];
+	[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:)
+												 name:UIDeviceOrientationDidChangeNotification object:nil];
 	[self playNextFromPlaylist];
 }
 
@@ -105,6 +131,7 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
 }
 
 

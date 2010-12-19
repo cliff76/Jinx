@@ -11,6 +11,7 @@
 #import "CCCChatViewController.h"
 #import "CCCBuddySelectorCell.h"
 #import "JinxApplicationGlobal.h"
+#import "BackgroundRotation.h"
 
 @implementation RootViewController
 @synthesize buddyList, backgroundImage, backgroundImageLandscape;
@@ -20,40 +21,7 @@
 
 -(void) updateView
 {
-	CGFloat rotation = 0.0f;
-	BOOL isLandscape = NO;
-	switch ([UIDevice currentDevice].orientation) {
-		case UIDeviceOrientationLandscapeLeft:
-			rotation = 0.0;
-			isLandscape = YES;
-			break;
-		case UIDeviceOrientationLandscapeRight:
-			rotation = 180.0f;
-			isLandscape = YES;
-			break;
-		default:
-			break;
-	}
-	if (isLandscape) {
-		[UIView beginAnimations:@"switch-background" context:nil];
-		backgroundImage.alpha = 0.0f;
-		backgroundImageLandscape.alpha = 1.0f;
-		backgroundImageLandscape.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(rotation));
-		[UIView commitAnimations];
-	} else {
-		[UIView beginAnimations:@"switch-background" context:nil];
-		backgroundImage.alpha = 1.0f;
-		backgroundImageLandscape.alpha = 0.0f;
-		if( [UIDevice currentDevice].orientation == UIDeviceOrientationPortraitUpsideDown ) {
-			backgroundImage.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(-180.0f));
-			backgroundImage.frame = CGRectMake(0.0f, 0.0f, 320.0f, 460.0f);
-		} else {
-			backgroundImage.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(0.0f));
-			backgroundImage.frame = CGRectMake(0.0f, 20.0f, 320.0f, 460.0f);
-		}
-
-		[UIView commitAnimations];
-	}
+	[[[[BackgroundRotation alloc] initWithBackgroundsForPortrait:backgroundImage andLandscape:backgroundImageLandscape] autorelease] updateViews];
 }
 
 - (void)orientationChanged:(NSNotification *)notification
@@ -83,18 +51,12 @@
 	[self.tableView reloadData];
 	[self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:[row intValue] inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
 }
-- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
-{
-//	self.tableView.delegate = nil;
-//	[self performSelector:@selector(scrollTo:) withObject:[NSNumber numberWithInt:1] afterDelay:1.0];
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 	[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:)
 												 name:UIDeviceOrientationDidChangeNotification object:nil];
-	self.tableView.delegate = self;
 	[self performSelector:@selector(scrollTo:) withObject:[NSNumber numberWithInt:2] afterDelay:0.0];
 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.

@@ -14,6 +14,13 @@
 	NSMutableArray *audioPlayList;
 	CCCAudioPlayer *player;
 	BOOL cancel;
+	UIImageView *backgroundImage;
+	UIImageView *backgroundImageLandscape;
+	UILabel *buddyLabel;
 }
+
+@property (nonatomic, retain) IBOutlet UIImageView *backgroundImage;
+@property (nonatomic, retain) IBOutlet UIImageView *backgroundImageLandscape;
+@property (nonatomic, retain) IBOutlet UILabel *buddyLabel;
 
 @end
