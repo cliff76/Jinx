@@ -42,7 +42,7 @@
 				<int key="NSvFlags">274</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<object class="IBUIImageView" id="476462278">
+					<object class="IBUIImageView" id="1062500762">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">256</int>
 						<string key="NSFrame">{{0, -10}, {320, 480}}</string>
@@ -55,34 +55,6 @@
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">CallScreen2.png</string>
-						</object>
-					</object>
-					<object class="IBUIImageView" id="231390586">
-						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">256</int>
-						<string key="NSFrame">{{147, 108}, {90, 90}}</string>
-						<reference key="NSSuperview" ref="191373211"/>
-						<bool key="IBUIOpaque">NO</bool>
-						<bool key="IBUIClipsSubviews">YES</bool>
-						<bool key="IBUIMultipleTouchEnabled">YES</bool>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<object class="NSCustomResource" key="IBUIImage" id="378925253">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">YouAvatar.png</string>
-						</object>
-					</object>
-					<object class="IBUIImageView" id="1064579420">
-						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">256</int>
-						<string key="NSFrame">{{25, 254}, {100, 100}}</string>
-						<reference key="NSSuperview" ref="191373211"/>
-						<bool key="IBUIOpaque">NO</bool>
-						<bool key="IBUIClipsSubviews">YES</bool>
-						<bool key="IBUIMultipleTouchEnabled">YES</bool>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<object class="NSCustomResource" key="IBUIImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">ClintAvatar.png</string>
 						</object>
 					</object>
 					<object class="IBUIImageView" id="196988236">
@@ -100,7 +72,7 @@
 							<string key="NSResourceName">CallScreen1.png</string>
 						</object>
 					</object>
-					<object class="IBUIImageView" id="168964851">
+					<object class="IBUIImageView" id="327910186">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">256</int>
 						<string key="NSFrame">{{169, 139}, {100, 100}}</string>
@@ -109,7 +81,10 @@
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<reference key="IBUIImage" ref="378925253"/>
+						<object class="NSCustomResource" key="IBUIImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">YouAvatar.png</string>
+						</object>
 					</object>
 					<object class="IBUILabel" id="630958543">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -182,7 +157,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">backgroundImageLandscape</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="476462278"/>
+						<reference key="destination" ref="1062500762"/>
 					</object>
 					<int key="connectionID">10</int>
 				</object>
@@ -202,6 +177,22 @@
 					</object>
 					<int key="connectionID">16</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">youAvatar</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="327910186"/>
+					</object>
+					<int key="connectionID">17</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">youLabel</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="630958543"/>
+					</object>
+					<int key="connectionID">18</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -220,10 +211,8 @@
 							<reference ref="630958543"/>
 							<reference ref="222041002"/>
 							<reference ref="196988236"/>
-							<reference ref="168964851"/>
-							<reference ref="476462278"/>
-							<reference ref="231390586"/>
-							<reference ref="1064579420"/>
+							<reference ref="327910186"/>
+							<reference ref="1062500762"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -255,22 +244,12 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">13</int>
-						<reference key="object" ref="168964851"/>
+						<reference key="object" ref="327910186"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">9</int>
-						<reference key="object" ref="476462278"/>
-						<reference key="parent" ref="191373211"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">14</int>
-						<reference key="object" ref="231390586"/>
-						<reference key="parent" ref="191373211"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">15</int>
-						<reference key="object" ref="1064579420"/>
+						<reference key="object" ref="1062500762"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</object>
@@ -284,8 +263,6 @@
 					<string>1.IBEditorWindowLastContentRect</string>
 					<string>1.IBPluginDependency</string>
 					<string>13.IBViewBoundsToFrameTransform</string>
-					<string>14.IBViewBoundsToFrameTransform</string>
-					<string>15.IBViewBoundsToFrameTransform</string>
 					<string>4.IBViewBoundsToFrameTransform</string>
 					<string>6.IBPluginDependency</string>
 					<string>6.IBViewBoundsToFrameTransform</string>
@@ -301,12 +278,6 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">AUMpAABDCwAAA</bytes>
-					</object>
-					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">AUMTAABC2AAAA</bytes>
-					</object>
-					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">AUHIAABDfgAAA</bytes>
 					</object>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAAAAAAAAw9kAAA</bytes>
@@ -340,7 +311,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">16</int>
+			<int key="maxID">19</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -355,10 +326,14 @@
 							<string>backgroundImage</string>
 							<string>backgroundImageLandscape</string>
 							<string>buddyLabel</string>
+							<string>youAvatar</string>
+							<string>youLabel</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UIImageView</string>
+							<string>UIImageView</string>
+							<string>UILabel</string>
 							<string>UIImageView</string>
 							<string>UILabel</string>
 						</object>
@@ -370,6 +345,8 @@
 							<string>backgroundImage</string>
 							<string>backgroundImageLandscape</string>
 							<string>buddyLabel</string>
+							<string>youAvatar</string>
+							<string>youLabel</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -383,6 +360,14 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">buddyLabel</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">youAvatar</string>
+								<string key="candidateClassName">UIImageView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">youLabel</string>
 								<string key="candidateClassName">UILabel</string>
 							</object>
 						</object>
@@ -595,14 +580,12 @@
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>CallScreen1.png</string>
 				<string>CallScreen2.png</string>
-				<string>ClintAvatar.png</string>
 				<string>YouAvatar.png</string>
 			</object>
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>{320, 480}</string>
 				<string>{320, 480}</string>
-				<string>{150, 150}</string>
 				<string>{150, 150}</string>
 			</object>
 		</object>

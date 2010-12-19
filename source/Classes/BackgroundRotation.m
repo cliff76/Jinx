@@ -30,6 +30,11 @@
 
 -(void) updateViews
 {
+	[self updateViewsWithPortraitAnimations:nil andLandscapeAnimations:nil];
+}
+
+-(void) updateViewsWithPortraitAnimations:(void(^)(void))portraitAnimations andLandscapeAnimations: (void(^)(void))landscapeAnimations
+{
 	CGFloat rotation = 0.0f;
 	BOOL isLandscape = NO;
 	switch ([UIDevice currentDevice].orientation) {
@@ -49,9 +54,15 @@
 		backgroundImage.alpha = 0.0f;
 		backgroundImageLandscape.alpha = 1.0f;
 		backgroundImageLandscape.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(rotation));
+		if (landscapeAnimations) {
+			landscapeAnimations();
+		}
 		[UIView commitAnimations];
 	} else {
 		[UIView beginAnimations:@"switch-background" context:nil];
+		if (portraitAnimations) {
+			portraitAnimations();
+		}
 		backgroundImage.alpha = 1.0f;
 		backgroundImageLandscape.alpha = 0.0f;
 		if( [UIDevice currentDevice].orientation == UIDeviceOrientationPortraitUpsideDown ) {

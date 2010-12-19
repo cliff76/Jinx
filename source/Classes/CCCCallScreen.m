@@ -10,6 +10,7 @@
 #import "CCCAudioPlayer.h"
 #import "CCCAudioFileReader.h"
 #import "BackgroundRotation.h"
+#import "JinxApplicationGlobal.h"
 
 @interface CCCCallScreen (PrivateMethods)
 
@@ -18,7 +19,7 @@
 @end
 
 @implementation CCCCallScreen
-@synthesize backgroundImage, backgroundImageLandscape, buddyLabel;
+@synthesize backgroundImage, backgroundImageLandscape, youAvatar, youLabel, buddyAvatar, buddyLabel;
 
 - (id) initWithBuddy:(NSString*)aChatBuddy
 {
@@ -47,10 +48,49 @@
 
 #pragma mark -
 #pragma mark Orientation Methods
+-(void) layoutViewComponentsPortrait
+{
+	youAvatar.frame = CGRectMake(169, 139, 100, 100);
+	youAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(0));
+	youLabel.frame = CGRectMake(40, 139, 76, 37);
+	youLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(0));
+	buddyAvatar.frame = CGRectMake(50, 264, 125, 125);
+	buddyAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(0));
+	buddyLabel.frame = CGRectMake(219, 271, 76, 37);
+	buddyLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(0));
+}
+
+-(void) layoutViewComponentsLandscape
+{
+	CGFloat angle = ([UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeLeft) ? 90.0f : -90.0f;
+	youAvatar.frame = CGRectMake(147, 108, 90, 90);
+	youAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+	youLabel.frame = CGRectMake(58, 100, 76, 37);
+	youLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+	buddyAvatar.frame = CGRectMake(25, 254, 100, 100);
+	buddyAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+	buddyLabel.frame = CGRectMake(170, 296, 76, 37);
+	buddyLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+}
 
 -(void) updateView
 {
-	[[[[BackgroundRotation alloc] initWithBackgroundsForPortrait:backgroundImage andLandscape:backgroundImageLandscape] autorelease] updateViews];
+	if (([UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeLeft) || ([UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeRight)) {
+		youLabel.text = chatBuddy;
+		buddyLabel.text = @"You";
+	}
+	else {
+		youLabel.text = @"You";
+		buddyLabel.text = chatBuddy;
+	}
+
+	[[[[BackgroundRotation alloc] initWithBackgroundsForPortrait:backgroundImage andLandscape:backgroundImageLandscape] autorelease] 
+	 updateViewsWithPortraitAnimations:^(void){
+		 [self layoutViewComponentsPortrait];
+	 } 
+	 andLandscapeAnimations:^(void){
+		 [self layoutViewComponentsLandscape];
+	 } ];
 }
 
 - (void)orientationChanged:(NSNotification *)notification
@@ -93,10 +133,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.buddyLabel.text = chatBuddy;
-	UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:ImageAvatarNameForBuddy(chatBuddy)]];
-	imageView.frame = CGRectMake(50, 264, 125, 125);
-	[self.view addSubview:imageView];
-	[imageView release];
+	buddyAvatar = [[UIImageView alloc] initWithImage:[UIImage imageNamed:ImageAvatarNameForBuddy(chatBuddy)]];
+	[self layoutViewComponentsPortrait];
+	[self.view addSubview:buddyAvatar];
+	[buddyAvatar release];
 	[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:)
 												 name:UIDeviceOrientationDidChangeNotification object:nil];
@@ -116,7 +156,7 @@
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 */
 

@@ -16,5 +16,6 @@
 
 - (id) initWithBackgroundsForPortrait:(UIImageView*)backgroundImage andLandscape:(UIImageView*)backgroundImageLandscape;
 -(void) updateViews;
+-(void) updateViewsWithPortraitAnimations:(void(^)(void))portraitAnimations andLandscapeAnimations: (void(^)(void))landscapeAnimations;
 
 @end
