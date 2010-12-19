@@ -43,7 +43,11 @@
 		replyType = @"arbitrary message";		
 	}
 	NSArray *potentialReplies = [replies objectForKey:replyType];
-	int nextReply = (++lastReply < [potentialReplies count]) ? lastReply : 0;
+//	int nextReply = (++lastReply < [potentialReplies count]) ? lastReply : 0;
+	int nextReply = (arc4random() % [potentialReplies count]);
+	while (nextReply == lastReply) {
+		nextReply = (arc4random() % [potentialReplies count]);
+	}
 	lastReply = nextReply;
 	return (potentialReplies && [potentialReplies count] > 0) ? [potentialReplies objectAtIndex:nextReply] : @"I have nothing to say.";
 }

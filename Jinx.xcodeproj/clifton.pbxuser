@@ -346,9 +346,9 @@
 	};
 	AF5DBCEC12BD22250038295F /* CCCCallScreen.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1160, 2535}}";
-			sepNavSelRange = "{2726, 0}";
-			sepNavVisRange = "{1577, 1488}";
+			sepNavIntBoundsRect = "{{0, 0}, {1143, 2678}}";
+			sepNavSelRange = "{5403, 0}";
+			sepNavVisRange = "{4709, 1034}";
 		};
 	};
 	AF5DBCEE12BD22250038295F /* JinxApplicationGlobal.h */ = {
@@ -450,7 +450,7 @@
 		fRef = AF8B625512B5144500E0C7E4 /* CCCChatViewController.m */;
 		name = "CCCChatViewController.m: 411";
 		rLen = 76;
-		rLoc = 14851;
+		rLoc = 14932;
 		rType = 0;
 		vrLen = 858;
 		vrLoc = 14211;
@@ -587,16 +587,16 @@
 		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{6893, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{6944, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{6994, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 15069}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1143, 5512}}";
-			sepNavSelRange = "{12969, 0}";
-			sepNavVisRange = "{12294, 1325}";
+			sepNavIntBoundsRect = "{{0, 0}, {1143, 5642}}";
+			sepNavSelRange = "{6808, 0}";
+			sepNavVisRange = "{6131, 1083}";
 		};
 	};
 	AF8B629212B557A300E0C7E4 /* CCCChatViewController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1143, 455}}";
 			sepNavSelRange = "{318, 0}";
-			sepNavVisRange = "{0, 1150}";
+			sepNavVisRange = "{0, 1151}";
 		};
 	};
 	AF8B629312B557A300E0C7E4 /* CCCChatViewController.m */ = {
@@ -623,9 +623,9 @@
 	};
 	AF8B62F612B5860200E0C7E4 /* CCCChatBuddy.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1177, 728}}";
-			sepNavSelRange = "{359, 0}";
-			sepNavVisRange = "{34, 847}";
+			sepNavIntBoundsRect = "{{0, 0}, {1143, 728}}";
+			sepNavSelRange = "{1121, 0}";
+			sepNavVisRange = "{383, 990}";
 		};
 	};
 	AF8B638112B59FC800E0C7E4 /* PBXBookmark */ = {
@@ -664,13 +664,13 @@
 		ignoreCount = 0;
 		lineNumber = 123;
 		location = Jinx;
-		modificationTime = 314431143.142379;
+		modificationTime = 314432960.51999;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
 	AF8B651B12B71E4300E0C7E4 /* CCCBasicChatRepositoryTest.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1177, 490}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1143, 422}}";
 			sepNavSelRange = "{357, 0}";
 			sepNavVisRange = "{0, 382}";
 		};
@@ -684,9 +684,9 @@
 	};
 	AF8B653812B71F1400E0C7E4 /* CCCBasicChatRepository.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1251, 490}}";
-			sepNavSelRange = "{796, 0}";
-			sepNavVisRange = "{0, 847}";
+			sepNavIntBoundsRect = "{{0, 0}, {1160, 520}}";
+			sepNavSelRange = "{1655, 0}";
+			sepNavVisRange = "{0, 2227}";
 		};
 	};
 	AF8B653D12B71F4A00E0C7E4 /* CCCBuddyRepository.h */ = {
@@ -987,7 +987,7 @@
 		fRef = AF8B625512B5144500E0C7E4 /* CCCChatViewController.m */;
 		name = "CCCChatViewController.m: 305";
 		rLen = 71;
-		rLoc = 10858;
+		rLoc = 10939;
 		rType = 0;
 		vrLen = 1355;
 		vrLoc = 10779;
@@ -1749,7 +1749,7 @@
 		fRef = AF8B625512B5144500E0C7E4 /* CCCChatViewController.m */;
 		name = "CCCChatViewController.m: 337";
 		rLen = 147;
-		rLoc = 12201;
+		rLoc = 12282;
 		rType = 0;
 		vrLen = 1538;
 		vrLoc = 11425;
@@ -2183,7 +2183,7 @@
 		fRef = AF8B625512B5144500E0C7E4 /* CCCChatViewController.m */;
 		name = "CCCChatViewController.m: 356";
 		rLen = 0;
-		rLoc = 13026;
+		rLoc = 13107;
 		rType = 0;
 		vrLen = 1325;
 		vrLoc = 12351;

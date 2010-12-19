@@ -191,6 +191,10 @@ static NSString *CellIdentifier = @"Cell";
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	isInEditMode = NO;
+	[messageToSend resignFirstResponder];
+	[self resizeView];
+	
     // Navigation logic may go here. Create and push another view controller.
 	/*
 	 <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
