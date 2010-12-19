@@ -11,7 +11,8 @@
 #import "CCCAudioFileReader.h"
 #import "BackgroundRotation.h"
 #import "JinxApplicationGlobal.h"
-
+#define RANDOM_SEED() srandom(time(NULL))
+#define RANDOM_INT(__MIN__, __MAX__) ((__MIN__) + random() % ((__MAX__+1) - (__MIN__)))
 @interface CCCCallScreen (PrivateMethods)
 
 -(void) stopPhoneCall;
@@ -26,11 +27,12 @@
 	self = [super init];
 	if (self != nil) {
 		chatBuddy = [aChatBuddy retain];
+		int callnum = RANDOM_INT(1,4);
 		audioPlayList = [[NSMutableArray alloc] initWithObjects:
 						 @"ringout", @"wav",
 						 @"ringout", @"wav",
 						 @"ringout", @"wav",
-						 [NSString stringWithFormat:@"%@Call", chatBuddy], @"aiff",
+						 [NSString stringWithFormat:@"%@Call%i", chatBuddy,callnum], @"aiff",
 						 nil];
 	}
 	return self;
