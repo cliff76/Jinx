@@ -43,11 +43,15 @@
 		replyType = @"arbitrary message";		
 	}
 	NSArray *potentialReplies = [replies objectForKey:replyType];
-//	int nextReply = (++lastReply < [potentialReplies count]) ? lastReply : 0;
+	//The simulator has an issue with modulo of the count into the random number, only during unit tests.
+#if TARGET_IPHONE_SIMULATOR
+	int nextReply = (++lastReply < [potentialReplies count]) ? lastReply : 0;
+#else
 	int nextReply = (arc4random() % [potentialReplies count]);
 	while (nextReply == lastReply) {
 		nextReply = (arc4random() % [potentialReplies count]);
 	}
+#endif
 	lastReply = nextReply;
 	return (potentialReplies && [potentialReplies count] > 0) ? [potentialReplies objectAtIndex:nextReply] : @"I have nothing to say.";
 }

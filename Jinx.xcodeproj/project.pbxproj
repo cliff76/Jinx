@@ -87,11 +87,11 @@
 			remoteGlobalIDString = AF8B614412B4697C00E0C7E4;
 			remoteInfo = "Jinx-Core";
 		};
-		AF8B652B12B71ECE00E0C7E4 /* PBXContainerItemProxy */ = {
+		AFD3C2C512BE85A6009752CA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AF8B615112B469CA00E0C7E4;
+			remoteGlobalIDString = AF8B615112B469CA00E0C7E4 /* UnitTests */;
 			remoteInfo = UnitTests;
 		};
 /* End PBXContainerItemProxy section */
@@ -419,7 +419,7 @@
 			);
 			dependencies = (
 				AF8B614B12B469AE00E0C7E4 /* PBXTargetDependency */,
-				AF8B652C12B71ECE00E0C7E4 /* PBXTargetDependency */,
+				AFD3C2C612BE85A6009752CA /* PBXTargetDependency */,
 			);
 			name = Jinx;
 			productName = Jinx;
@@ -601,10 +601,10 @@
 			target = AF8B614412B4697C00E0C7E4 /* Jinx-Core */;
 			targetProxy = AF8B618D12B46C1500E0C7E4 /* PBXContainerItemProxy */;
 		};
-		AF8B652C12B71ECE00E0C7E4 /* PBXTargetDependency */ = {
+		AFD3C2C612BE85A6009752CA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AF8B615112B469CA00E0C7E4 /* UnitTests */;
-			targetProxy = AF8B652B12B71ECE00E0C7E4 /* PBXContainerItemProxy */;
+			targetProxy = AFD3C2C512BE85A6009752CA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

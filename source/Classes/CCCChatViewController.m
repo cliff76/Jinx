@@ -128,11 +128,10 @@ static NSString *CellIdentifier = @"Cell";
     [super viewDidAppear:animated];
 }
 
-/*
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
+	[self saveConversation];
 }
-*/
 
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -356,7 +355,6 @@ static NSString *CellIdentifier = @"Cell";
 }
 -(void)onCallButton:(id)sender
 {
-	DLog(@"Phone call...");
 	[self.navigationController pushViewController: [[CCCCallScreen alloc] initWithBuddy:chatBuddy.buddyName] animated:YES];
 }
 
@@ -364,26 +362,14 @@ static NSString *CellIdentifier = @"Cell";
 #pragma mark UITextField delegate methods
 - (BOOL)textFieldShouldReturn:(UITextField *)textField 
 {
-//	[self addMessage:[NSString stringWithFormat:@"You: %@", textField.text]];
 	[self sendMessageToBuddy:textField.text];
 	textField.text = @"";
-	//	[textField resignFirstResponder];
-	//	[UIView beginAnimations:nil context:NULL];
-	//    [UIView setAnimationDuration:0.3];	
-	//	toolbar.frame = CGRectMake(0, 372, 320, 44);
-	//	tbl.frame = CGRectMake(0, 0, 320, 372);	
-	//	[UIView commitAnimations];
 	return YES;
 }
 
 - (void)keyboardWillShow:(NSNotification *)notif {
 	isInEditMode = YES;
 	[self resizeView];
-//	[UIView beginAnimations:nil context:NULL];
-//    [UIView setAnimationDuration:0.3];	
-//	toolbar.frame = CGRectMake(0, 156, 320, 44);
-//	tableView.frame = CGRectMake(0, 0, 320, 156);	
-//	[UIView commitAnimations];
 	
 	if([messages count] > 0)
 	{
