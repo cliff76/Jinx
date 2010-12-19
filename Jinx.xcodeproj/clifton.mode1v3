@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>AFD3C34C12BE93A8009752CA</string>
+						<string>AFD3C37612BEA279009752CA</string>
 						<key>history</key>
 						<array>
 							<string>AFD3C24812BE7C03009752CA</string>
@@ -310,6 +310,7 @@
 								<string>AF8B615E12B46A2500E0C7E4</string>
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>AFD3BF9612BD7E69009752CA</string>
+								<string>AF5DBCFB12BD22310038295F</string>
 								<string>AF8B61A112B46DA300E0C7E4</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
@@ -321,14 +322,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>18</integer>
-									<integer>14</integer>
+									<integer>35</integer>
 									<integer>5</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 204}, {214, 695}}</string>
+							<string>{{0, 8}, {214, 695}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -367,7 +367,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>CCCCallScreen.m</string>
+								<string>CCCChatViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -375,11 +375,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>CCCCallScreen.m</string>
+										<string>CCCChatViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>AFD3C34B12BE93A8009752CA</string>
+										<string>AFD3C37512BEA279009752CA</string>
 										<key>history</key>
 										<array>
 											<string>AF8B61C812B4716700E0C7E4</string>
@@ -406,14 +406,15 @@
 											<string>AFD3C23C12BE7C03009752CA</string>
 											<string>AFD3C23F12BE7C03009752CA</string>
 											<string>AFD3C24012BE7C03009752CA</string>
-											<string>AFD3C24112BE7C03009752CA</string>
 											<string>AFD3C24312BE7C03009752CA</string>
-											<string>AFD3C29112BE80C0009752CA</string>
 											<string>AFD3C29212BE80C0009752CA</string>
 											<string>AFD3C29312BE80C0009752CA</string>
-											<string>AFD3C33C12BE9231009752CA</string>
 											<string>AFD3C33D12BE9231009752CA</string>
-											<string>AFD3C33E12BE9231009752CA</string>
+											<string>AFD3C37012BEA279009752CA</string>
+											<string>AFD3C37112BEA279009752CA</string>
+											<string>AFD3C37212BEA279009752CA</string>
+											<string>AFD3C37312BEA279009752CA</string>
+											<string>AFD3C37412BEA279009752CA</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -613,11 +614,11 @@
 	<array>
 		<string>AFD3C18112BDC2E5009752CA</string>
 		<string>AFD3C18212BDC2E5009752CA</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>AF8B611812B464C300E0C7E4</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>AFD3C24612BE7C03009752CA</string>
 		<string>/Users/clifton/dev/iphone/Jinx/Jinx.xcodeproj</string>
-		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>6 122 1440 754 0 0 1440 878 </string>
@@ -993,7 +994,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

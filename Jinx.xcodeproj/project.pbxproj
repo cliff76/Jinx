@@ -79,6 +79,10 @@
 		AFD3C33712BE8F98009752CA /* StuartCall2.aiff in Resources */ = {isa = PBXBuildFile; fileRef = AFD3C32B12BE8F98009752CA /* StuartCall2.aiff */; };
 		AFD3C33812BE8F98009752CA /* StuartCall3.aiff in Resources */ = {isa = PBXBuildFile; fileRef = AFD3C32C12BE8F98009752CA /* StuartCall3.aiff */; };
 		AFD3C33912BE8F98009752CA /* StuartCall4.aiff in Resources */ = {isa = PBXBuildFile; fileRef = AFD3C32D12BE8F98009752CA /* StuartCall4.aiff */; };
+		AFD3C35612BE9846009752CA /* outgoing-message-winxp.wav in Resources */ = {isa = PBXBuildFile; fileRef = AFD3C35212BE9837009752CA /* outgoing-message-winxp.wav */; };
+		AFD3C35712BE987A009752CA /* incoming-message-winxp.wav in Resources */ = {isa = PBXBuildFile; fileRef = AFD3C35312BE9837009752CA /* incoming-message-winxp.wav */; };
+		AFD3C35C12BE9CEF009752CA /* CCCSoundServices.h in Headers */ = {isa = PBXBuildFile; fileRef = AFD3C35A12BE9CEF009752CA /* CCCSoundServices.h */; };
+		AFD3C35D12BE9CEF009752CA /* CCCSoundServices.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD3C35B12BE9CEF009752CA /* CCCSoundServices.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,6 +191,10 @@
 		AFD3C32B12BE8F98009752CA /* StuartCall2.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = StuartCall2.aiff; sourceTree = "<group>"; };
 		AFD3C32C12BE8F98009752CA /* StuartCall3.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = StuartCall3.aiff; sourceTree = "<group>"; };
 		AFD3C32D12BE8F98009752CA /* StuartCall4.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = StuartCall4.aiff; sourceTree = "<group>"; };
+		AFD3C35212BE9837009752CA /* outgoing-message-winxp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "outgoing-message-winxp.wav"; sourceTree = "<group>"; };
+		AFD3C35312BE9837009752CA /* incoming-message-winxp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "incoming-message-winxp.wav"; sourceTree = "<group>"; };
+		AFD3C35A12BE9CEF009752CA /* CCCSoundServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCSoundServices.h; sourceTree = "<group>"; };
+		AFD3C35B12BE9CEF009752CA /* CCCSoundServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCSoundServices.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +290,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AFD3C35212BE9837009752CA /* outgoing-message-winxp.wav */,
+				AFD3C35312BE9837009752CA /* incoming-message-winxp.wav */,
 				AFD3C32212BE8F98009752CA /* ClintCall1.aiff */,
 				AFD3C32312BE8F98009752CA /* ClintCall2.aiff */,
 				AFD3C32412BE8F98009752CA /* ClintCall3.aiff */,
@@ -336,6 +346,8 @@
 				AF5DBCE812BD22250038295F /* CCCAudioSource.h */,
 				AF5DBCE912BD22250038295F /* CCCAudioSupport.h */,
 				AF5DBCEA12BD22250038295F /* CCCAudioSupport.m */,
+				AFD3C35A12BE9CEF009752CA /* CCCSoundServices.h */,
+				AFD3C35B12BE9CEF009752CA /* CCCSoundServices.m */,
 			);
 			name = Audio;
 			sourceTree = "<group>";
@@ -428,6 +440,7 @@
 				AF5DBCF912BD22250038295F /* JinxApplicationGlobal.h in Headers */,
 				AF5DBCFA12BD22250038295F /* JinxNotifications.h in Headers */,
 				AFD3C15212BDB71B009752CA /* BackgroundRotation.h in Headers */,
+				AFD3C35C12BE9CEF009752CA /* CCCSoundServices.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +570,8 @@
 				AFD3C33712BE8F98009752CA /* StuartCall2.aiff in Resources */,
 				AFD3C33812BE8F98009752CA /* StuartCall3.aiff in Resources */,
 				AFD3C33912BE8F98009752CA /* StuartCall4.aiff in Resources */,
+				AFD3C35612BE9846009752CA /* outgoing-message-winxp.wav in Resources */,
+				AFD3C35712BE987A009752CA /* incoming-message-winxp.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,6 +626,7 @@
 				AF5DBCF312BD22250038295F /* CCCAudioPlayer.m in Sources */,
 				AF5DBCF612BD22250038295F /* CCCAudioSupport.m in Sources */,
 				AFD3C15312BDB71B009752CA /* BackgroundRotation.m in Sources */,
+				AFD3C35D12BE9CEF009752CA /* CCCSoundServices.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

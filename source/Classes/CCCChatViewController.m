@@ -10,6 +10,7 @@
 #import "CCCChatBuddy.h"
 #import "CCCBasicChatRepository.h"
 #import "CCCCallScreen.h"
+#import "CCCSoundServices.h"
 
 #define kCCCBallonViewTag 1
 #define kCCCLabelTag 2
@@ -21,6 +22,7 @@ static NSString *CellIdentifier = @"Cell";
 -(UIView*) createMessageView:(CGRect)cellFrame;
 -(UITableViewCell*) createReusableTableCellForChatMessageView:(UIView*) chatMessageView;
 -(void) addRawMessage:(NSString*)raw toMessageView:(UIView*)messageView;
+-(void) removeLastMessageFromSpeaker: (NSString*)speaker;
 -(void) onMessageAdded;
 - (BOOL)textFieldShouldReturn:(UITextField *)textField;
 -(void) resizeView;
@@ -78,11 +80,23 @@ static NSString *CellIdentifier = @"Cell";
 	[self performSelectorOnMainThread:@selector(onMessagesUpdated) withObject:nil waitUntilDone:NO];
 }
 
+-(void) completeTheBuddyReply:(NSString*)aMessageToBuddy
+{
+	NSString *reply = [self.chatBuddy tellBuddy:aMessageToBuddy];
+	[self removeLastMessageFromSpeaker:chatBuddy.buddyName];
+	[self addMessage:[NSString stringWithFormat:@"%@: %@", chatBuddy.buddyName, reply]];
+}
+
+-(void) buddyReplyForMessage:(NSString*) aMessageToBuddy
+{
+	[self addMessage:[NSString stringWithFormat:@"%@: ...", chatBuddy.buddyName]];
+	[self performSelector:@selector(completeTheBuddyReply:) withObject:aMessageToBuddy afterDelay:1];
+}
+
 -(void) sendMessageToBuddy:(NSString*) aMessageToBuddy
 {
 	[self addMessage:[NSString stringWithFormat:@"You: %@", aMessageToBuddy]];
-	NSString *reply = [self.chatBuddy tellBuddy:aMessageToBuddy];
-	[self addMessage:[NSString stringWithFormat:@"%@: %@", chatBuddy.buddyName, reply]];
+	[self performSelector:@selector(buddyReplyForMessage:) withObject:aMessageToBuddy afterDelay:1];
 }
 
 -(void) removeLastMessageFromSpeaker: (NSString*)speaker
