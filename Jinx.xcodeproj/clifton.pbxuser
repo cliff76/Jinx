@@ -22,16 +22,16 @@
 	};
 	28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1143, 429}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1143, 404}}";
 			sepNavSelRange = "{239, 20}";
 			sepNavVisRange = "{0, 561}";
 		};
 	};
 	28C286E00D94DF7D0034E888 /* RootViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1153, 3107}}";
-			sepNavSelRange = "{3176, 0}";
-			sepNavVisRange = "{2356, 1179}";
+			sepNavIntBoundsRect = "{{0, 0}, {1143, 3198}}";
+			sepNavSelRange = "{7573, 0}";
+			sepNavVisRange = "{6537, 1058}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
@@ -373,7 +373,7 @@
 		ignoreCount = 0;
 		lineNumber = 51;
 		location = Jinx;
-		modificationTime = 314418357.569776;
+		modificationTime = 314418371.182527;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -569,16 +569,16 @@
 		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{6893, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{6944, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{6994, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 15069}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1143, 5551}}";
-			sepNavSelRange = "{12144, 147}";
-			sepNavVisRange = "{11368, 1538}";
+			sepNavIntBoundsRect = "{{0, 0}, {1143, 5746}}";
+			sepNavSelRange = "{14712, 15}";
+			sepNavVisRange = "{14002, 1002}";
 		};
 	};
 	AF8B629212B557A300E0C7E4 /* CCCChatViewController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1143, 455}}";
 			sepNavSelRange = "{318, 0}";
-			sepNavVisRange = "{0, 1156}";
+			sepNavVisRange = "{0, 1150}";
 		};
 	};
 	AF8B629312B557A300E0C7E4 /* CCCChatViewController.m */ = {
@@ -646,7 +646,7 @@
 		ignoreCount = 0;
 		lineNumber = 123;
 		location = Jinx;
-		modificationTime = 314418357.569733;
+		modificationTime = 314418371.182481;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};

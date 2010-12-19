@@ -237,6 +237,8 @@
 
 - (void)dealloc {
 	self.buddyList = nil;
+	[backgroundImage release];
+	[backgroundImageLandscape release];
     [super dealloc];
 }
 
