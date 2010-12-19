@@ -12,6 +12,7 @@
 #import "CCCCallScreen.h"
 #import "CCCSoundServices.h"
 
+#define YOU @"You"
 #define kCCCBallonViewTag 1
 #define kCCCLabelTag 2
 #define kCCCMessageTag 0
@@ -75,6 +76,12 @@ static NSString *CellIdentifier = @"Cell";
 
 - (void)addMessage:(NSString*) aNewMessage
 {
+	NSString *youInitialMessage = [YOU stringByAppendingString:@": ..."];
+	NSString *buddyInitialMessage = [chatBuddy.buddyName stringByAppendingString:@": ..."];
+	if (! [aNewMessage isEqualToString:youInitialMessage] && ! [aNewMessage isEqualToString:buddyInitialMessage])
+	{
+		DLog(@"Do chime...");
+	}
 	[messages addObject:aNewMessage];
 	//Need to ensure screen update is done on the Main Thread
 	[self performSelectorOnMainThread:@selector(onMessagesUpdated) withObject:nil waitUntilDone:NO];
@@ -95,7 +102,11 @@ static NSString *CellIdentifier = @"Cell";
 
 -(void) sendMessageToBuddy:(NSString*) aMessageToBuddy
 {
-	[self addMessage:[NSString stringWithFormat:@"You: %@", aMessageToBuddy]];
+	if(youWereTypingSomething) {
+		youWereTypingSomething = NO;
+		[self removeLastMessageFromSpeaker:YOU];
+	}
+	[self addMessage:[NSString stringWithFormat:@"%@: %@", YOU, aMessageToBuddy]];
 	[self performSelector:@selector(buddyReplyForMessage:) withObject:aMessageToBuddy afterDelay:1];
 }
 
@@ -374,6 +385,16 @@ static NSString *CellIdentifier = @"Cell";
 
 #pragma mark -
 #pragma mark UITextField delegate methods
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+	
+	if (! youWereTypingSomething && [textField.text isEqualToString:@""]) {
+		[self addMessage:[NSString stringWithFormat:@"%@: ...", YOU]];
+		youWereTypingSomething = YES;
+	}
+	return YES;
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField 
 {
 	[self sendMessageToBuddy:textField.text];
@@ -387,8 +408,7 @@ static NSString *CellIdentifier = @"Cell";
 	
 	if([messages count] > 0)
 	{
-		NSUInteger index = [messages count] - 1;
-		[tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+		[self performSelectorOnMainThread:@selector(onMessagesUpdated) withObject:nil waitUntilDone:NO];
 	}
 }
 

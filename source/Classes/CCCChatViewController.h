@@ -17,6 +17,7 @@
 	CCCChatBuddy *chatBuddy;
 	BOOL isShowingLandscape;
 	BOOL isInEditMode;
+	BOOL youWereTypingSomething;
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
