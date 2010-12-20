@@ -592,6 +592,9 @@
 			AFD3C5A012BF006C009752CA /* PBXTextBookmark */ = AFD3C5A012BF006C009752CA /* PBXTextBookmark */;
 			AFD3C5A112BF006C009752CA /* PBXTextBookmark */ = AFD3C5A112BF006C009752CA /* PBXTextBookmark */;
 			AFD3C5A212BF006C009752CA /* PBXTextBookmark */ = AFD3C5A212BF006C009752CA /* PBXTextBookmark */;
+			AFD3C5A712BF0176009752CA /* PBXTextBookmark */ = AFD3C5A712BF0176009752CA /* PBXTextBookmark */;
+			AFD3C5A912BF0180009752CA /* PBXTextBookmark */ = AFD3C5A912BF0180009752CA /* PBXTextBookmark */;
+			AFD3C5AA12BF0180009752CA /* PBXTextBookmark */ = AFD3C5AA12BF0180009752CA /* PBXTextBookmark */;
 		};
 		sourceControlManager = AF8B612112B464C300E0C7E4 /* Source Control */;
 		userBuildSettings = {
@@ -3523,7 +3526,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {656, 299}}";
 			sepNavSelRange = "{375, 0}";
-			sepNavVisRange = "{80, 349}";
+			sepNavVisRange = "{80, 351}";
 		};
 	};
 	AFD3C37012BEA279009752CA /* PBXTextBookmark */ = {
@@ -5943,6 +5946,41 @@
 		vrLoc = 42285;
 	};
 	AFD3C5A312BF006C009752CA /* BuildLog_2010-12-19_08-05-14.txt */ = {
+		isa = PBXFileReference;
+		path = "BuildLog_2010-12-19_08-05-14.txt";
+		sourceTree = "<group>";
+	};
+	AFD3C5A712BF0176009752CA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AFD3C35B12BE9CEF009752CA /* CCCSoundServices.m */;
+		name = "CCCSoundServices.m: 17";
+		rLen = 0;
+		rLoc = 375;
+		rType = 0;
+		vrLen = 351;
+		vrLoc = 80;
+	};
+	AFD3C5A912BF0180009752CA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* JinxAppDelegate.m */;
+		name = "JinxAppDelegate.m: 154";
+		rLen = 0;
+		rLoc = 5491;
+		rType = 0;
+		vrLen = 1123;
+		vrLoc = 4377;
+	};
+	AFD3C5AA12BF0180009752CA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AFD3C5AB12BF0180009752CA /* BuildLog_2010-12-19_08-05-14.txt */;
+		name = "BuildLog_2010-12-19_08-05-14.txt: 408";
+		rLen = 91;
+		rLoc = 43585;
+		rType = 0;
+		vrLen = 4809;
+		vrLoc = 42285;
+	};
+	AFD3C5AB12BF0180009752CA /* BuildLog_2010-12-19_08-05-14.txt */ = {
 		isa = PBXFileReference;
 		path = "BuildLog_2010-12-19_08-05-14.txt";
 		sourceTree = "<group>";

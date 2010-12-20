@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>AFD3C5A212BF006C009752CA</string>
+						<string>AFD3C5AA12BF0180009752CA</string>
 						<key>history</key>
 						<array>
 							<string>AFD3C24812BE7C03009752CA</string>
@@ -270,6 +270,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -309,6 +311,7 @@
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>AF8B615E12B46A2500E0C7E4</string>
 								<string>080E96DDFE201D6D7F000001</string>
+								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>29B97323FDCFA39411CA2CEA</string>
 								<string>19C28FACFE9D520D11CA2CBB</string>
 								<string>1C37FBAC04509CD000000102</string>
@@ -318,13 +321,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>14</integer>
-									<integer>5</integer>
+									<integer>40</integer>
+									<integer>20</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {214, 695}}</string>
+							<string>{{0, 107}, {214, 695}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -356,8 +359,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -375,7 +376,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>AFD3C5A112BF006C009752CA</string>
+										<string>AFD3C5A912BF0180009752CA</string>
 										<key>history</key>
 										<array>
 											<string>AF8B61C812B4716700E0C7E4</string>
@@ -612,15 +613,14 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>AFD3C5A412BF006C009752CA</string>
 		<string>AFD3C38A12BEA641009752CA</string>
 		<string>AFD3C18112BDC2E5009752CA</string>
 		<string>AFD3C18212BDC2E5009752CA</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>AF8B611812B464C300E0C7E4</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>AFD3C24612BE7C03009752CA</string>
 		<string>/Users/clifton/dev/iphone/Jinx/Jinx.xcodeproj</string>
-		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>6 122 1440 754 0 0 1440 878 </string>
@@ -996,7 +996,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
