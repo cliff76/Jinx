@@ -52,27 +52,51 @@
 #pragma mark Orientation Methods
 -(void) layoutViewComponentsPortrait
 {
-	youAvatar.frame = CGRectMake(169, 139, 100, 100);
-	youAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(0));
-	youLabel.frame = CGRectMake(40, 139, 76, 37);
-	youLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(0));
-	buddyAvatar.frame = CGRectMake(50, 264, 125, 125);
-	buddyAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(0));
-	buddyLabel.frame = CGRectMake(219, 271, 76, 37);
-	buddyLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(0));
+	CGFloat angle = ([UIDevice currentDevice].orientation == UIDeviceOrientationPortraitUpsideDown) ? 180.0f : 0;
+	if (([UIDevice currentDevice].orientation == UIDeviceOrientationPortraitUpsideDown)) {
+		youAvatar.frame = CGRectMake(144, 95, 125, 125);
+		youAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+		youLabel.frame = CGRectMake(24, 170, 76, 37);
+		youLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+		buddyAvatar.frame = CGRectMake(52, 242, 100, 100);
+		buddyAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+		buddyLabel.frame = CGRectMake(200, 300, 76, 47);
+		buddyLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+	} else {
+		youAvatar.frame = CGRectMake(169, 139, 100, 100);
+		youAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+		youLabel.frame = CGRectMake(40, 139, 76, 37);
+		youLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+		buddyAvatar.frame = CGRectMake(50, 264, 125, 125);
+		buddyAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+		buddyLabel.frame = CGRectMake(219, 264, 76, 47);
+		buddyLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+	}
 }
 
 -(void) layoutViewComponentsLandscape
 {
 	CGFloat angle = ([UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeLeft) ? 90.0f : -90.0f;
-	youAvatar.frame = CGRectMake(147, 108, 90, 90);
-	youAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
-	youLabel.frame = CGRectMake(58, 100, 76, 37);
-	youLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
-	buddyAvatar.frame = CGRectMake(25, 254, 100, 100);
-	buddyAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
-	buddyLabel.frame = CGRectMake(170, 296, 76, 37);
-	buddyLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+	if ([UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeLeft) {
+		youAvatar.frame = CGRectMake(147, 108, 90, 90);
+		youAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+		youLabel.frame = CGRectMake(54, 108, 76, 37);
+		youLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+		buddyAvatar.frame = CGRectMake(25, 254, 100, 100);
+		buddyAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+		buddyLabel.frame = CGRectMake(175, 300, 76, 37);
+		buddyLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+	}else {
+		youAvatar.frame = CGRectMake(200, 108, 90, 90);
+		youAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+		youLabel.frame = CGRectMake(72, 125, 76, 37);
+		youLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+		buddyAvatar.frame = CGRectMake(80, 264, 95, 95);
+		buddyAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+		buddyLabel.frame = CGRectMake(195, 320, 76, 37);
+		buddyLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+		
+	}
 }
 
 -(void) updateView
@@ -85,7 +109,7 @@
 		youLabel.text = @"You";
 		buddyLabel.text = chatBuddy;
 	}
-
+	
 	[[[[BackgroundRotation alloc] initWithBackgroundsForPortrait:backgroundImage andLandscape:backgroundImageLandscape] autorelease] 
 	 updateViewsWithPortraitAnimations:^(void){
 		 [self layoutViewComponentsPortrait];

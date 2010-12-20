@@ -32,7 +32,7 @@
 
 	UIImageView *splashView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"JinxSplash.png"]];
 	splashView.alpha = 0.0f;
-	splashView.frame = CGRectMake(0.0f, 20.0f, 320, 460);
+	splashView.frame = CGRectMake(0.0f, 0.0f, 320, 480);
 	[window addSubview: splashView];
 	[UIView animateWithDuration:1.0 delay:1.0 options:UIViewAnimationOptionAllowUserInteraction animations:^{ splashView.alpha = 1.0f; } 
 					 completion:^(BOOL finished){
