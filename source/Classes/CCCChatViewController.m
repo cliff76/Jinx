@@ -355,9 +355,10 @@ static NSString *CellIdentifier = @"Cell";
 	
 	if([[speaker lowercaseString] isEqualToString:@"you"])
 	{
-		balloonView.frame = CGRectMake(320.0f - (size.width + 28.0f), 2.0f, size.width + 28.0f, size.height + 15.0f);
+		CGFloat widthAdj = isShowingLandscape ? 480.0f - 320.0f : 0;
+		balloonView.frame = CGRectMake((320.0f + widthAdj) - (size.width + 28.0f), 2.0f, size.width + 28.0f, size.height + 15.0f);
 		balloon = [[UIImage imageNamed:@"green.png"] stretchableImageWithLeftCapWidth:24 topCapHeight:15];
-		label.frame = CGRectMake(307.0f - (size.width + 5.0f), 8.0f, size.width + 5.0f, size.height);
+		label.frame = CGRectMake((307.0f + widthAdj) - (size.width + 5.0f), 8.0f, size.width + 5.0f, size.height);
 	}
 	else
 	{
