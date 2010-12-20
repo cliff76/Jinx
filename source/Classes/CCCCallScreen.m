@@ -22,17 +22,27 @@
 @implementation CCCCallScreen
 @synthesize backgroundImage, backgroundImageLandscape, youAvatar, youLabel, buddyAvatar, buddyLabel;
 
+static int lastReply = 0;
 - (id) initWithBuddy:(NSString*)aChatBuddy
 {
 	self = [super init];
 	if (self != nil) {
 		chatBuddy = [aChatBuddy retain];
-		int callnum = RANDOM_INT(1,4);
+#if TARGET_IPHONE_SIMULATOR
+		int nextReply = (++lastReply < 7) ? lastReply : 0;
+#else
+		int nextReply = (arc4random() % 7);
+		while (nextReply == lastReply) {
+			nextReply = (arc4random() % 7);
+		}
+#endif
+		lastReply = nextReply;
+//		int callnum = RANDOM_INT(1,4);
 		audioPlayList = [[NSMutableArray alloc] initWithObjects:
 						 @"ringout", @"wav",
 						 @"ringout", @"wav",
 						 @"ringout", @"wav",
-						 [NSString stringWithFormat:@"%@Call%i", chatBuddy,callnum], @"aiff",
+						 [NSString stringWithFormat:@"%@Call%i", chatBuddy,nextReply], @"aiff",
 						 nil];
 	}
 	return self;
