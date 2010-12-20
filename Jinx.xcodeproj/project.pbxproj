@@ -83,6 +83,8 @@
 		AFD3C35712BE987A009752CA /* incoming-message-winxp.wav in Resources */ = {isa = PBXBuildFile; fileRef = AFD3C35312BE9837009752CA /* incoming-message-winxp.wav */; };
 		AFD3C35C12BE9CEF009752CA /* CCCSoundServices.h in Headers */ = {isa = PBXBuildFile; fileRef = AFD3C35A12BE9CEF009752CA /* CCCSoundServices.h */; };
 		AFD3C35D12BE9CEF009752CA /* CCCSoundServices.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD3C35B12BE9CEF009752CA /* CCCSoundServices.m */; };
+		AFD3C3CA12BECC24009752CA /* JinxSplash.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD3C3C912BECC24009752CA /* JinxSplash.png */; };
+		AFD3C40812BED6BD009752CA /* JinxIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD3C40712BED6BD009752CA /* JinxIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -195,6 +197,8 @@
 		AFD3C35312BE9837009752CA /* incoming-message-winxp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "incoming-message-winxp.wav"; sourceTree = "<group>"; };
 		AFD3C35A12BE9CEF009752CA /* CCCSoundServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCSoundServices.h; sourceTree = "<group>"; };
 		AFD3C35B12BE9CEF009752CA /* CCCSoundServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCSoundServices.m; sourceTree = "<group>"; };
+		AFD3C3C912BECC24009752CA /* JinxSplash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JinxSplash.png; sourceTree = "<group>"; };
+		AFD3C40712BED6BD009752CA /* JinxIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JinxIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -379,6 +383,8 @@
 		AF8B62C512B55D6900E0C7E4 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				AFD3C40712BED6BD009752CA /* JinxIcon.png */,
+				AFD3C3C912BECC24009752CA /* JinxSplash.png */,
 				AFD3C16D12BDBE21009752CA /* YouAvatar.png */,
 				AFD3C16712BDBC86009752CA /* ClintAvatar.png */,
 				AFD3C16812BDBC86009752CA /* LeezaAvatar.png */,
@@ -572,6 +578,8 @@
 				AFD3C33912BE8F98009752CA /* StuartCall4.aiff in Resources */,
 				AFD3C35612BE9846009752CA /* outgoing-message-winxp.wav in Resources */,
 				AFD3C35712BE987A009752CA /* incoming-message-winxp.wav in Resources */,
+				AFD3C3CA12BECC24009752CA /* JinxSplash.png in Resources */,
+				AFD3C40812BED6BD009752CA /* JinxIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

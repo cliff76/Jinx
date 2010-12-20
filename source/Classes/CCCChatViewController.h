@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 @class CCCChatBuddy;
 @interface CCCChatViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>{
@@ -18,6 +19,8 @@
 	BOOL isShowingLandscape;
 	BOOL isInEditMode;
 	BOOL youWereTypingSomething;
+	SystemSoundID outgoingMessageClip;
+	SystemSoundID incomingMessageClip;
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *tableView;

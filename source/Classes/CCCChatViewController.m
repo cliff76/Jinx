@@ -69,6 +69,9 @@ static NSString *CellIdentifier = @"Cell";
 		 [NSDictionary dictionaryWithObjectsAndKeys:
 		  chatBuddy, kJinxNotificationKeyChatBuddy, chatBuddy.buddyName, kJinxNotificationKeyChatBuddyName, messages, kJinxNotificationKeyMessages,
 		  nil]];
+		
+		[CCCSoundServices loadClipFromFile:[[NSBundle mainBundle] pathForResource:@"outgoing-message-winxp" ofType:@"wav"] asSoundId: &outgoingMessageClip];
+		[CCCSoundServices loadClipFromFile:[[NSBundle mainBundle] pathForResource:@"incoming-message-winxp" ofType:@"wav"] asSoundId: &incomingMessageClip];
 		[self loadConversationForBuddy:chatBuddy.buddyName];
 	}
 	return self;
@@ -81,6 +84,11 @@ static NSString *CellIdentifier = @"Cell";
 	if (! [aNewMessage isEqualToString:youInitialMessage] && ! [aNewMessage isEqualToString:buddyInitialMessage])
 	{
 		DLog(@"Do chime...");
+		if ([aNewMessage hasPrefix:YOU]) {
+			[CCCSoundServices playClip:outgoingMessageClip];
+		}else {
+			[CCCSoundServices playClip:incomingMessageClip];
+		}
 	}
 	[messages addObject:aNewMessage];
 	//Need to ensure screen update is done on the Main Thread

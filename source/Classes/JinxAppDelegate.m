@@ -23,6 +23,28 @@
 @synthesize window;
 @synthesize navigationController;
 
+-(void) doSplash
+{
+	UIImageView *loadScreen = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default.png"]];
+	loadScreen.frame = CGRectMake(0.0f, 20.0f, 320, 460);
+	[window addSubview: loadScreen];
+    [window makeKeyAndVisible];
+
+	UIImageView *splashView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"JinxSplash.png"]];
+	splashView.alpha = 0.0f;
+	splashView.frame = CGRectMake(0.0f, 20.0f, 320, 460);
+	[window addSubview: splashView];
+	[UIView animateWithDuration:1.0 delay:1.0 options:UIViewAnimationOptionAllowUserInteraction animations:^{ splashView.alpha = 1.0f; } 
+					 completion:^(BOOL finished){
+						 [loadScreen removeFromSuperview];
+						 [loadScreen release];
+						 [UIView animateWithDuration:1.0 delay:3.0 options:UIViewAnimationOptionAllowUserInteraction animations:^{ splashView.alpha = 0.0f; } 
+										  completion:^(BOOL finished){
+											 [splashView removeFromSuperview];
+											 [splashView release];
+										  }];
+					 }];
+}
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -34,7 +56,7 @@
     // Add the navigation controller's view to the window and display.
     [window addSubview:navigationController.view];
 	[self loadConversations];
-    [window makeKeyAndVisible];
+	[self doSplash];
 
     return YES;
 }

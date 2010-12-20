@@ -11,25 +11,14 @@
 
 @implementation CCCSoundServices
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-    if ((self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])) {
-        // Initialization code
-    }
-    return self;
++ (void) loadClipFromFile:(NSString*)path asSoundId:(SystemSoundID*)systemSoundId
+{
+	AudioServicesCreateSystemSoundID((CFURLRef)[NSURL fileURLWithPath:path], systemSoundId);
 }
 
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
++ (void) playClip:(SystemSoundID)systemSoundIdClip
+{
+	AudioServicesPlaySystemSound(systemSoundIdClip);
 }
-
-
-- (void)dealloc {
-    [super dealloc];
-}
-
 
 @end

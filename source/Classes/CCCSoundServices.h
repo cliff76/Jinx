@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioToolbox.h>
 
-
-@interface CCCSoundServices : UITableViewCell {
+@interface CCCSoundServices : NSObject {
 
 }
-
++ (void) loadClipFromFile:(NSString*)path asSoundId:(SystemSoundID*)systemSoundId;
++ (void) playClip:(SystemSoundID)systemSoundIdClip;
 @end
