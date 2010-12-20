@@ -14,6 +14,7 @@
 
 -(void) loadConversations;
 -(void) saveCurrentConversation:(NSString*)aChatBuddy;
+-(void) aConversationEnded:(NSNotification*)notification;
 -(void) newConversationStarted:(NSNotification*)notification;
 
 @end
@@ -53,6 +54,7 @@
     
     // Override point for customization after application launch.
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newConversationStarted:) name:kJinxNotificationCoversationStarted object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(aConversationEnded:) name:kJinxNotificationCoversationEnded object:nil];
     // Add the navigation controller's view to the window and display.
     [window addSubview:navigationController.view];
 	[self loadConversations];
@@ -132,18 +134,23 @@
 
 -(void) saveCurrentConversation:(NSString*)aChatBuddy
 {
-	if (!aChatBuddy) {
-		return;
-	} else {
-		ensureDirectoryExistsAtPath(JinxArchivePath);
-		[[NSFileManager defaultManager] createFileAtPath:JinxArchiveFileForLastChat contents:[NSData data] attributes:nil];
-		writeStringToFile(aChatBuddy, JinxArchiveFileForLastChat);
-	}
+	NSString *conversation = aChatBuddy ? aChatBuddy : @"";
+	ensureDirectoryExistsAtPath(JinxArchivePath);
+	[[NSFileManager defaultManager] createFileAtPath:JinxArchiveFileForLastChat contents:[NSData data] attributes:nil];
+	writeStringToFile(conversation, JinxArchiveFileForLastChat);
+}
+
+-(void) aConversationEnded:(NSNotification*)notification
+{
+	DLog(@"A conversation ended.");
+	currentConversation = @"";
+	[self saveCurrentConversation:currentConversation];
 }
 
 -(void) newConversationStarted:(NSNotification*)notification
 {
 	currentConversation = [(NSDictionary*)[notification userInfo] objectForKey:kJinxNotificationKeyChatBuddyName];
+	[self saveCurrentConversation:currentConversation];
 }
 
 @end

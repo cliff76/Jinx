@@ -8,6 +8,7 @@
  */
 
 #define kJinxNotificationCoversationStarted @"JinxNotificationCoversationStarted"
+#define kJinxNotificationCoversationEnded @"JinxNotificationCoversationEnded"
 #define kJinxNotificationKeyChatBuddy @"chatBuddy"
 #define kJinxNotificationKeyChatBuddyName @"chatBuddyName"
 #define kJinxNotificationKeyMessages @"messages"

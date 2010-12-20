@@ -164,6 +164,10 @@ static NSString *CellIdentifier = @"Cell";
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
 	[self saveConversation];
+	[[NSNotificationCenter defaultCenter] postNotificationName:kJinxNotificationCoversationEnded object:self userInfo:
+	 [NSDictionary dictionaryWithObjectsAndKeys:
+	  chatBuddy, kJinxNotificationKeyChatBuddy, chatBuddy.buddyName, kJinxNotificationKeyChatBuddyName, messages, kJinxNotificationKeyMessages,
+	  nil]];
 }
 
 // Override to allow orientations other than the default portrait orientation.

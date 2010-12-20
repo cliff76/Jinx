@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>AFD3C56812BEF783009752CA</string>
+						<string>AFD3C5A212BF006C009752CA</string>
 						<key>history</key>
 						<array>
 							<string>AFD3C24812BE7C03009752CA</string>
@@ -318,7 +318,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>18</integer>
+									<integer>14</integer>
 									<integer>5</integer>
 									<integer>0</integer>
 								</array>
@@ -363,7 +363,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>CCCCallScreen.m</string>
+								<string>JinxAppDelegate.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -371,11 +371,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>CCCCallScreen.m</string>
+										<string>JinxAppDelegate.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>AFD3C56712BEF783009752CA</string>
+										<string>AFD3C5A112BF006C009752CA</string>
 										<key>history</key>
 										<array>
 											<string>AF8B61C812B4716700E0C7E4</string>
@@ -385,7 +385,6 @@
 											<string>AF8B655412B7227A00E0C7E4</string>
 											<string>AF8B655512B7227A00E0C7E4</string>
 											<string>AF5DBD3612BD25CD0038295F</string>
-											<string>AF5DBD3812BD25CD0038295F</string>
 											<string>AF5DBE3112BD502F0038295F</string>
 											<string>AF5DBE3312BD502F0038295F</string>
 											<string>AF5DBE3412BD502F0038295F</string>
@@ -404,16 +403,18 @@
 											<string>AFD3C29312BE80C0009752CA</string>
 											<string>AFD3C33D12BE9231009752CA</string>
 											<string>AFD3C3B212BEB193009752CA</string>
-											<string>AFD3C40112BED4B7009752CA</string>
 											<string>AFD3C42C12BEE7B0009752CA</string>
 											<string>AFD3C42D12BEE7B0009752CA</string>
 											<string>AFD3C42E12BEE7B0009752CA</string>
 											<string>AFD3C42F12BEE7B0009752CA</string>
 											<string>AFD3C43012BEE7B0009752CA</string>
-											<string>AFD3C43812BEE7D6009752CA</string>
-											<string>AFD3C44212BEE884009752CA</string>
 											<string>AFD3C4FF12BEF149009752CA</string>
-											<string>AFD3C51F12BEF279009752CA</string>
+											<string>AFD3C57012BEFC69009752CA</string>
+											<string>AFD3C57112BEFC69009752CA</string>
+											<string>AFD3C57D12BEFE63009752CA</string>
+											<string>AFD3C57E12BEFE63009752CA</string>
+											<string>AFD3C59F12BF006C009752CA</string>
+											<string>AFD3C5A012BF006C009752CA</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -611,15 +612,15 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>AFD3C56A12BEF783009752CA</string>
+		<string>AFD3C5A412BF006C009752CA</string>
 		<string>AFD3C38A12BEA641009752CA</string>
 		<string>AFD3C18112BDC2E5009752CA</string>
 		<string>AFD3C18212BDC2E5009752CA</string>
 		<string>AF8B611812B464C300E0C7E4</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>AFD3C24612BE7C03009752CA</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/clifton/dev/iphone/Jinx/Jinx.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>6 122 1440 754 0 0 1440 878 </string>
