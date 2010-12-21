@@ -394,6 +394,12 @@ static NSString *CellIdentifier = @"Cell";
 -(void)onCallButton:(id)sender
 {
 	[self.navigationController pushViewController: [[CCCCallScreen alloc] initWithBuddy:chatBuddy.buddyName] animated:YES];
+	if (isShowingLandscape && [UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeLeft) {
+		self.navigationController.visibleViewController.view.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(-90));
+	} else if(isShowingLandscape && [UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeRight) {
+		self.navigationController.visibleViewController.view.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(90));
+	}
+
 }
 
 #pragma mark -

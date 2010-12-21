@@ -111,6 +111,8 @@ static int lastReply = 0;
 
 -(void) updateView
 {
+	self.view.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(0));
+	self.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
 	if (([UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeLeft) || ([UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeRight)) {
 		youLabel.text = chatBuddy;
 		buddyLabel.text = @"You";
@@ -236,7 +238,10 @@ static int lastReply = 0;
 {
 	if ([audioPlayList count] > 0) {
 		[self performSelector:@selector(playNextFromPlaylist) withObject:nil afterDelay:1.5];
+	} else {
+		[self.navigationController popViewControllerAnimated:YES];
 	}
+
 }
 
 @end

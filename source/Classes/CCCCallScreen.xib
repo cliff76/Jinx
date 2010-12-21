@@ -132,11 +132,8 @@
 				<string key="NSFrameSize">{320, 460}</string>
 				<reference key="NSSuperview"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
-					<int key="NSColorSpace">3</int>
-					<bytes key="NSWhite">MQA</bytes>
-					<object class="NSColorSpace" key="NSCustomColorSpace">
-						<int key="NSID">2</int>
-					</object>
+					<int key="NSColorSpace">2</int>
+					<bytes key="NSRGB">MC4yNjI3NDUxMTIyIDAuNTg0MzEzNzUwMyAwLjc2ODYyNzUyNDQAA</bytes>
 				</object>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -274,7 +271,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>CCCCallScreen</string>
 					<string>UIResponder</string>
-					<string>{{556, 376}, {320, 480}}</string>
+					<string>{{564, 93}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">AUMpAABDCwAAA</bytes>
