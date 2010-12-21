@@ -201,6 +201,7 @@ static NSString *CellIdentifier = @"Cell";
 		messageToSend.frame = CGRectMake(messageToSend.frame.origin.x, messageToSend.frame.origin.y, 234.0f, messageToSend.frame.size.height);
 		[UIView commitAnimations];
 	}
+	[tableView reloadData];
 }
 
 -(void) updateView

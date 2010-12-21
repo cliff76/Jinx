@@ -608,6 +608,9 @@
 			AFD3C75912C05871009752CA /* PBXTextBookmark */ = AFD3C75912C05871009752CA /* PBXTextBookmark */;
 			AFD3C75D12C058F0009752CA /* PBXTextBookmark */ = AFD3C75D12C058F0009752CA /* PBXTextBookmark */;
 			AFD3C76112C05969009752CA /* PBXTextBookmark */ = AFD3C76112C05969009752CA /* PBXTextBookmark */;
+			AFD3C76512C05A78009752CA /* PBXTextBookmark */ = AFD3C76512C05A78009752CA /* PBXTextBookmark */;
+			AFD3C76612C05A78009752CA /* PBXTextBookmark */ = AFD3C76612C05A78009752CA /* PBXTextBookmark */;
+			AFD3C76712C05A78009752CA /* PBXTextBookmark */ = AFD3C76712C05A78009752CA /* PBXTextBookmark */;
 		};
 		sourceControlManager = AF8B612112B464C300E0C7E4 /* Source Control */;
 		userBuildSettings = {
@@ -768,7 +771,7 @@
 		fRef = AF8B625512B5144500E0C7E4 /* CCCChatViewController.m */;
 		name = "CCCChatViewController.m: 411";
 		rLen = 76;
-		rLoc = 16909;
+		rLoc = 16934;
 		rType = 0;
 		vrLen = 858;
 		vrLoc = 14211;
@@ -904,10 +907,10 @@
 		path = /Users/clifton/dev/iphone/Jinx/source/Classes/CCCChatViewController.m;
 		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{8744, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{8795, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{8845, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 17127}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1143, 6006}}";
-			sepNavSelRange = "{15457, 0}";
-			sepNavVisRange = "{14317, 1477}";
+			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{8769, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{8820, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{8870, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 17152}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1143, 5928}}";
+			sepNavSelRange = "{7819, 0}";
+			sepNavVisRange = "{6645, 1178}";
 		};
 	};
 	AF8B629212B557A300E0C7E4 /* CCCChatViewController.h */ = {
@@ -1287,7 +1290,7 @@
 		fRef = AF8B625512B5144500E0C7E4 /* CCCChatViewController.m */;
 		name = "CCCChatViewController.m: 305";
 		rLen = 71;
-		rLoc = 12709;
+		rLoc = 12734;
 		rType = 0;
 		vrLen = 1355;
 		vrLoc = 10779;
@@ -2049,7 +2052,7 @@
 		fRef = AF8B625512B5144500E0C7E4 /* CCCChatViewController.m */;
 		name = "CCCChatViewController.m: 337";
 		rLen = 147;
-		rLoc = 14141;
+		rLoc = 14166;
 		rType = 0;
 		vrLen = 1538;
 		vrLoc = 11425;
@@ -2483,7 +2486,7 @@
 		fRef = AF8B625512B5144500E0C7E4 /* CCCChatViewController.m */;
 		name = "CCCChatViewController.m: 356";
 		rLen = 0;
-		rLoc = 14941;
+		rLoc = 14966;
 		rType = 0;
 		vrLen = 1325;
 		vrLoc = 12351;
@@ -3044,7 +3047,7 @@
 		fRef = AF8B625512B5144500E0C7E4 /* CCCChatViewController.m */;
 		name = "CCCChatViewController.m: 405";
 		rLen = 21;
-		rLoc = 16473;
+		rLoc = 16498;
 		rType = 0;
 		vrLen = 1082;
 		vrLoc = 13793;
@@ -3054,7 +3057,7 @@
 		fRef = AF8B625512B5144500E0C7E4 /* CCCChatViewController.m */;
 		name = "CCCChatViewController.m: 402";
 		rLen = 21;
-		rLoc = 16473;
+		rLoc = 16498;
 		rType = 0;
 		vrLen = 1082;
 		vrLoc = 13850;
@@ -3396,7 +3399,7 @@
 		fRef = AF8B629312B557A300E0C7E4 /* CCCChatViewController.m */;
 		name = "CCCChatViewController.m: 358";
 		rLen = 0;
-		rLoc = 14941;
+		rLoc = 14966;
 		rType = 0;
 		vrLen = 1290;
 		vrLoc = 12535;
@@ -3422,7 +3425,7 @@
 		fRef = AF8B629312B557A300E0C7E4 /* CCCChatViewController.m */;
 		name = "CCCChatViewController.m: 373";
 		rLen = 0;
-		rLoc = 16134;
+		rLoc = 16159;
 		rType = 0;
 		vrLen = 1123;
 		vrLoc = 465;
@@ -3448,7 +3451,7 @@
 		fRef = AF8B629312B557A300E0C7E4 /* CCCChatViewController.m */;
 		name = "CCCChatViewController.m: 373";
 		rLen = 0;
-		rLoc = 16134;
+		rLoc = 16159;
 		rType = 0;
 		vrLen = 1123;
 		vrLoc = 465;
@@ -3653,7 +3656,7 @@
 		fRef = AF8B629312B557A300E0C7E4 /* CCCChatViewController.m */;
 		name = "CCCChatViewController.m: 387";
 		rLen = 0;
-		rLoc = 16025;
+		rLoc = 16050;
 		rType = 0;
 		vrLen = 847;
 		vrLoc = 13633;
@@ -3679,7 +3682,7 @@
 		fRef = AF8B629312B557A300E0C7E4 /* CCCChatViewController.m */;
 		name = "CCCChatViewController.m: 398";
 		rLen = 0;
-		rLoc = 16264;
+		rLoc = 16289;
 		rType = 0;
 		vrLen = 980;
 		vrLoc = 13978;
@@ -3705,7 +3708,7 @@
 		fRef = AF8B629312B557A300E0C7E4 /* CCCChatViewController.m */;
 		name = "CCCChatViewController.m: 398";
 		rLen = 0;
-		rLoc = 16264;
+		rLoc = 16289;
 		rType = 0;
 		vrLen = 980;
 		vrLoc = 13978;
@@ -3741,7 +3744,7 @@
 		fRef = AF8B629312B557A300E0C7E4 /* CCCChatViewController.m */;
 		name = "CCCChatViewController.m: 380";
 		rLen = 22;
-		rLoc = 15720;
+		rLoc = 15745;
 		rType = 0;
 		vrLen = 875;
 		vrLoc = 13671;
@@ -3751,7 +3754,7 @@
 		fRef = AF8B629312B557A300E0C7E4 /* CCCChatViewController.m */;
 		name = "CCCChatViewController.m: 389";
 		rLen = 0;
-		rLoc = 15960;
+		rLoc = 15985;
 		rType = 0;
 		vrLen = 938;
 		vrLoc = 13671;
@@ -3777,7 +3780,7 @@
 		fRef = AF8B629312B557A300E0C7E4 /* CCCChatViewController.m */;
 		name = "CCCChatViewController.m: 385";
 		rLen = 0;
-		rLoc = 15898;
+		rLoc = 15923;
 		rType = 0;
 		vrLen = 936;
 		vrLoc = 13671;
@@ -5866,7 +5869,7 @@
 		fRef = AF8B629312B557A300E0C7E4 /* CCCChatViewController.m */;
 		name = "CCCChatViewController.m: 439";
 		rLen = 0;
-		rLoc = 16686;
+		rLoc = 16711;
 		rType = 0;
 		vrLen = 1210;
 		vrLoc = 15272;
@@ -5962,7 +5965,7 @@
 		fRef = AF8B629312B557A300E0C7E4 /* CCCChatViewController.m */;
 		name = "CCCChatViewController.m: 439";
 		rLen = 0;
-		rLoc = 16686;
+		rLoc = 16711;
 		rType = 0;
 		vrLen = 1210;
 		vrLoc = 15272;
@@ -5972,7 +5975,7 @@
 		fRef = AF8B629312B557A300E0C7E4 /* CCCChatViewController.m */;
 		name = "CCCChatViewController.m: 436";
 		rLen = 0;
-		rLoc = 16686;
+		rLoc = 16711;
 		rType = 0;
 		vrLen = 1227;
 		vrLoc = 15272;
@@ -6116,7 +6119,7 @@
 		fRef = AF8B625512B5144500E0C7E4 /* CCCChatViewController.m */;
 		name = "CCCChatViewController.m: 361";
 		rLen = 0;
-		rLoc = 13669;
+		rLoc = 13694;
 		rType = 0;
 		vrLen = 1374;
 		vrLoc = 12942;
@@ -6170,7 +6173,7 @@
 		fRef = AF8B625512B5144500E0C7E4 /* CCCChatViewController.m */;
 		name = "CCCChatViewController.m: 400";
 		rLen = 0;
-		rLoc = 15514;
+		rLoc = 15539;
 		rType = 0;
 		vrLen = 1477;
 		vrLoc = 14374;
@@ -6224,5 +6227,35 @@
 		rType = 0;
 		vrLen = 1250;
 		vrLoc = 3586;
+	};
+	AFD3C76512C05A78009752CA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
+		name = "CCCCallScreen.m: 115";
+		rLen = 0;
+		rLoc = 4543;
+		rType = 0;
+		vrLen = 1250;
+		vrLoc = 3586;
+	};
+	AFD3C76612C05A78009752CA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AF8B625512B5144500E0C7E4 /* CCCChatViewController.m */;
+		name = "CCCChatViewController.m: 400";
+		rLen = 0;
+		rLoc = 15539;
+		rType = 0;
+		vrLen = 1477;
+		vrLoc = 14374;
+	};
+	AFD3C76712C05A78009752CA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AF8B625512B5144500E0C7E4 /* CCCChatViewController.m */;
+		name = "CCCChatViewController.m: 204";
+		rLen = 0;
+		rLoc = 7819;
+		rType = 0;
+		vrLen = 1178;
+		vrLoc = 6645;
 	};
 }
