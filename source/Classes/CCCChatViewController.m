@@ -134,6 +134,12 @@ static NSString *CellIdentifier = @"Cell";
 	[self textFieldShouldReturn:messageToSend];
 }
 
+- (IBAction)onClearButton:(id)sender
+{
+	[messages removeAllObjects];
+	[tableView reloadData];
+}
+
 #pragma mark -
 #pragma mark View lifecycle
 
@@ -189,7 +195,7 @@ static NSString *CellIdentifier = @"Cell";
 		CGFloat y = isInEditMode ? 62.0f: 224.0f;
 		toolbar.frame = CGRectMake(0, y, 480, 44);
 		tableView.frame = CGRectMake(0, 0, 480, y);
-		messageToSend.frame = CGRectMake(messageToSend.frame.origin.x, messageToSend.frame.origin.y, 390.0f, messageToSend.frame.size.height);
+		messageToSend.frame = CGRectMake(messageToSend.frame.origin.x, messageToSend.frame.origin.y, 339.0f, messageToSend.frame.size.height);
 		[UIView commitAnimations];
 	} else if (UIDeviceOrientationIsPortrait(deviceOrientation) || ! isShowingLandscape) {
 		isShowingLandscape = NO;
@@ -198,7 +204,7 @@ static NSString *CellIdentifier = @"Cell";
 		CGFloat y = isInEditMode ? 156.0f: 372.0f;
 		toolbar.frame = CGRectMake(0, y, 320, 44);
 		tableView.frame = CGRectMake(0, 0, 320, y);
-		messageToSend.frame = CGRectMake(messageToSend.frame.origin.x, messageToSend.frame.origin.y, 234.0f, messageToSend.frame.size.height);
+		messageToSend.frame = CGRectMake(messageToSend.frame.origin.x, messageToSend.frame.origin.y, 183.0f, messageToSend.frame.size.height);
 		[UIView commitAnimations];
 	}
 	[tableView reloadData];

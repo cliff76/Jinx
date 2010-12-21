@@ -34,5 +34,6 @@
 - (id)initWithBuddy:(NSString *)aChatBuddy andNibName:(NSString *)nibName bundle:(NSBundle *)nibBundle;
 - (void)addMessage:(NSString*) aNewMessage;
 - (IBAction)onSendButton:(id)sender;
+- (IBAction)onClearButton:(id)sender;
 
 @end
