@@ -277,7 +277,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>21</integer>
+									<integer>17</integer>
 									<integer>5</integer>
 									<integer>0</integer>
 								</array>
@@ -322,7 +322,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>CCCCallScreen.m</string>
+								<string>CCCChatViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -330,11 +330,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>CCCCallScreen.m</string>
+										<string>CCCChatViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>AFD3C7F912C1AB54009752CA</string>
+										<string>AFD3C82D12C1B85D009752CA</string>
 										<key>history</key>
 										<array>
 											<string>AF8B61C812B4716700E0C7E4</string>
@@ -350,9 +350,12 @@
 											<string>AFD3C7EB12C1A8F1009752CA</string>
 											<string>AFD3C7EC12C1A8F1009752CA</string>
 											<string>AFD3C7ED12C1A8F1009752CA</string>
-											<string>AFD3C7EE12C1A8F1009752CA</string>
-											<string>AFD3C7F712C1AB54009752CA</string>
-											<string>AFD3C7F812C1AB54009752CA</string>
+											<string>AFD3C81812C1B0A7009752CA</string>
+											<string>AFD3C81912C1B0A7009752CA</string>
+											<string>AFD3C81A12C1B0A7009752CA</string>
+											<string>AFD3C82112C1B6FC009752CA</string>
+											<string>AFD3C82212C1B6FC009752CA</string>
+											<string>AFD3C82312C1B6FC009752CA</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -550,7 +553,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>AFD3C7FA12C1AB54009752CA</string>
+		<string>AFD3C82E12C1B85D009752CA</string>
 		<string>AFD3C75612C057FE009752CA</string>
 		<string>AFD3C74612C05523009752CA</string>
 		<string>AF8B611812B464C300E0C7E4</string>
@@ -580,7 +583,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>JinxAppDelegate.m</string>
+								<string>CCCAudioPlayer.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>

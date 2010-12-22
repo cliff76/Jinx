@@ -10,6 +10,8 @@
 #import <Foundation/Foundation.h>
 
 #pragma mark Supplementary C functions
-#define OSStatusCall(expr) checkOSStatusCall((expr), ([NSString stringWithFormat:@"[%@ %s]", [[self class] description], _cmd]));
+#define OSStatusCall(expr) {NSAutoreleasePool *osStatusCheckPool = [[NSAutoreleasePool alloc] init];\
+checkOSStatusCall((expr), ([NSString stringWithFormat:@"[%@ %s]", [[self class] description], _cmd]));\
+[osStatusCheckPool release];}
 #define OSStatusCallMessage(message, expr) checkOSStatusCall((expr), (message));
 void checkOSStatusCall(OSStatus aStatus, NSString *message);
