@@ -239,7 +239,7 @@ static int lastReply = 0;
 	self.navigationController.navigationItem.leftBarButtonItem.enabled = NO;
 	if ([audioPlayList count] > 0) {
 		[self performSelector:@selector(playNextFromPlaylist) withObject:nil afterDelay:1.5];
-	} else {
+	} else if(self.navigationController.visibleViewController == self) {
 		[self.navigationController popViewControllerAnimated:YES];
 	}
 

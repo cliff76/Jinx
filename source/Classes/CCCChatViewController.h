@@ -21,6 +21,7 @@
 	BOOL youWereTypingSomething;
 	SystemSoundID outgoingMessageClip;
 	SystemSoundID incomingMessageClip;
+	SystemSoundID clearScreenClip;
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *tableView;

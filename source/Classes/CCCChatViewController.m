@@ -70,8 +70,9 @@ static NSString *CellIdentifier = @"Cell";
 		  chatBuddy, kJinxNotificationKeyChatBuddy, chatBuddy.buddyName, kJinxNotificationKeyChatBuddyName, messages, kJinxNotificationKeyMessages,
 		  nil]];
 		
-		[CCCSoundServices loadClipFromFile:[[NSBundle mainBundle] pathForResource:@"outgoing-message-winxp" ofType:@"wav"] asSoundId: &outgoingMessageClip];
-		[CCCSoundServices loadClipFromFile:[[NSBundle mainBundle] pathForResource:@"incoming-message-winxp" ofType:@"wav"] asSoundId: &incomingMessageClip];
+		[CCCSoundServices loadClipFromFile:[[NSBundle mainBundle] pathForResource:@"outgoing-blip" ofType:@"aiff"] asSoundId: &outgoingMessageClip];
+		[CCCSoundServices loadClipFromFile:[[NSBundle mainBundle] pathForResource:@"incoming-blip" ofType:@"aiff"] asSoundId: &incomingMessageClip];
+		[CCCSoundServices loadClipFromFile:[[NSBundle mainBundle] pathForResource:@"clear-screen" ofType:@"aiff"] asSoundId: &clearScreenClip];
 		[self loadConversationForBuddy:chatBuddy.buddyName];
 	}
 	return self;
@@ -138,6 +139,7 @@ static NSString *CellIdentifier = @"Cell";
 {
 	[messages removeAllObjects];
 	[tableView reloadData];
+	[CCCSoundServices playClip:clearScreenClip];
 }
 
 #pragma mark -
