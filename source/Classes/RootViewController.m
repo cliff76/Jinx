@@ -10,7 +10,7 @@
 #import "CCCJinxAppLoadLogic.h"
 #import "CCCChatViewController.h"
 #import "CCCBuddySelectorCell.h"
-#import "JinxApplicationGlobal.h"
+#import "JinxMath.h"
 #import "BackgroundRotation.h"
 
 @implementation RootViewController

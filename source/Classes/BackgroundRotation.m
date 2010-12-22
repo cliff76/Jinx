@@ -5,7 +5,7 @@
 //  Created by Clifton Craig on 12/18/10.
 //  Copyright 2010 Craig Corp. All rights reserved.
 //
-#import "JinxApplicationGlobal.h"
+#import "JinxMath.h"
 #import "BackgroundRotation.h"
 
 

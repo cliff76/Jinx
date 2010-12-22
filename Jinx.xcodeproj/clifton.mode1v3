@@ -334,7 +334,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>AFD3C7AF12C18E04009752CA</string>
+										<string>AFD3C7F012C1A8F1009752CA</string>
 										<key>history</key>
 										<array>
 											<string>AF8B61C812B4716700E0C7E4</string>
@@ -343,13 +343,16 @@
 											<string>AF8B655412B7227A00E0C7E4</string>
 											<string>AF8B655512B7227A00E0C7E4</string>
 											<string>AFD3C70112BFC5AC009752CA</string>
-											<string>AFD3C77912C05CAF009752CA</string>
 											<string>AFD3C7A912C18E04009752CA</string>
 											<string>AFD3C7AA12C18E04009752CA</string>
 											<string>AFD3C7AB12C18E04009752CA</string>
-											<string>AFD3C7AC12C18E04009752CA</string>
-											<string>AFD3C7AD12C18E04009752CA</string>
-											<string>AFD3C7AE12C18E04009752CA</string>
+											<string>AFD3C7E912C1A8F1009752CA</string>
+											<string>AFD3C7EA12C1A8F1009752CA</string>
+											<string>AFD3C7EB12C1A8F1009752CA</string>
+											<string>AFD3C7EC12C1A8F1009752CA</string>
+											<string>AFD3C7ED12C1A8F1009752CA</string>
+											<string>AFD3C7EE12C1A8F1009752CA</string>
+											<string>AFD3C7EF12C1A8F1009752CA</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -547,7 +550,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>AFD3C7B012C18E04009752CA</string>
 		<string>AFD3C75612C057FE009752CA</string>
 		<string>AFD3C74612C05523009752CA</string>
 		<string>AF8B611812B464C300E0C7E4</string>
@@ -577,7 +579,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>JinxAppDelegate.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>

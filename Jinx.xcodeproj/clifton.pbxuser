@@ -9,9 +9,9 @@
 	};
 	1D3623250D0F684500981E51 /* JinxAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1143, 2015}}";
-			sepNavSelRange = "{1017, 0}";
-			sepNavVisRange = "{500, 836}";
+			sepNavIntBoundsRect = "{{0, 0}, {1143, 2080}}";
+			sepNavSelRange = "{231, 0}";
+			sepNavVisRange = "{0, 747}";
 			sepNavWindowFrame = "{{15, 68}, {750, 805}}";
 		};
 	};
@@ -37,9 +37,9 @@
 	};
 	28C286E00D94DF7D0034E888 /* RootViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1153, 2743}}";
-			sepNavSelRange = "{1537, 19}";
-			sepNavVisRange = "{1058, 1214}";
+			sepNavIntBoundsRect = "{{0, 0}, {1143, 2782}}";
+			sepNavSelRange = "{289, 0}";
+			sepNavVisRange = "{0, 700}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
@@ -627,6 +627,16 @@
 			AFD3C7AD12C18E04009752CA /* PBXTextBookmark */ = AFD3C7AD12C18E04009752CA /* PBXTextBookmark */;
 			AFD3C7AE12C18E04009752CA /* PBXTextBookmark */ = AFD3C7AE12C18E04009752CA /* PBXTextBookmark */;
 			AFD3C7AF12C18E04009752CA /* PBXTextBookmark */ = AFD3C7AF12C18E04009752CA /* PBXTextBookmark */;
+			AFD3C7DF12C1A8C5009752CA /* XCBuildMessageTextBookmark */ = AFD3C7DF12C1A8C5009752CA /* XCBuildMessageTextBookmark */;
+			AFD3C7E012C1A8C5009752CA /* PBXTextBookmark */ = AFD3C7E012C1A8C5009752CA /* PBXTextBookmark */;
+			AFD3C7E912C1A8F1009752CA /* PBXTextBookmark */ = AFD3C7E912C1A8F1009752CA /* PBXTextBookmark */;
+			AFD3C7EA12C1A8F1009752CA /* PBXTextBookmark */ = AFD3C7EA12C1A8F1009752CA /* PBXTextBookmark */;
+			AFD3C7EB12C1A8F1009752CA /* PBXTextBookmark */ = AFD3C7EB12C1A8F1009752CA /* PBXTextBookmark */;
+			AFD3C7EC12C1A8F1009752CA /* PBXTextBookmark */ = AFD3C7EC12C1A8F1009752CA /* PBXTextBookmark */;
+			AFD3C7ED12C1A8F1009752CA /* PBXTextBookmark */ = AFD3C7ED12C1A8F1009752CA /* PBXTextBookmark */;
+			AFD3C7EE12C1A8F1009752CA /* PBXTextBookmark */ = AFD3C7EE12C1A8F1009752CA /* PBXTextBookmark */;
+			AFD3C7EF12C1A8F1009752CA /* PBXTextBookmark */ = AFD3C7EF12C1A8F1009752CA /* PBXTextBookmark */;
+			AFD3C7F012C1A8F1009752CA /* PBXTextBookmark */ = AFD3C7F012C1A8F1009752CA /* PBXTextBookmark */;
 		};
 		sourceControlManager = AF8B612112B464C300E0C7E4 /* Source Control */;
 		userBuildSettings = {
@@ -683,9 +693,9 @@
 	};
 	AF5DBCEC12BD22250038295F /* CCCCallScreen.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1143, 3419}}";
-			sepNavSelRange = "{8463, 0}";
-			sepNavVisRange = "{7884, 777}";
+			sepNavIntBoundsRect = "{{0, 0}, {1143, 3367}}";
+			sepNavSelRange = "{248, 21}";
+			sepNavVisRange = "{0, 697}";
 		};
 	};
 	AF5DBCEE12BD22250038295F /* JinxApplicationGlobal.h */ = {
@@ -797,9 +807,9 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 220";
 		rLen = 0;
-		rLoc = 6209;
+		rLoc = 6196;
 		rType = 0;
-		vrLen = 1095;
+		vrLen = 585;
 		vrLoc = 5764;
 	};
 	AF5DBE4C12BD7C550038295F /* PBXTextBookmark */ = {
@@ -817,7 +827,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 63";
 		rLen = 0;
-		rLoc = 6086;
+		rLoc = 6073;
 		rType = 0;
 		vrLen = 996;
 		vrLoc = 1067;
@@ -827,7 +837,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 49";
 		rLen = 0;
-		rLoc = 5473;
+		rLoc = 5460;
 		rType = 0;
 		vrLen = 995;
 		vrLoc = 1067;
@@ -924,9 +934,9 @@
 		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{9034, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{9085, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{9135, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 17416}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1143, 6045}}";
-			sepNavSelRange = "{2885, 0}";
-			sepNavVisRange = "{1694, 1519}";
+			sepNavIntBoundsRect = "{{0, 0}, {1143, 6214}}";
+			sepNavSelRange = "{140, 34}";
+			sepNavVisRange = "{0, 908}";
 		};
 	};
 	AF8B629212B557A300E0C7E4 /* CCCChatViewController.h */ = {
@@ -1040,7 +1050,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 49";
 		rLen = 0;
-		rLoc = 5473;
+		rLoc = 5460;
 		rType = 0;
 		vrLen = 993;
 		vrLoc = 1067;
@@ -1060,7 +1070,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 76";
 		rLen = 0;
-		rLoc = 1263;
+		rLoc = 1250;
 		rType = 0;
 		vrLen = 1070;
 		vrLoc = 1812;
@@ -1070,7 +1080,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 77";
 		rLen = 0;
-		rLoc = 1259;
+		rLoc = 1246;
 		rType = 0;
 		vrLen = 984;
 		vrLoc = 1545;
@@ -1080,7 +1090,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 77";
 		rLen = 0;
-		rLoc = 1254;
+		rLoc = 1241;
 		rType = 0;
 		vrLen = 985;
 		vrLoc = 1545;
@@ -1094,9 +1104,9 @@
 	};
 	AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1143, 637}}";
-			sepNavSelRange = "{208, 92}";
-			sepNavVisRange = "{30, 1492}";
+			sepNavIntBoundsRect = "{{0, 0}, {1143, 546}}";
+			sepNavSelRange = "{194, 0}";
+			sepNavVisRange = "{30, 1414}";
 		};
 	};
 	AFD3BF9D12BD7F1D009752CA /* PBXTextBookmark */ = {
@@ -1124,7 +1134,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 142";
 		rLen = 0;
-		rLoc = 3619;
+		rLoc = 3606;
 		rType = 0;
 		vrLen = 1134;
 		vrLoc = 3305;
@@ -1168,7 +1178,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 144";
 		rLen = 0;
-		rLoc = 3624;
+		rLoc = 3611;
 		rType = 0;
 		vrLen = 1162;
 		vrLoc = 3666;
@@ -1188,7 +1198,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 18";
 		rLen = 0;
-		rLoc = 1456;
+		rLoc = 1443;
 		rType = 0;
 		vrLen = 691;
 		vrLoc = 0;
@@ -1206,7 +1216,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 140";
 		rLen = 0;
-		rLoc = 3265;
+		rLoc = 3252;
 		rType = 0;
 		vrLen = 1130;
 		vrLoc = 3666;
@@ -1216,7 +1226,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 140";
 		rLen = 0;
-		rLoc = 3265;
+		rLoc = 3252;
 		rType = 0;
 		vrLen = 1130;
 		vrLoc = 3666;
@@ -1226,7 +1236,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 19";
 		rLen = 0;
-		rLoc = 1350;
+		rLoc = 1337;
 		rType = 0;
 		vrLen = 945;
 		vrLoc = 0;
@@ -1236,7 +1246,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 19";
 		rLen = 0;
-		rLoc = 1349;
+		rLoc = 1336;
 		rType = 0;
 		vrLen = 949;
 		vrLoc = 0;
@@ -1246,7 +1256,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 15";
 		rLen = 0;
-		rLoc = 334;
+		rLoc = 321;
 		rType = 0;
 		vrLen = 762;
 		vrLoc = 0;
@@ -1276,7 +1286,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 20";
 		rLen = 0;
-		rLoc = 1433;
+		rLoc = 1420;
 		rType = 0;
 		vrLen = 1052;
 		vrLoc = 0;
@@ -1286,7 +1296,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 11";
 		rLen = 0;
-		rLoc = 207;
+		rLoc = 194;
 		rType = 0;
 		vrLen = 1046;
 		vrLoc = 0;
@@ -1296,7 +1306,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 21";
 		rLen = 0;
-		rLoc = 1349;
+		rLoc = 1336;
 		rType = 0;
 		vrLen = 1089;
 		vrLoc = 0;
@@ -1316,7 +1326,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 21";
 		rLen = 0;
-		rLoc = 1349;
+		rLoc = 1336;
 		rType = 0;
 		vrLen = 1089;
 		vrLoc = 0;
@@ -1326,7 +1336,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 21";
 		rLen = 0;
-		rLoc = 1349;
+		rLoc = 1336;
 		rType = 0;
 		vrLen = 1138;
 		vrLoc = 0;
@@ -1336,7 +1346,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 21";
 		rLen = 0;
-		rLoc = 1023;
+		rLoc = 1010;
 		rType = 0;
 		vrLen = 1138;
 		vrLoc = 0;
@@ -1346,7 +1356,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 141";
 		rLen = 0;
-		rLoc = 3619;
+		rLoc = 3606;
 		rType = 0;
 		vrLen = 1427;
 		vrLoc = 3424;
@@ -1366,7 +1376,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 15";
 		rLen = 149;
-		rLoc = 440;
+		rLoc = 427;
 		rType = 0;
 		vrLen = 1174;
 		vrLoc = 0;
@@ -1376,7 +1386,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 16";
 		rLen = 0;
-		rLoc = 587;
+		rLoc = 574;
 		rType = 0;
 		vrLen = 1172;
 		vrLoc = 0;
@@ -1386,7 +1396,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 15";
 		rLen = 0;
-		rLoc = 586;
+		rLoc = 573;
 		rType = 0;
 		vrLen = 1172;
 		vrLoc = 0;
@@ -1414,7 +1424,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 140";
 		rLen = 0;
-		rLoc = 3619;
+		rLoc = 3606;
 		rType = 0;
 		vrLen = 1292;
 		vrLoc = 3563;
@@ -1424,7 +1434,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 140";
 		rLen = 0;
-		rLoc = 3619;
+		rLoc = 3606;
 		rType = 0;
 		vrLen = 1140;
 		vrLoc = 3563;
@@ -1444,7 +1454,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 140";
 		rLen = 0;
-		rLoc = 3619;
+		rLoc = 3606;
 		rType = 0;
 		vrLen = 1140;
 		vrLoc = 3563;
@@ -1454,7 +1464,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 15";
 		rLen = 0;
-		rLoc = 586;
+		rLoc = 573;
 		rType = 0;
 		vrLen = 1172;
 		vrLoc = 0;
@@ -1464,7 +1474,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 22";
 		rLen = 0;
-		rLoc = 966;
+		rLoc = 953;
 		rType = 0;
 		vrLen = 1172;
 		vrLoc = 0;
@@ -1474,7 +1484,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 22";
 		rLen = 0;
-		rLoc = 966;
+		rLoc = 953;
 		rType = 0;
 		vrLen = 1172;
 		vrLoc = 0;
@@ -1484,7 +1494,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 141";
 		rLen = 0;
-		rLoc = 3619;
+		rLoc = 3606;
 		rType = 0;
 		vrLen = 1166;
 		vrLoc = 3563;
@@ -1494,7 +1504,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 146";
 		rLen = 0;
-		rLoc = 3654;
+		rLoc = 3641;
 		rType = 0;
 		vrLen = 1166;
 		vrLoc = 3563;
@@ -1504,7 +1514,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 146";
 		rLen = 0;
-		rLoc = 3654;
+		rLoc = 3641;
 		rType = 0;
 		vrLen = 1166;
 		vrLoc = 3563;
@@ -1514,7 +1524,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 22";
 		rLen = 0;
-		rLoc = 966;
+		rLoc = 953;
 		rType = 0;
 		vrLen = 1172;
 		vrLoc = 0;
@@ -1524,7 +1534,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 17";
 		rLen = 0;
-		rLoc = 663;
+		rLoc = 650;
 		rType = 0;
 		vrLen = 1177;
 		vrLoc = 0;
@@ -1534,7 +1544,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 146";
 		rLen = 0;
-		rLoc = 3654;
+		rLoc = 3641;
 		rType = 0;
 		vrLen = 1166;
 		vrLoc = 3563;
@@ -1544,7 +1554,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 17";
 		rLen = 13;
-		rLoc = 612;
+		rLoc = 599;
 		rType = 0;
 		vrLen = 1172;
 		vrLoc = 0;
@@ -1554,7 +1564,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 22";
 		rLen = 0;
-		rLoc = 999;
+		rLoc = 986;
 		rType = 0;
 		vrLen = 1161;
 		vrLoc = 0;
@@ -1584,7 +1594,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 30";
 		rLen = 0;
-		rLoc = 1459;
+		rLoc = 1446;
 		rType = 0;
 		vrLen = 1172;
 		vrLoc = 0;
@@ -1602,7 +1612,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 154";
 		rLen = 0;
-		rLoc = 3787;
+		rLoc = 3774;
 		rType = 0;
 		vrLen = 1133;
 		vrLoc = 3561;
@@ -1620,7 +1630,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 140";
 		rLen = 0;
-		rLoc = 3619;
+		rLoc = 3606;
 		rType = 0;
 		vrLen = 564;
 		vrLoc = 3900;
@@ -1630,7 +1640,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 153";
 		rLen = 0;
-		rLoc = 3786;
+		rLoc = 3773;
 		rType = 0;
 		vrLen = 1104;
 		vrLoc = 3561;
@@ -1640,7 +1650,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 146";
 		rLen = 0;
-		rLoc = 3654;
+		rLoc = 3641;
 		rType = 0;
 		vrLen = 1106;
 		vrLoc = 3561;
@@ -1650,7 +1660,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 153";
 		rLen = 0;
-		rLoc = 3786;
+		rLoc = 3773;
 		rType = 0;
 		vrLen = 1106;
 		vrLoc = 3561;
@@ -1660,7 +1670,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 153";
 		rLen = 0;
-		rLoc = 3786;
+		rLoc = 3773;
 		rType = 0;
 		vrLen = 1106;
 		vrLoc = 3561;
@@ -1670,7 +1680,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 30";
 		rLen = 0;
-		rLoc = 1459;
+		rLoc = 1446;
 		rType = 0;
 		vrLen = 1119;
 		vrLoc = 0;
@@ -1680,7 +1690,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 22";
 		rLen = 0;
-		rLoc = 999;
+		rLoc = 986;
 		rType = 0;
 		vrLen = 1200;
 		vrLoc = 30;
@@ -1690,7 +1700,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 153";
 		rLen = 6;
-		rLoc = 3780;
+		rLoc = 3767;
 		rType = 0;
 		vrLen = 1104;
 		vrLoc = 3563;
@@ -1700,7 +1710,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 22";
 		rLen = 31;
-		rLoc = 966;
+		rLoc = 953;
 		rType = 0;
 		vrLen = 1211;
 		vrLoc = 0;
@@ -1710,7 +1720,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 22";
 		rLen = 0;
-		rLoc = 972;
+		rLoc = 959;
 		rType = 0;
 		vrLen = 1182;
 		vrLoc = 0;
@@ -1720,7 +1730,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 24";
 		rLen = 0;
-		rLoc = 1349;
+		rLoc = 1336;
 		rType = 0;
 		vrLen = 1201;
 		vrLoc = 0;
@@ -1730,7 +1740,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 27";
 		rLen = 0;
-		rLoc = 1349;
+		rLoc = 1336;
 		rType = 0;
 		vrLen = 1278;
 		vrLoc = 0;
@@ -1740,7 +1750,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 140";
 		rLen = 0;
-		rLoc = 3619;
+		rLoc = 3606;
 		rType = 0;
 		vrLen = 566;
 		vrLoc = 3900;
@@ -1758,7 +1768,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 46";
 		rLen = 0;
-		rLoc = 1671;
+		rLoc = 1658;
 		rType = 0;
 		vrLen = 154;
 		vrLoc = 1279;
@@ -1778,7 +1788,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 27";
 		rLen = 0;
-		rLoc = 1347;
+		rLoc = 1334;
 		rType = 0;
 		vrLen = 1277;
 		vrLoc = 0;
@@ -1788,7 +1798,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 29";
 		rLen = 0;
-		rLoc = 1433;
+		rLoc = 1420;
 		rType = 0;
 		vrLen = 1260;
 		vrLoc = 0;
@@ -1798,7 +1808,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 24";
 		rLen = 0;
-		rLoc = 1268;
+		rLoc = 1255;
 		rType = 0;
 		vrLen = 1307;
 		vrLoc = 0;
@@ -1808,7 +1818,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 24";
 		rLen = 0;
-		rLoc = 1268;
+		rLoc = 1255;
 		rType = 0;
 		vrLen = 1343;
 		vrLoc = 0;
@@ -1818,7 +1828,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 24";
 		rLen = 0;
-		rLoc = 1268;
+		rLoc = 1255;
 		rType = 0;
 		vrLen = 1343;
 		vrLoc = 0;
@@ -1828,7 +1838,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 24";
 		rLen = 0;
-		rLoc = 1268;
+		rLoc = 1255;
 		rType = 0;
 		vrLen = 1343;
 		vrLoc = 0;
@@ -1838,7 +1848,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 24";
 		rLen = 0;
-		rLoc = 1268;
+		rLoc = 1255;
 		rType = 0;
 		vrLen = 1344;
 		vrLoc = 0;
@@ -1848,7 +1858,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 24";
 		rLen = 0;
-		rLoc = 1268;
+		rLoc = 1255;
 		rType = 0;
 		vrLen = 1330;
 		vrLoc = 0;
@@ -1858,7 +1868,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 24";
 		rLen = 0;
-		rLoc = 1268;
+		rLoc = 1255;
 		rType = 0;
 		vrLen = 1331;
 		vrLoc = 0;
@@ -1868,7 +1878,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 24";
 		rLen = 0;
-		rLoc = 1268;
+		rLoc = 1255;
 		rType = 0;
 		vrLen = 1329;
 		vrLoc = 0;
@@ -1878,7 +1888,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 24";
 		rLen = 0;
-		rLoc = 1268;
+		rLoc = 1255;
 		rType = 0;
 		vrLen = 1343;
 		vrLoc = 0;
@@ -1888,7 +1898,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 27";
 		rLen = 0;
-		rLoc = 1349;
+		rLoc = 1336;
 		rType = 0;
 		vrLen = 1334;
 		vrLoc = 0;
@@ -1898,7 +1908,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 24";
 		rLen = 0;
-		rLoc = 1268;
+		rLoc = 1255;
 		rType = 0;
 		vrLen = 1335;
 		vrLoc = 0;
@@ -1908,7 +1918,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 24";
 		rLen = 0;
-		rLoc = 1268;
+		rLoc = 1255;
 		rType = 0;
 		vrLen = 1336;
 		vrLoc = 0;
@@ -1918,7 +1928,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 24";
 		rLen = 0;
-		rLoc = 1268;
+		rLoc = 1255;
 		rType = 0;
 		vrLen = 1336;
 		vrLoc = 0;
@@ -1928,7 +1938,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 24";
 		rLen = 0;
-		rLoc = 1268;
+		rLoc = 1255;
 		rType = 0;
 		vrLen = 1336;
 		vrLoc = 0;
@@ -1938,7 +1948,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 24";
 		rLen = 0;
-		rLoc = 1268;
+		rLoc = 1255;
 		rType = 0;
 		vrLen = 1336;
 		vrLoc = 0;
@@ -1948,7 +1958,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 24";
 		rLen = 0;
-		rLoc = 1268;
+		rLoc = 1255;
 		rType = 0;
 		vrLen = 1336;
 		vrLoc = 0;
@@ -1958,7 +1968,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 24";
 		rLen = 0;
-		rLoc = 1268;
+		rLoc = 1255;
 		rType = 0;
 		vrLen = 1336;
 		vrLoc = 0;
@@ -1968,7 +1978,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 24";
 		rLen = 0;
-		rLoc = 1268;
+		rLoc = 1255;
 		rType = 0;
 		vrLen = 1336;
 		vrLoc = 0;
@@ -1978,7 +1988,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 28";
 		rLen = 0;
-		rLoc = 1349;
+		rLoc = 1336;
 		rType = 0;
 		vrLen = 1381;
 		vrLoc = 0;
@@ -1988,7 +1998,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 29";
 		rLen = 0;
-		rLoc = 1349;
+		rLoc = 1336;
 		rType = 0;
 		vrLen = 1427;
 		vrLoc = 0;
@@ -1998,7 +2008,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 29";
 		rLen = 0;
-		rLoc = 1349;
+		rLoc = 1336;
 		rType = 0;
 		vrLen = 1427;
 		vrLoc = 0;
@@ -2008,7 +2018,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 26";
 		rLen = 0;
-		rLoc = 1268;
+		rLoc = 1255;
 		rType = 0;
 		vrLen = 1544;
 		vrLoc = 0;
@@ -2018,7 +2028,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 25";
 		rLen = 0;
-		rLoc = 1268;
+		rLoc = 1255;
 		rType = 0;
 		vrLen = 1544;
 		vrLoc = 0;
@@ -2028,7 +2038,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 30";
 		rLen = 0;
-		rLoc = 1431;
+		rLoc = 1418;
 		rType = 0;
 		vrLen = 1520;
 		vrLoc = 3;
@@ -2038,7 +2048,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 27";
 		rLen = 0;
-		rLoc = 1241;
+		rLoc = 1228;
 		rType = 0;
 		vrLen = 1457;
 		vrLoc = 3;
@@ -2048,7 +2058,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 27";
 		rLen = 0;
-		rLoc = 1241;
+		rLoc = 1228;
 		rType = 0;
 		vrLen = 1457;
 		vrLoc = 3;
@@ -2088,7 +2098,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 86";
 		rLen = 0;
-		rLoc = 1926;
+		rLoc = 1913;
 		rType = 0;
 		vrLen = 1179;
 		vrLoc = 2012;
@@ -2098,7 +2108,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 86";
 		rLen = 0;
-		rLoc = 1926;
+		rLoc = 1913;
 		rType = 0;
 		vrLen = 1182;
 		vrLoc = 2012;
@@ -2108,7 +2118,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 86";
 		rLen = 0;
-		rLoc = 1926;
+		rLoc = 1913;
 		rType = 0;
 		vrLen = 1175;
 		vrLoc = 2012;
@@ -2118,7 +2128,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 87";
 		rLen = 0;
-		rLoc = 1926;
+		rLoc = 1913;
 		rType = 0;
 		vrLen = 1175;
 		vrLoc = 2012;
@@ -2128,7 +2138,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 87";
 		rLen = 0;
-		rLoc = 1926;
+		rLoc = 1913;
 		rType = 0;
 		vrLen = 1175;
 		vrLoc = 2012;
@@ -2138,7 +2148,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 86";
 		rLen = 0;
-		rLoc = 1926;
+		rLoc = 1913;
 		rType = 0;
 		vrLen = 1179;
 		vrLoc = 2012;
@@ -2148,7 +2158,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 86";
 		rLen = 0;
-		rLoc = 1926;
+		rLoc = 1913;
 		rType = 0;
 		vrLen = 1175;
 		vrLoc = 2012;
@@ -2158,7 +2168,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 86";
 		rLen = 0;
-		rLoc = 1926;
+		rLoc = 1913;
 		rType = 0;
 		vrLen = 1179;
 		vrLoc = 2012;
@@ -2168,7 +2178,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 76";
 		rLen = 0;
-		rLoc = 1263;
+		rLoc = 1250;
 		rType = 0;
 		vrLen = 1230;
 		vrLoc = 2012;
@@ -2178,7 +2188,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 76";
 		rLen = 0;
-		rLoc = 1263;
+		rLoc = 1250;
 		rType = 0;
 		vrLen = 1231;
 		vrLoc = 2012;
@@ -2188,7 +2198,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 76";
 		rLen = 0;
-		rLoc = 1263;
+		rLoc = 1250;
 		rType = 0;
 		vrLen = 1231;
 		vrLoc = 2012;
@@ -2198,7 +2208,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 92";
 		rLen = 0;
-		rLoc = 1926;
+		rLoc = 1913;
 		rType = 0;
 		vrLen = 1191;
 		vrLoc = 2012;
@@ -2208,7 +2218,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 93";
 		rLen = 0;
-		rLoc = 1926;
+		rLoc = 1913;
 		rType = 0;
 		vrLen = 1301;
 		vrLoc = 2012;
@@ -2218,7 +2228,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 93";
 		rLen = 0;
-		rLoc = 1926;
+		rLoc = 1913;
 		rType = 0;
 		vrLen = 1303;
 		vrLoc = 2012;
@@ -2228,7 +2238,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 93";
 		rLen = 0;
-		rLoc = 1926;
+		rLoc = 1913;
 		rType = 0;
 		vrLen = 1297;
 		vrLoc = 2012;
@@ -2248,7 +2258,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 93";
 		rLen = 0;
-		rLoc = 1926;
+		rLoc = 1913;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 2012;
@@ -2258,7 +2268,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 88";
 		rLen = 0;
-		rLoc = 1536;
+		rLoc = 1523;
 		rType = 0;
 		vrLen = 1312;
 		vrLoc = 2051;
@@ -2268,7 +2278,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 90";
 		rLen = 0;
-		rLoc = 1536;
+		rLoc = 1523;
 		rType = 0;
 		vrLen = 1258;
 		vrLoc = 2051;
@@ -2278,7 +2288,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 89";
 		rLen = 0;
-		rLoc = 1536;
+		rLoc = 1523;
 		rType = 0;
 		vrLen = 1312;
 		vrLoc = 2051;
@@ -2288,7 +2298,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 89";
 		rLen = 0;
-		rLoc = 1536;
+		rLoc = 1523;
 		rType = 0;
 		vrLen = 1312;
 		vrLoc = 2051;
@@ -2298,7 +2308,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 98";
 		rLen = 0;
-		rLoc = 1907;
+		rLoc = 1894;
 		rType = 0;
 		vrLen = 1316;
 		vrLoc = 2051;
@@ -2308,7 +2318,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 157";
 		rLen = 0;
-		rLoc = 3654;
+		rLoc = 3641;
 		rType = 0;
 		vrLen = 1168;
 		vrLoc = 4129;
@@ -2318,7 +2328,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 156";
 		rLen = 0;
-		rLoc = 3380;
+		rLoc = 3367;
 		rType = 0;
 		vrLen = 1185;
 		vrLoc = 3955;
@@ -2328,7 +2338,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 48";
 		rLen = 0;
-		rLoc = 1671;
+		rLoc = 1658;
 		rType = 0;
 		vrLen = 908;
 		vrLoc = 300;
@@ -2338,7 +2348,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 48";
 		rLen = 0;
-		rLoc = 1671;
+		rLoc = 1658;
 		rType = 0;
 		vrLen = 908;
 		vrLoc = 300;
@@ -2348,7 +2358,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 154";
 		rLen = 0;
-		rLoc = 3380;
+		rLoc = 3367;
 		rType = 0;
 		vrLen = 1128;
 		vrLoc = 4131;
@@ -2358,7 +2368,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 142";
 		rLen = 0;
-		rLoc = 3053;
+		rLoc = 3040;
 		rType = 0;
 		vrLen = 1157;
 		vrLoc = 4133;
@@ -2368,7 +2378,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 98";
 		rLen = 0;
-		rLoc = 1907;
+		rLoc = 1894;
 		rType = 0;
 		vrLen = 1192;
 		vrLoc = 2386;
@@ -2378,7 +2388,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 98";
 		rLen = 0;
-		rLoc = 1921;
+		rLoc = 1908;
 		rType = 0;
 		vrLen = 1179;
 		vrLoc = 2356;
@@ -2392,9 +2402,9 @@
 	};
 	AFD3C15112BDB71B009752CA /* BackgroundRotation.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1143, 1053}}";
-			sepNavSelRange = "{240, 122}";
-			sepNavVisRange = "{82, 823}";
+			sepNavIntBoundsRect = "{{0, 0}, {1143, 1131}}";
+			sepNavSelRange = "{158, 0}";
+			sepNavVisRange = "{82, 647}";
 		};
 	};
 	AFD3C17712BDC2E5009752CA /* PBXTextBookmark */ = {
@@ -2432,7 +2442,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 196";
 		rLen = 111;
-		rLoc = 6098;
+		rLoc = 6085;
 		rType = 0;
 		vrLen = 850;
 		vrLoc = 5499;
@@ -2442,7 +2452,7 @@
 		fRef = AFD3C15112BDB71B009752CA /* BackgroundRotation.m */;
 		name = "BackgroundRotation.m: 14";
 		rLen = 122;
-		rLoc = 240;
+		rLoc = 227;
 		rType = 0;
 		vrLen = 1098;
 		vrLoc = 764;
@@ -2462,7 +2472,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 34";
 		rLen = 0;
-		rLoc = 1262;
+		rLoc = 1249;
 		rType = 0;
 		vrLen = 961;
 		vrLoc = 463;
@@ -2472,7 +2482,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 34";
 		rLen = 0;
-		rLoc = 1262;
+		rLoc = 1249;
 		rType = 0;
 		vrLen = 1004;
 		vrLoc = 420;
@@ -2492,7 +2502,7 @@
 		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
 		name = "CCCBuddySelectorCell.m: 12";
 		rLen = 92;
-		rLoc = 208;
+		rLoc = 195;
 		rType = 0;
 		vrLen = 1492;
 		vrLoc = 30;
@@ -2512,7 +2522,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 60";
 		rLen = 78;
-		rLoc = 5322;
+		rLoc = 5309;
 		rType = 0;
 		vrLen = 983;
 		vrLoc = 1385;
@@ -2522,7 +2532,7 @@
 		fRef = AFD3C15112BDB71B009752CA /* BackgroundRotation.m */;
 		name = "BackgroundRotation.m: 14";
 		rLen = 122;
-		rLoc = 240;
+		rLoc = 227;
 		rType = 0;
 		vrLen = 1093;
 		vrLoc = 764;
@@ -2532,7 +2542,7 @@
 		fRef = AFD3C15112BDB71B009752CA /* BackgroundRotation.m */;
 		name = "BackgroundRotation.m: 33";
 		rLen = 0;
-		rLoc = 904;
+		rLoc = 891;
 		rType = 0;
 		vrLen = 1064;
 		vrLoc = 585;
@@ -2542,7 +2552,7 @@
 		fRef = AFD3C15112BDB71B009752CA /* BackgroundRotation.m */;
 		name = "BackgroundRotation.m: 32";
 		rLen = 0;
-		rLoc = 663;
+		rLoc = 650;
 		rType = 0;
 		vrLen = 1219;
 		vrLoc = 667;
@@ -2562,7 +2572,7 @@
 		fRef = AFD3C15112BDB71B009752CA /* BackgroundRotation.m */;
 		name = "BackgroundRotation.m: 33";
 		rLen = 0;
-		rLoc = 738;
+		rLoc = 725;
 		rType = 0;
 		vrLen = 823;
 		vrLoc = 82;
@@ -2572,7 +2582,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 60";
 		rLen = 78;
-		rLoc = 5322;
+		rLoc = 5309;
 		rType = 0;
 		vrLen = 983;
 		vrLoc = 1385;
@@ -2582,7 +2592,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 57";
 		rLen = 0;
-		rLoc = 5136;
+		rLoc = 5123;
 		rType = 0;
 		vrLen = 800;
 		vrLoc = 1109;
@@ -2592,7 +2602,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 55";
 		rLen = 0;
-		rLoc = 5051;
+		rLoc = 5038;
 		rType = 0;
 		vrLen = 752;
 		vrLoc = 1109;
@@ -2612,7 +2622,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 21";
 		rLen = 0;
-		rLoc = 614;
+		rLoc = 601;
 		rType = 0;
 		vrLen = 746;
 		vrLoc = 35;
@@ -2622,7 +2632,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 21";
 		rLen = 0;
-		rLoc = 603;
+		rLoc = 590;
 		rType = 0;
 		vrLen = 770;
 		vrLoc = 32;
@@ -2642,7 +2652,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 21";
 		rLen = 0;
-		rLoc = 603;
+		rLoc = 590;
 		rType = 0;
 		vrLen = 770;
 		vrLoc = 32;
@@ -2652,7 +2662,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 98";
 		rLen = 19;
-		rLoc = 6353;
+		rLoc = 6340;
 		rType = 0;
 		vrLen = 1174;
 		vrLoc = 2205;
@@ -2672,7 +2682,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 98";
 		rLen = 19;
-		rLoc = 6353;
+		rLoc = 6340;
 		rType = 0;
 		vrLen = 1174;
 		vrLoc = 2205;
@@ -2682,7 +2692,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 101";
 		rLen = 0;
-		rLoc = 6435;
+		rLoc = 6422;
 		rType = 0;
 		vrLen = 1149;
 		vrLoc = 2382;
@@ -2692,7 +2702,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 101";
 		rLen = 0;
-		rLoc = 6435;
+		rLoc = 6422;
 		rType = 0;
 		vrLen = 1149;
 		vrLoc = 2382;
@@ -2702,7 +2712,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 102";
 		rLen = 0;
-		rLoc = 6435;
+		rLoc = 6422;
 		rType = 0;
 		vrLen = 1194;
 		vrLoc = 2382;
@@ -2722,7 +2732,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 102";
 		rLen = 0;
-		rLoc = 6435;
+		rLoc = 6422;
 		rType = 0;
 		vrLen = 1194;
 		vrLoc = 2382;
@@ -2732,7 +2742,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 105";
 		rLen = 0;
-		rLoc = 6581;
+		rLoc = 6568;
 		rType = 0;
 		vrLen = 1208;
 		vrLoc = 2382;
@@ -2749,7 +2759,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 58";
 		rLen = 0;
-		rLoc = 3078;
+		rLoc = 3065;
 		rType = 0;
 		vrLen = 1080;
 		vrLoc = 1205;
@@ -2759,7 +2769,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 63";
 		rLen = 0;
-		rLoc = 4349;
+		rLoc = 4336;
 		rType = 0;
 		vrLen = 1078;
 		vrLoc = 1205;
@@ -2769,7 +2779,7 @@
 		fRef = AFD3C15112BDB71B009752CA /* BackgroundRotation.m */;
 		name = "BackgroundRotation.m: 14";
 		rLen = 122;
-		rLoc = 240;
+		rLoc = 227;
 		rType = 0;
 		vrLen = 823;
 		vrLoc = 82;
@@ -2789,7 +2799,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 162";
 		rLen = 0;
-		rLoc = 7411;
+		rLoc = 7398;
 		rType = 0;
 		vrLen = 1034;
 		vrLoc = 4709;
@@ -2849,7 +2859,7 @@
 		fRef = 1D3623250D0F684500981E51 /* JinxAppDelegate.m */;
 		name = "JinxAppDelegate.m: 36";
 		rLen = 0;
-		rLoc = 1991;
+		rLoc = 1970;
 		rType = 0;
 		vrLen = 1587;
 		vrLoc = 515;
@@ -2902,7 +2912,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 194";
 		rLen = 0;
-		rLoc = 6046;
+		rLoc = 6033;
 		rType = 0;
 		vrLen = 864;
 		vrLoc = 5485;
@@ -3487,7 +3497,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 29";
 		rLen = 0;
-		rLoc = 1014;
+		rLoc = 1001;
 		rType = 0;
 		vrLen = 940;
 		vrLoc = 325;
@@ -3497,7 +3507,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 29";
 		rLen = 0;
-		rLoc = 1014;
+		rLoc = 1001;
 		rType = 0;
 		vrLen = 957;
 		vrLoc = 325;
@@ -3523,7 +3533,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 30";
 		rLen = 0;
-		rLoc = 1028;
+		rLoc = 1015;
 		rType = 0;
 		vrLen = 969;
 		vrLoc = 32;
@@ -3549,7 +3559,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 30";
 		rLen = 0;
-		rLoc = 1028;
+		rLoc = 1015;
 		rType = 0;
 		vrLen = 986;
 		vrLoc = 32;
@@ -3589,7 +3599,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 30";
 		rLen = 0;
-		rLoc = 1028;
+		rLoc = 1015;
 		rType = 0;
 		vrLen = 969;
 		vrLoc = 32;
@@ -3609,7 +3619,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 194";
 		rLen = 0;
-		rLoc = 6046;
+		rLoc = 6033;
 		rType = 0;
 		vrLen = 863;
 		vrLoc = 5485;
@@ -4042,7 +4052,7 @@
 		fRef = 1D3623250D0F684500981E51 /* JinxAppDelegate.m */;
 		name = "JinxAppDelegate.m: 49";
 		rLen = 0;
-		rLoc = 1282;
+		rLoc = 1261;
 		rType = 0;
 		vrLen = 1100;
 		vrLoc = 543;
@@ -4068,7 +4078,7 @@
 		fRef = 1D3623250D0F684500981E51 /* JinxAppDelegate.m */;
 		name = "JinxAppDelegate.m: 42";
 		rLen = 0;
-		rLoc = 835;
+		rLoc = 814;
 		rType = 0;
 		vrLen = 1056;
 		vrLoc = 539;
@@ -4094,7 +4104,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 193";
 		rLen = 21;
-		rLoc = 5942;
+		rLoc = 5929;
 		rType = 0;
 		vrLen = 863;
 		vrLoc = 5485;
@@ -4104,7 +4114,7 @@
 		fRef = 1D3623250D0F684500981E51 /* JinxAppDelegate.m */;
 		name = "JinxAppDelegate.m: 42";
 		rLen = 0;
-		rLoc = 835;
+		rLoc = 814;
 		rType = 0;
 		vrLen = 1252;
 		vrLoc = 539;
@@ -4114,7 +4124,7 @@
 		fRef = 1D3623250D0F684500981E51 /* JinxAppDelegate.m */;
 		name = "JinxAppDelegate.m: 32";
 		rLen = 0;
-		rLoc = 834;
+		rLoc = 813;
 		rType = 0;
 		vrLen = 1487;
 		vrLoc = 481;
@@ -4158,7 +4168,7 @@
 		fRef = 1D3623250D0F684500981E51 /* JinxAppDelegate.m */;
 		name = "JinxAppDelegate.m: 32";
 		rLen = 0;
-		rLoc = 834;
+		rLoc = 813;
 		rType = 0;
 		vrLen = 1487;
 		vrLoc = 481;
@@ -4260,7 +4270,7 @@
 		fRef = 1D3623250D0F684500981E51 /* JinxAppDelegate.m */;
 		name = "JinxAppDelegate.m: 32";
 		rLen = 0;
-		rLoc = 834;
+		rLoc = 813;
 		rType = 0;
 		vrLen = 1487;
 		vrLoc = 481;
@@ -4270,7 +4280,7 @@
 		fRef = 1D3623250D0F684500981E51 /* JinxAppDelegate.m */;
 		name = "JinxAppDelegate.m: 35";
 		rLen = 0;
-		rLoc = 835;
+		rLoc = 814;
 		rType = 0;
 		vrLen = 1486;
 		vrLoc = 481;
@@ -4296,7 +4306,7 @@
 		fRef = 1D3623250D0F684500981E51 /* JinxAppDelegate.m */;
 		name = "JinxAppDelegate.m: 35";
 		rLen = 0;
-		rLoc = 835;
+		rLoc = 814;
 		rType = 0;
 		vrLen = 1486;
 		vrLoc = 481;
@@ -4306,7 +4316,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 30";
 		rLen = 0;
-		rLoc = 1028;
+		rLoc = 1015;
 		rType = 0;
 		vrLen = 969;
 		vrLoc = 32;
@@ -4316,7 +4326,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 70";
 		rLen = 0;
-		rLoc = 4349;
+		rLoc = 4336;
 		rType = 0;
 		vrLen = 1501;
 		vrLoc = 1498;
@@ -4342,7 +4352,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 70";
 		rLen = 0;
-		rLoc = 4349;
+		rLoc = 4336;
 		rType = 0;
 		vrLen = 1633;
 		vrLoc = 1498;
@@ -4368,7 +4378,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 70";
 		rLen = 0;
-		rLoc = 4349;
+		rLoc = 4336;
 		rType = 0;
 		vrLen = 1501;
 		vrLoc = 1498;
@@ -4394,7 +4404,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 70";
 		rLen = 0;
-		rLoc = 4349;
+		rLoc = 4336;
 		rType = 0;
 		vrLen = 1501;
 		vrLoc = 1498;
@@ -4420,7 +4430,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 72";
 		rLen = 0;
-		rLoc = 4349;
+		rLoc = 4336;
 		rType = 0;
 		vrLen = 1633;
 		vrLoc = 1498;
@@ -4446,7 +4456,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 72";
 		rLen = 0;
-		rLoc = 4349;
+		rLoc = 4336;
 		rType = 0;
 		vrLen = 1501;
 		vrLoc = 1498;
@@ -4472,7 +4482,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 72";
 		rLen = 0;
-		rLoc = 4349;
+		rLoc = 4336;
 		rType = 0;
 		vrLen = 1502;
 		vrLoc = 1498;
@@ -4498,7 +4508,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 72";
 		rLen = 0;
-		rLoc = 4349;
+		rLoc = 4336;
 		rType = 0;
 		vrLen = 1501;
 		vrLoc = 1498;
@@ -4524,7 +4534,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 72";
 		rLen = 0;
-		rLoc = 4349;
+		rLoc = 4336;
 		rType = 0;
 		vrLen = 1633;
 		vrLoc = 1498;
@@ -4550,7 +4560,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 72";
 		rLen = 0;
-		rLoc = 4349;
+		rLoc = 4336;
 		rType = 0;
 		vrLen = 1501;
 		vrLoc = 1498;
@@ -4576,7 +4586,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 72";
 		rLen = 0;
-		rLoc = 4349;
+		rLoc = 4336;
 		rType = 0;
 		vrLen = 1501;
 		vrLoc = 1498;
@@ -4602,7 +4612,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 72";
 		rLen = 0;
-		rLoc = 4349;
+		rLoc = 4336;
 		rType = 0;
 		vrLen = 1499;
 		vrLoc = 1498;
@@ -4628,7 +4638,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 72";
 		rLen = 0;
-		rLoc = 4349;
+		rLoc = 4336;
 		rType = 0;
 		vrLen = 1499;
 		vrLoc = 1498;
@@ -4654,7 +4664,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 72";
 		rLen = 0;
-		rLoc = 4349;
+		rLoc = 4336;
 		rType = 0;
 		vrLen = 1499;
 		vrLoc = 1498;
@@ -4680,7 +4690,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 72";
 		rLen = 0;
-		rLoc = 4349;
+		rLoc = 4336;
 		rType = 0;
 		vrLen = 1499;
 		vrLoc = 1498;
@@ -4706,7 +4716,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 72";
 		rLen = 0;
-		rLoc = 4349;
+		rLoc = 4336;
 		rType = 0;
 		vrLen = 1499;
 		vrLoc = 1498;
@@ -4732,7 +4742,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 61";
 		rLen = 0;
-		rLoc = 3038;
+		rLoc = 3025;
 		rType = 0;
 		vrLen = 1519;
 		vrLoc = 1410;
@@ -4758,7 +4768,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 61";
 		rLen = 0;
-		rLoc = 3038;
+		rLoc = 3025;
 		rType = 0;
 		vrLen = 1519;
 		vrLoc = 1410;
@@ -4784,7 +4794,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 68";
 		rLen = 0;
-		rLoc = 4349;
+		rLoc = 4336;
 		rType = 0;
 		vrLen = 1519;
 		vrLoc = 1410;
@@ -4810,7 +4820,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 68";
 		rLen = 0;
-		rLoc = 4349;
+		rLoc = 4336;
 		rType = 0;
 		vrLen = 1519;
 		vrLoc = 1410;
@@ -4836,7 +4846,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 68";
 		rLen = 0;
-		rLoc = 4349;
+		rLoc = 4336;
 		rType = 0;
 		vrLen = 1519;
 		vrLoc = 1410;
@@ -4862,7 +4872,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 68";
 		rLen = 0;
-		rLoc = 4349;
+		rLoc = 4336;
 		rType = 0;
 		vrLen = 1519;
 		vrLoc = 1410;
@@ -4872,7 +4882,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 68";
 		rLen = 0;
-		rLoc = 4349;
+		rLoc = 4336;
 		rType = 0;
 		vrLen = 1519;
 		vrLoc = 1410;
@@ -4898,7 +4908,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 68";
 		rLen = 0;
-		rLoc = 4349;
+		rLoc = 4336;
 		rType = 0;
 		vrLen = 1519;
 		vrLoc = 1410;
@@ -4924,7 +4934,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 88";
 		rLen = 0;
-		rLoc = 4349;
+		rLoc = 4336;
 		rType = 0;
 		vrLen = 1586;
 		vrLoc = 2011;
@@ -4950,7 +4960,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 77";
 		rLen = 0;
-		rLoc = 3812;
+		rLoc = 3799;
 		rType = 0;
 		vrLen = 1586;
 		vrLoc = 2011;
@@ -4976,7 +4986,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 77";
 		rLen = 0;
-		rLoc = 3804;
+		rLoc = 3791;
 		rType = 0;
 		vrLen = 1588;
 		vrLoc = 2011;
@@ -5002,7 +5012,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 84";
 		rLen = 0;
-		rLoc = 4247;
+		rLoc = 4234;
 		rType = 0;
 		vrLen = 1588;
 		vrLoc = 2011;
@@ -5028,7 +5038,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 84";
 		rLen = 0;
-		rLoc = 4247;
+		rLoc = 4234;
 		rType = 0;
 		vrLen = 1588;
 		vrLoc = 2011;
@@ -5054,7 +5064,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 84";
 		rLen = 0;
-		rLoc = 4249;
+		rLoc = 4236;
 		rType = 0;
 		vrLen = 1588;
 		vrLoc = 2011;
@@ -5080,7 +5090,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 84";
 		rLen = 0;
-		rLoc = 4241;
+		rLoc = 4228;
 		rType = 0;
 		vrLen = 1588;
 		vrLoc = 2011;
@@ -5106,7 +5116,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 84";
 		rLen = 0;
-		rLoc = 4248;
+		rLoc = 4235;
 		rType = 0;
 		vrLen = 1588;
 		vrLoc = 2011;
@@ -5132,7 +5142,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 84";
 		rLen = 0;
-		rLoc = 4248;
+		rLoc = 4235;
 		rType = 0;
 		vrLen = 1588;
 		vrLoc = 2011;
@@ -5158,7 +5168,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 75";
 		rLen = 0;
-		rLoc = 3710;
+		rLoc = 3697;
 		rType = 0;
 		vrLen = 1588;
 		vrLoc = 2011;
@@ -5184,7 +5194,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 71";
 		rLen = 0;
-		rLoc = 3441;
+		rLoc = 3428;
 		rType = 0;
 		vrLen = 1588;
 		vrLoc = 2011;
@@ -5210,7 +5220,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 61";
 		rLen = 0;
-		rLoc = 3038;
+		rLoc = 3025;
 		rType = 0;
 		vrLen = 1820;
 		vrLoc = 1410;
@@ -5236,7 +5246,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 64";
 		rLen = 0;
-		rLoc = 2501;
+		rLoc = 2488;
 		rType = 0;
 		vrLen = 1637;
 		vrLoc = 1410;
@@ -5272,7 +5282,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 57";
 		rLen = 0;
-		rLoc = 2501;
+		rLoc = 2488;
 		rType = 0;
 		vrLen = 1539;
 		vrLoc = 1410;
@@ -5282,7 +5292,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 56";
 		rLen = 0;
-		rLoc = 2501;
+		rLoc = 2488;
 		rType = 0;
 		vrLen = 1678;
 		vrLoc = 1410;
@@ -5308,7 +5318,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 56";
 		rLen = 0;
-		rLoc = 2501;
+		rLoc = 2488;
 		rType = 0;
 		vrLen = 1680;
 		vrLoc = 1410;
@@ -5334,7 +5344,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 56";
 		rLen = 0;
-		rLoc = 2501;
+		rLoc = 2488;
 		rType = 0;
 		vrLen = 1679;
 		vrLoc = 1410;
@@ -5360,7 +5370,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 103";
 		rLen = 0;
-		rLoc = 4834;
+		rLoc = 4821;
 		rType = 0;
 		vrLen = 1143;
 		vrLoc = 3230;
@@ -5386,7 +5396,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 56";
 		rLen = 0;
-		rLoc = 2501;
+		rLoc = 2488;
 		rType = 0;
 		vrLen = 1554;
 		vrLoc = 1388;
@@ -5412,7 +5422,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 56";
 		rLen = 0;
-		rLoc = 2501;
+		rLoc = 2488;
 		rType = 0;
 		vrLen = 1554;
 		vrLoc = 1388;
@@ -5422,7 +5432,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 56";
 		rLen = 0;
-		rLoc = 2501;
+		rLoc = 2488;
 		rType = 0;
 		vrLen = 1554;
 		vrLoc = 1388;
@@ -5448,7 +5458,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 64";
 		rLen = 0;
-		rLoc = 3031;
+		rLoc = 3018;
 		rType = 0;
 		vrLen = 1523;
 		vrLoc = 1388;
@@ -5474,7 +5484,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 65";
 		rLen = 0;
-		rLoc = 2491;
+		rLoc = 2478;
 		rType = 0;
 		vrLen = 1737;
 		vrLoc = 1407;
@@ -5500,7 +5510,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 63";
 		rLen = 0;
-		rLoc = 2390;
+		rLoc = 2377;
 		rType = 0;
 		vrLen = 1785;
 		vrLoc = 1407;
@@ -5526,7 +5536,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 63";
 		rLen = 0;
-		rLoc = 2397;
+		rLoc = 2384;
 		rType = 0;
 		vrLen = 1785;
 		vrLoc = 1407;
@@ -5552,7 +5562,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 61";
 		rLen = 0;
-		rLoc = 2255;
+		rLoc = 2242;
 		rType = 0;
 		vrLen = 1737;
 		vrLoc = 1407;
@@ -5578,7 +5588,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 61";
 		rLen = 0;
-		rLoc = 2260;
+		rLoc = 2247;
 		rType = 0;
 		vrLen = 1737;
 		vrLoc = 1407;
@@ -5604,7 +5614,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 57";
 		rLen = 0;
-		rLoc = 2001;
+		rLoc = 1988;
 		rType = 0;
 		vrLen = 1737;
 		vrLoc = 1407;
@@ -5630,7 +5640,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 61";
 		rLen = 0;
-		rLoc = 2260;
+		rLoc = 2247;
 		rType = 0;
 		vrLen = 1737;
 		vrLoc = 1407;
@@ -5656,7 +5666,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 57";
 		rLen = 0;
-		rLoc = 1994;
+		rLoc = 1981;
 		rType = 0;
 		vrLen = 1737;
 		vrLoc = 1407;
@@ -5682,7 +5692,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 57";
 		rLen = 0;
-		rLoc = 1996;
+		rLoc = 1983;
 		rType = 0;
 		vrLen = 1737;
 		vrLoc = 1407;
@@ -5708,7 +5718,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 57";
 		rLen = 0;
-		rLoc = 1996;
+		rLoc = 1983;
 		rType = 0;
 		vrLen = 1737;
 		vrLoc = 1407;
@@ -5734,7 +5744,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 59";
 		rLen = 0;
-		rLoc = 2126;
+		rLoc = 2113;
 		rType = 0;
 		vrLen = 1737;
 		vrLoc = 1407;
@@ -5760,7 +5770,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 57";
 		rLen = 0;
-		rLoc = 1996;
+		rLoc = 1983;
 		rType = 0;
 		vrLen = 1736;
 		vrLoc = 1407;
@@ -5786,7 +5796,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 59";
 		rLen = 0;
-		rLoc = 2138;
+		rLoc = 2125;
 		rType = 0;
 		vrLen = 1736;
 		vrLoc = 1407;
@@ -5812,7 +5822,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 59";
 		rLen = 0;
-		rLoc = 2138;
+		rLoc = 2125;
 		rType = 0;
 		vrLen = 1784;
 		vrLoc = 1407;
@@ -5831,7 +5841,7 @@
 		isa = PBXTextBookmark;
 		fRef = 1D3623250D0F684500981E51 /* JinxAppDelegate.m */;
 		rLen = 1;
-		rLoc = 131;
+		rLoc = 130;
 		rType = 1;
 	};
 	AFD3C57312BEFC69009752CA /* PBXTextBookmark */ = {
@@ -5839,7 +5849,7 @@
 		fRef = 1D3623250D0F684500981E51 /* JinxAppDelegate.m */;
 		name = "JinxAppDelegate.m: 135";
 		rLen = 0;
-		rLoc = 4541;
+		rLoc = 4520;
 		rType = 0;
 		vrLen = 1023;
 		vrLoc = 4036;
@@ -5865,7 +5875,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 55";
 		rLen = 19;
-		rLoc = 1537;
+		rLoc = 1524;
 		rType = 0;
 		vrLen = 1214;
 		vrLoc = 1058;
@@ -5894,7 +5904,7 @@
 		isa = PBXTextBookmark;
 		fRef = 1D3623250D0F684500981E51 /* JinxAppDelegate.m */;
 		rLen = 1;
-		rLoc = 145;
+		rLoc = 144;
 		rType = 1;
 	};
 	AFD3C58112BEFE63009752CA /* PBXTextBookmark */ = {
@@ -5902,7 +5912,7 @@
 		fRef = 1D3623250D0F684500981E51 /* JinxAppDelegate.m */;
 		name = "JinxAppDelegate.m: 57";
 		rLen = 0;
-		rLoc = 1785;
+		rLoc = 1764;
 		rType = 0;
 		vrLen = 1420;
 		vrLoc = 944;
@@ -5937,7 +5947,7 @@
 		isa = PBXTextBookmark;
 		fRef = 1D3623250D0F684500981E51 /* JinxAppDelegate.m */;
 		rLen = 1;
-		rLoc = 139;
+		rLoc = 138;
 		rType = 1;
 	};
 	AFD3C58912BEFEA7009752CA /* PBXTextBookmark */ = {
@@ -5945,7 +5955,7 @@
 		fRef = 1D3623250D0F684500981E51 /* JinxAppDelegate.m */;
 		name = "JinxAppDelegate.m: 145";
 		rLen = 0;
-		rLoc = 4915;
+		rLoc = 4894;
 		rType = 0;
 		vrLen = 1072;
 		vrLoc = 4313;
@@ -5971,7 +5981,7 @@
 		fRef = 1D3623250D0F684500981E51 /* JinxAppDelegate.m */;
 		name = "JinxAppDelegate.m: 145";
 		rLen = 0;
-		rLoc = 4915;
+		rLoc = 4894;
 		rType = 0;
 		vrLen = 1072;
 		vrLoc = 4313;
@@ -6053,7 +6063,7 @@
 		fRef = 1D3623250D0F684500981E51 /* JinxAppDelegate.m */;
 		name = "JinxAppDelegate.m: 145";
 		rLen = 0;
-		rLoc = 4915;
+		rLoc = 4894;
 		rType = 0;
 		vrLen = 1072;
 		vrLoc = 4313;
@@ -6063,7 +6073,7 @@
 		fRef = 1D3623250D0F684500981E51 /* JinxAppDelegate.m */;
 		name = "JinxAppDelegate.m: 154";
 		rLen = 0;
-		rLoc = 5231;
+		rLoc = 5210;
 		rType = 0;
 		vrLen = 1123;
 		vrLoc = 4377;
@@ -6099,7 +6109,7 @@
 		fRef = 1D3623250D0F684500981E51 /* JinxAppDelegate.m */;
 		name = "JinxAppDelegate.m: 154";
 		rLen = 0;
-		rLoc = 5231;
+		rLoc = 5210;
 		rType = 0;
 		vrLen = 1123;
 		vrLoc = 4377;
@@ -6155,7 +6165,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 59";
 		rLen = 0;
-		rLoc = 2138;
+		rLoc = 2125;
 		rType = 0;
 		vrLen = 1523;
 		vrLoc = 1407;
@@ -6165,7 +6175,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 45";
 		rLen = 0;
-		rLoc = 1238;
+		rLoc = 1225;
 		rType = 0;
 		vrLen = 798;
 		vrLoc = 484;
@@ -6179,7 +6189,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 240";
 		rLen = 0;
-		rLoc = 8716;
+		rLoc = 8703;
 		rType = 0;
 		vrLen = 721;
 		vrLoc = 7695;
@@ -6199,7 +6209,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 103";
 		rLen = 57;
-		rLoc = 4016;
+		rLoc = 4003;
 		rType = 0;
 		vrLen = 1107;
 		vrLoc = 3813;
@@ -6209,7 +6219,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 136";
 		rLen = 0;
-		rLoc = 5322;
+		rLoc = 5309;
 		rType = 0;
 		vrLen = 829;
 		vrLoc = 4595;
@@ -6219,7 +6229,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 136";
 		rLen = 0;
-		rLoc = 5322;
+		rLoc = 5309;
 		rType = 0;
 		vrLen = 827;
 		vrLoc = 4595;
@@ -6229,7 +6239,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 114";
 		rLen = 0;
-		rLoc = 4446;
+		rLoc = 4433;
 		rType = 0;
 		vrLen = 1287;
 		vrLoc = 3586;
@@ -6239,7 +6249,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 115";
 		rLen = 0;
-		rLoc = 4543;
+		rLoc = 4530;
 		rType = 0;
 		vrLen = 1250;
 		vrLoc = 3586;
@@ -6249,7 +6259,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 115";
 		rLen = 0;
-		rLoc = 4543;
+		rLoc = 4530;
 		rType = 0;
 		vrLen = 1250;
 		vrLoc = 3586;
@@ -6400,7 +6410,7 @@
 		fRef = 1D3623250D0F684500981E51 /* JinxAppDelegate.m */;
 		name = "JinxAppDelegate.m: 36";
 		rLen = 0;
-		rLoc = 1017;
+		rLoc = 996;
 		rType = 0;
 		vrLen = 836;
 		vrLoc = 500;
@@ -6410,7 +6420,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 239";
 		rLen = 0;
-		rLoc = 8463;
+		rLoc = 8450;
 		rType = 0;
 		vrLen = 777;
 		vrLoc = 7884;
@@ -6434,5 +6444,104 @@
 		rType = 0;
 		vrLen = 1192;
 		vrLoc = 5535;
+	};
+	AFD3C7DF12C1A8C5009752CA /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'kJinxNotificationCoversationStarted' undeclared (first use in this function)";
+		fRef = 1D3623250D0F684500981E51 /* JinxAppDelegate.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 50;
+		rType = 1;
+	};
+	AFD3C7E012C1A8C5009752CA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* JinxAppDelegate.m */;
+		name = "JinxAppDelegate.m: 51";
+		rLen = 0;
+		rLoc = 1501;
+		rType = 0;
+		vrLen = 707;
+		vrLoc = 1250;
+	};
+	AFD3C7E912C1A8F1009752CA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AF8B629212B557A300E0C7E4 /* CCCChatViewController.h */;
+		name = "CCCChatViewController.h: 14";
+		rLen = 0;
+		rLoc = 368;
+		rType = 0;
+		vrLen = 785;
+		vrLoc = 0;
+	};
+	AFD3C7EA12C1A8F1009752CA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
+		name = "CCCCallScreen.m: 13";
+		rLen = 21;
+		rLoc = 248;
+		rType = 0;
+		vrLen = 697;
+		vrLoc = 0;
+	};
+	AFD3C7EB12C1A8F1009752CA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 14";
+		rLen = 0;
+		rLoc = 289;
+		rType = 0;
+		vrLen = 700;
+		vrLoc = 0;
+	};
+	AFD3C7EC12C1A8F1009752CA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AFD3C15112BDB71B009752CA /* BackgroundRotation.m */;
+		name = "BackgroundRotation.m: 9";
+		rLen = 0;
+		rLoc = 158;
+		rType = 0;
+		vrLen = 647;
+		vrLoc = 82;
+	};
+	AFD3C7ED12C1A8F1009752CA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */;
+		name = "CCCBuddySelectorCell.m: 11";
+		rLen = 0;
+		rLoc = 194;
+		rType = 0;
+		vrLen = 1414;
+		vrLoc = 30;
+	};
+	AFD3C7EE12C1A8F1009752CA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* JinxAppDelegate.m */;
+		name = "JinxAppDelegate.m: 12";
+		rLen = 0;
+		rLoc = 231;
+		rType = 0;
+		vrLen = 747;
+		vrLoc = 0;
+	};
+	AFD3C7EF12C1A8F1009752CA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AF8B625512B5144500E0C7E4 /* CCCChatViewController.m */;
+		name = "CCCChatViewController.m: 75";
+		rLen = 0;
+		rLoc = 2885;
+		rType = 0;
+		vrLen = 1633;
+		vrLoc = 1691;
+	};
+	AFD3C7F012C1A8F1009752CA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AF8B625512B5144500E0C7E4 /* CCCChatViewController.m */;
+		name = "CCCChatViewController.m: 8";
+		rLen = 34;
+		rLoc = 140;
+		rType = 0;
+		vrLen = 908;
+		vrLoc = 0;
 	};
 }

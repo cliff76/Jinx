@@ -9,7 +9,6 @@
 #import "JinxApplicationGlobal.h"
 #import "JinxAppDelegate.h"
 #import "CCCChatViewController.h"
-#import "JinxMath.h"
 
 @interface JinxAppDelegate (PrivateMethods)
 

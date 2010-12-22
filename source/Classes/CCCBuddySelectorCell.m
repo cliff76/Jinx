@@ -7,7 +7,7 @@
 //
 
 #import "CCCBuddySelectorCell.h"
-#import "JinxApplicationGlobal.h"
+#import "JinxMath.h"
 
 #define ImageIconNameForBuddy(buddyName) ([NSString stringWithFormat:@"%@.png", buddyName])
 #define NameLabelImageNameForBuddy(buddyName) ([NSString stringWithFormat:@"%@Label.png", buddyName])

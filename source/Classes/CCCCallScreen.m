@@ -10,7 +10,7 @@
 #import "CCCAudioPlayer.h"
 #import "CCCAudioFileReader.h"
 #import "BackgroundRotation.h"
-#import "JinxApplicationGlobal.h"
+#import "JinxMath.h"
 #define RANDOM_SEED() srandom(time(NULL))
 #define RANDOM_INT(__MIN__, __MAX__) ((__MIN__) + random() % ((__MAX__+1) - (__MIN__)))
 @interface CCCCallScreen (PrivateMethods)
