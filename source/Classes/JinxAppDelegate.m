@@ -9,6 +9,7 @@
 #import "JinxApplicationGlobal.h"
 #import "JinxAppDelegate.h"
 #import "CCCChatViewController.h"
+#import "JinxMath.h"
 
 @interface JinxAppDelegate (PrivateMethods)
 
@@ -27,23 +28,18 @@
 -(void) doSplash
 {
 	UIImageView *loadScreen = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default.png"]];
-	loadScreen.frame = CGRectMake(0.0f, 20.0f, 320, 460);
+	loadScreen.frame = CGRectMake(0.0f, 0.0f, 320, 480);
 	[window addSubview: loadScreen];
     [window makeKeyAndVisible];
 
-	UIImageView *splashView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"JinxSplash.png"]];
-	splashView.alpha = 0.0f;
-	splashView.frame = CGRectMake(0.0f, 0.0f, 320, 480);
-	[window addSubview: splashView];
-	[UIView animateWithDuration:1.0 delay:1.0 options:UIViewAnimationOptionAllowUserInteraction animations:^{ splashView.alpha = 1.0f; } 
+	[UIView animateWithDuration:1.0 delay:2.0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
+		loadScreen.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(-180));
+		loadScreen.frame = CGRectMake(0.0f, 0.0f, loadScreen.frame.size.width * 2, loadScreen.frame.size.height * 2);
+		loadScreen.alpha = 0.0f;
+	} 
 					 completion:^(BOOL finished){
 						 [loadScreen removeFromSuperview];
 						 [loadScreen release];
-						 [UIView animateWithDuration:1.0 delay:3.0 options:UIViewAnimationOptionAllowUserInteraction animations:^{ splashView.alpha = 0.0f; } 
-										  completion:^(BOOL finished){
-											 [splashView removeFromSuperview];
-											 [splashView release];
-										  }];
 					 }];
 }
 
@@ -85,6 +81,7 @@
     /*
      Called as part of  transition from the background to the inactive state: here you can undo many of the changes made on entering the background.
      */
+	[self doSplash];
 }
 
 

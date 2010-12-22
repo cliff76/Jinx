@@ -8,10 +8,8 @@
  */
 #import "JinxNotifications.h"
 #import "SharedFunctions.h"
+#import "JinxMath.h"
 
-#define M_PI   3.14159265358979323846264338327950288   /* pi */
-// Our conversion definition
-#define DEGREES_TO_RADIANS(angle) ((angle / 180.0) * M_PI)
 #define JinxArchivePath ([NSString stringWithFormat:@"%@/%@",\
 [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0],\
 @"conversations"\

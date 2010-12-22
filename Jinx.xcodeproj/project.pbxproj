@@ -83,7 +83,6 @@
 		AFD3C35712BE987A009752CA /* incoming-message-winxp.wav in Resources */ = {isa = PBXBuildFile; fileRef = AFD3C35312BE9837009752CA /* incoming-message-winxp.wav */; };
 		AFD3C35C12BE9CEF009752CA /* CCCSoundServices.h in Headers */ = {isa = PBXBuildFile; fileRef = AFD3C35A12BE9CEF009752CA /* CCCSoundServices.h */; };
 		AFD3C35D12BE9CEF009752CA /* CCCSoundServices.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD3C35B12BE9CEF009752CA /* CCCSoundServices.m */; };
-		AFD3C3CA12BECC24009752CA /* JinxSplash.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD3C3C912BECC24009752CA /* JinxSplash.png */; };
 		AFD3C40812BED6BD009752CA /* JinxIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD3C40712BED6BD009752CA /* JinxIcon.png */; };
 		AFD3C6F412BFC57C009752CA /* ClintCall0.aiff in Resources */ = {isa = PBXBuildFile; fileRef = AFD3C6E912BFC57C009752CA /* ClintCall0.aiff */; };
 		AFD3C6F512BFC57C009752CA /* ClintCall5.aiff in Resources */ = {isa = PBXBuildFile; fileRef = AFD3C6EA12BFC57C009752CA /* ClintCall5.aiff */; };
@@ -97,6 +96,7 @@
 		AFD3C6FD12BFC57C009752CA /* StuartCall6.aiff in Resources */ = {isa = PBXBuildFile; fileRef = AFD3C6F212BFC57C009752CA /* StuartCall6.aiff */; };
 		AFD3C6FE12BFC57C009752CA /* StuartCall7.aiff in Resources */ = {isa = PBXBuildFile; fileRef = AFD3C6F312BFC57C009752CA /* StuartCall7.aiff */; };
 		AFD3C70712BFC637009752CA /* LeezaCall7.aiff in Resources */ = {isa = PBXBuildFile; fileRef = AFD3C70612BFC637009752CA /* LeezaCall7.aiff */; };
+		AFD3C78812C18955009752CA /* JinxMath.h in Headers */ = {isa = PBXBuildFile; fileRef = AFD3C78712C18955009752CA /* JinxMath.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,7 +209,6 @@
 		AFD3C35312BE9837009752CA /* incoming-message-winxp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "incoming-message-winxp.wav"; sourceTree = "<group>"; };
 		AFD3C35A12BE9CEF009752CA /* CCCSoundServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCSoundServices.h; sourceTree = "<group>"; };
 		AFD3C35B12BE9CEF009752CA /* CCCSoundServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCSoundServices.m; sourceTree = "<group>"; };
-		AFD3C3C912BECC24009752CA /* JinxSplash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JinxSplash.png; sourceTree = "<group>"; };
 		AFD3C40712BED6BD009752CA /* JinxIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JinxIcon.png; sourceTree = "<group>"; };
 		AFD3C6E912BFC57C009752CA /* ClintCall0.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = ClintCall0.aiff; sourceTree = "<group>"; };
 		AFD3C6EA12BFC57C009752CA /* ClintCall5.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = ClintCall5.aiff; sourceTree = "<group>"; };
@@ -223,6 +222,7 @@
 		AFD3C6F212BFC57C009752CA /* StuartCall6.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = StuartCall6.aiff; sourceTree = "<group>"; };
 		AFD3C6F312BFC57C009752CA /* StuartCall7.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = StuartCall7.aiff; sourceTree = "<group>"; };
 		AFD3C70612BFC637009752CA /* LeezaCall7.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = LeezaCall7.aiff; sourceTree = "<group>"; };
+		AFD3C78712C18955009752CA /* JinxMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JinxMath.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -372,6 +372,7 @@
 			children = (
 				AF5DBCEE12BD22250038295F /* JinxApplicationGlobal.h */,
 				AF5DBCEF12BD22250038295F /* JinxNotifications.h */,
+				AFD3C78712C18955009752CA /* JinxMath.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -420,7 +421,6 @@
 			isa = PBXGroup;
 			children = (
 				AFD3C40712BED6BD009752CA /* JinxIcon.png */,
-				AFD3C3C912BECC24009752CA /* JinxSplash.png */,
 				AFD3C16D12BDBE21009752CA /* YouAvatar.png */,
 				AFD3C16712BDBC86009752CA /* ClintAvatar.png */,
 				AFD3C16812BDBC86009752CA /* LeezaAvatar.png */,
@@ -483,6 +483,7 @@
 				AF5DBCFA12BD22250038295F /* JinxNotifications.h in Headers */,
 				AFD3C15212BDB71B009752CA /* BackgroundRotation.h in Headers */,
 				AFD3C35C12BE9CEF009752CA /* CCCSoundServices.h in Headers */,
+				AFD3C78812C18955009752CA /* JinxMath.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,7 +615,6 @@
 				AFD3C33912BE8F98009752CA /* StuartCall4.aiff in Resources */,
 				AFD3C35612BE9846009752CA /* outgoing-message-winxp.wav in Resources */,
 				AFD3C35712BE987A009752CA /* incoming-message-winxp.wav in Resources */,
-				AFD3C3CA12BECC24009752CA /* JinxSplash.png in Resources */,
 				AFD3C40812BED6BD009752CA /* JinxIcon.png in Resources */,
 				AFD3C6F412BFC57C009752CA /* ClintCall0.aiff in Resources */,
 				AFD3C6F512BFC57C009752CA /* ClintCall5.aiff in Resources */,

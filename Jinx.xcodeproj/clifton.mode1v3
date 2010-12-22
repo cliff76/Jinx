@@ -268,6 +268,7 @@
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>AF8B615E12B46A2500E0C7E4</string>
 								<string>080E96DDFE201D6D7F000001</string>
+								<string>AF5DBCE312BD22010038295F</string>
 								<string>29B97323FDCFA39411CA2CEA</string>
 								<string>19C28FACFE9D520D11CA2CBB</string>
 								<string>1C37FBAC04509CD000000102</string>
@@ -276,7 +277,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>20</integer>
+									<integer>19</integer>
+									<integer>5</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -332,19 +334,22 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>AFD3C77B12C05CAF009752CA</string>
+										<string>AFD3C7AF12C18E04009752CA</string>
 										<key>history</key>
 										<array>
 											<string>AF8B61C812B4716700E0C7E4</string>
 											<string>AF8B638612B59FC800E0C7E4</string>
 											<string>AF8B639112B5B4E500E0C7E4</string>
-											<string>AF8B639212B5B4E500E0C7E4</string>
 											<string>AF8B655412B7227A00E0C7E4</string>
 											<string>AF8B655512B7227A00E0C7E4</string>
 											<string>AFD3C70112BFC5AC009752CA</string>
-											<string>AFD3C76512C05A78009752CA</string>
 											<string>AFD3C77912C05CAF009752CA</string>
-											<string>AFD3C77A12C05CAF009752CA</string>
+											<string>AFD3C7A912C18E04009752CA</string>
+											<string>AFD3C7AA12C18E04009752CA</string>
+											<string>AFD3C7AB12C18E04009752CA</string>
+											<string>AFD3C7AC12C18E04009752CA</string>
+											<string>AFD3C7AD12C18E04009752CA</string>
+											<string>AFD3C7AE12C18E04009752CA</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -542,12 +547,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>AFD3C77C12C05CAF009752CA</string>
+		<string>AFD3C7B012C18E04009752CA</string>
 		<string>AFD3C75612C057FE009752CA</string>
 		<string>AFD3C74612C05523009752CA</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>AF8B611812B464C300E0C7E4</string>
 		<string>1CD10A99069EF8BA00B06720</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/clifton/dev/iphone/Jinx/Jinx.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -589,6 +594,8 @@
 							<string>219pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -922,7 +929,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

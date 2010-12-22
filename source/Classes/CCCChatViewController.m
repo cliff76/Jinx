@@ -406,7 +406,6 @@ static NSString *CellIdentifier = @"Cell";
 	} else if(isShowingLandscape && [UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeRight) {
 		self.navigationController.visibleViewController.view.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(90));
 	}
-
 }
 
 #pragma mark -
