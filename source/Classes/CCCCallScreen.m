@@ -11,8 +11,7 @@
 #import "CCCAudioFileReader.h"
 #import "BackgroundRotation.h"
 #import "JinxMath.h"
-#define RANDOM_SEED() srandom(time(NULL))
-#define RANDOM_INT(__MIN__, __MAX__) ((__MIN__) + random() % ((__MAX__+1) - (__MIN__)))
+
 @interface CCCCallScreen (PrivateMethods)
 
 -(void) stopPhoneCall;
@@ -37,7 +36,6 @@ static int lastReply = 0;
 		}
 #endif
 		lastReply = nextReply;
-//		int callnum = RANDOM_INT(1,4);
 		audioPlayList = [[NSMutableArray alloc] initWithObjects:
 						 @"ringout", @"wav",
 						 @"ringout", @"wav",
@@ -47,16 +45,6 @@ static int lastReply = 0;
 	}
 	return self;
 }
-
-/*
- // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-        // Custom initialization
-    }
-    return self;
-}
-*/
 
 #pragma mark -
 #pragma mark Orientation Methods
@@ -189,14 +177,6 @@ static int lastReply = 0;
 - (void)viewDidDisappear:(BOOL)animated {
  [super viewDidDisappear:animated];
 }
- 
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-}
-*/
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -224,7 +204,8 @@ static int lastReply = 0;
 #pragma mark -
 #pragma mark CCCAudioPlaybackDelegate methods
 -(void) playbackStateDidChangeForPlayer:(CCCAudioPlayer*)audioPlayer
-{}
+{
+}
 
 -(void) playbackIsStoppingForPlayer:(CCCAudioPlayer*)audioPlayer
 {
