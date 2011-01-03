@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CCCAudioPlayer.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface CCCCallScreen : UIViewController <CCCAudioPlaybackDelegate>{
 	NSString *chatBuddy;
@@ -20,6 +21,14 @@
 	UILabel *youLabel;
 	UIImageView *buddyAvatar;
 	UILabel *buddyLabel;
+
+#pragma mark Video management vars
+	AVCaptureSession *captureSession;
+	AVCaptureDevice *videoCaptureDevice;
+	NSError *error;	
+	AVCaptureDeviceInput *videoInput;
+	UIView *videoPreview;
+	
 }
 
 @property (nonatomic, retain) IBOutlet UIImageView *backgroundImage;

@@ -15,6 +15,11 @@
 @interface CCCCallScreen (PrivateMethods)
 
 -(void) stopPhoneCall;
+-(AVCaptureDevice*) backFacingCamera;
+-(AVCaptureDevice*) frontFacingCamera;
+-(AVCaptureDevice *) cameraWithPosition:(AVCaptureDevicePosition) position;
+-(void) startVideoCapture:(UIView*)theVideoPreview;
+-(void) stopVideoCapture;
 
 @end
 
@@ -53,7 +58,7 @@ static int lastReply = 0;
 	CGFloat angle = ([UIDevice currentDevice].orientation == UIDeviceOrientationPortraitUpsideDown) ? 180.0f : 0;
 	if (([UIDevice currentDevice].orientation == UIDeviceOrientationPortraitUpsideDown)) {
 		youAvatar.frame = CGRectMake(144, 95, 125, 125);
-		youAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+//		youAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
 		youLabel.frame = CGRectMake(24, 170, 76, 37);
 		youLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
 		buddyAvatar.frame = CGRectMake(52, 242, 100, 100);
@@ -62,7 +67,7 @@ static int lastReply = 0;
 		buddyLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
 	} else {
 		youAvatar.frame = CGRectMake(169, 139, 100, 100);
-		youAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+//		youAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
 		youLabel.frame = CGRectMake(40, 139, 76, 37);
 		youLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
 		buddyAvatar.frame = CGRectMake(50, 264, 125, 125);
@@ -77,7 +82,7 @@ static int lastReply = 0;
 	CGFloat angle = ([UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeLeft) ? 90.0f : -90.0f;
 	if ([UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeLeft) {
 		youAvatar.frame = CGRectMake(147, 108, 90, 90);
-		youAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+//		youAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
 		youLabel.frame = CGRectMake(54, 108, 76, 37);
 		youLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
 		buddyAvatar.frame = CGRectMake(25, 254, 100, 100);
@@ -86,7 +91,7 @@ static int lastReply = 0;
 		buddyLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
 	}else {
 		youAvatar.frame = CGRectMake(200, 108, 90, 90);
-		youAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+//		youAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
 		youLabel.frame = CGRectMake(72, 125, 76, 37);
 		youLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
 		buddyAvatar.frame = CGRectMake(80, 264, 95, 95);
@@ -166,6 +171,7 @@ static int lastReply = 0;
 	[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:)
 												 name:UIDeviceOrientationDidChangeNotification object:nil];
+	[self startVideoCapture:youAvatar];
 	[self playNextFromPlaylist];
 }
 
@@ -175,6 +181,7 @@ static int lastReply = 0;
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
+	[self stopVideoCapture];
  [super viewDidDisappear:animated];
 }
 
@@ -224,6 +231,69 @@ static int lastReply = 0;
 		[self.navigationController popViewControllerAnimated:YES];
 	}
 
+}
+
+#pragma mark -
+#pragma mark Video management logic
+-(void) startVideoCapture:(UIView*)theVideoPreview
+{
+	NSLog(@"Go Video!");
+	CALayer *previewLayer = theVideoPreview.layer;
+	NSLog(@"Preview on view layer %@", previewLayer);
+	captureSession = [[AVCaptureSession alloc] init];
+	videoCaptureDevice = [self frontFacingCamera];
+	error = nil;
+	videoInput = [AVCaptureDeviceInput deviceInputWithDevice:videoCaptureDevice error:&error];
+	
+	[captureSession beginConfiguration];
+	[captureSession removeInput:videoInput];
+	if (videoInput && [captureSession canAddInput:videoInput]) {
+		NSLog(@"Adding video input to session.");
+		[captureSession addInput:videoInput];
+	}
+	else {
+		UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Video Error" message:@"Could not start video session." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease];
+		[alert show];
+	}
+	[captureSession commitConfiguration];
+	
+	AVCaptureVideoDataOutput *videoOutput = [[AVCaptureVideoDataOutput alloc] init];
+	[captureSession addOutput:videoOutput];
+	[videoOutput release];
+	NSLog(@"Recording started.");
+	AVCaptureVideoPreviewLayer *captureVideoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:captureSession];
+	captureVideoPreviewLayer.frame = [previewLayer bounds];
+	[captureVideoPreviewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
+	NSLog(@"Preview on adding layer %@", captureVideoPreviewLayer);
+	[previewLayer addSublayer:captureVideoPreviewLayer];
+	[captureSession startRunning];
+}
+
+-(void) stopVideoCapture
+{
+	[captureSession stopRunning];
+	[captureSession release];
+	captureSession = nil;
+}
+
+- (AVCaptureDevice *) cameraWithPosition:(AVCaptureDevicePosition) position
+{
+    for (AVCaptureDevice *device in [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo]) {
+        if ([device position] == position) {
+            return device;
+        }
+    }
+    return nil;
+}
+
+-(AVCaptureDevice*) backFacingCamera
+{
+	return [self cameraWithPosition:AVCaptureDevicePositionBack];
+}
+
+-(AVCaptureDevice*) frontFacingCamera
+{
+	return [self cameraWithPosition:AVCaptureDevicePositionFront];
 }
 
 @end
