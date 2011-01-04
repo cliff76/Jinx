@@ -264,6 +264,7 @@
 			children = (
 				AFD3BF9612BD7E69009752CA /* UI */,
 				AF5DBCFB12BD22310038295F /* Audio */,
+				AF9819C412D2AEB90030BC99 /* Video */,
 				AF5DBCE312BD22010038295F /* Headers */,
 				AF8B653C12B71F2E00E0C7E4 /* Protocols */,
 				AF8B61A112B46DA300E0C7E4 /* Logic */,
@@ -453,6 +454,13 @@
 				AF8B653D12B71F4A00E0C7E4 /* CCCBuddyRepository.h */,
 			);
 			name = Protocols;
+			sourceTree = "<group>";
+		};
+		AF9819C412D2AEB90030BC99 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Video;
 			sourceTree = "<group>";
 		};
 		AFD3BF9612BD7E69009752CA /* UI */ = {

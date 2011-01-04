@@ -23,12 +23,13 @@
 	UILabel *buddyLabel;
 
 #pragma mark Video management vars
+#if ! TARGET_IPHONE_SIMULATOR
 	AVCaptureSession *captureSession;
 	AVCaptureDevice *videoCaptureDevice;
 	NSError *error;	
 	AVCaptureDeviceInput *videoInput;
 	UIView *videoPreview;
-	
+#endif	
 }
 
 @property (nonatomic, retain) IBOutlet UIImageView *backgroundImage;

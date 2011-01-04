@@ -212,16 +212,16 @@
 	};
 	AF5DBCEB12BD22250038295F /* CCCCallScreen.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1143, 572}}";
-			sepNavSelRange = "{554, 35}";
-			sepNavVisRange = "{35, 777}";
+			sepNavIntBoundsRect = "{{0, 0}, {1143, 559}}";
+			sepNavSelRange = "{594, 0}";
+			sepNavVisRange = "{317, 852}";
 		};
 	};
 	AF5DBCEC12BD22250038295F /* CCCCallScreen.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1143, 4069}}";
-			sepNavSelRange = "{567, 0}";
-			sepNavVisRange = "{3, 774}";
+			sepNavIntBoundsRect = "{{0, 0}, {1143, 4095}}";
+			sepNavSelRange = "{342, 0}";
+			sepNavVisRange = "{312, 785}";
 		};
 	};
 	AF5DBCEE12BD22250038295F /* JinxApplicationGlobal.h */ = {
@@ -354,7 +354,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1143, 780}}";
 			sepNavSelRange = "{1088, 293}";
-			sepNavVisRange = "{463, 1052}";
+			sepNavVisRange = "{482, 1033}";
 		};
 	};
 	AF8B638612B59FC800E0C7E4 /* PBXTextBookmark */ = {
@@ -537,7 +537,7 @@
 		fRef = AF5DBCEC12BD22250038295F /* CCCCallScreen.m */;
 		name = "CCCCallScreen.m: 208";
 		rLen = 0;
-		rLoc = 7540;
+		rLoc = 7780;
 		rType = 0;
 		vrLen = 703;
 		vrLoc = 7153;

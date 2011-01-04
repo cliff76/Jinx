@@ -15,9 +15,11 @@
 @interface CCCCallScreen (PrivateMethods)
 
 -(void) stopPhoneCall;
+#if ! TARGET_IPHONE_SIMULATOR
 -(AVCaptureDevice*) backFacingCamera;
 -(AVCaptureDevice*) frontFacingCamera;
 -(AVCaptureDevice *) cameraWithPosition:(AVCaptureDevicePosition) position;
+#endif
 -(void) startVideoCapture:(UIView*)theVideoPreview;
 -(void) stopVideoCapture;
 
@@ -58,7 +60,9 @@ static int lastReply = 0;
 	CGFloat angle = ([UIDevice currentDevice].orientation == UIDeviceOrientationPortraitUpsideDown) ? 180.0f : 0;
 	if (([UIDevice currentDevice].orientation == UIDeviceOrientationPortraitUpsideDown)) {
 		youAvatar.frame = CGRectMake(144, 95, 125, 125);
-//		youAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+#if TARGET_IPHONE_SIMULATOR
+		youAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+#endif
 		youLabel.frame = CGRectMake(24, 170, 76, 37);
 		youLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
 		buddyAvatar.frame = CGRectMake(52, 242, 100, 100);
@@ -67,7 +71,9 @@ static int lastReply = 0;
 		buddyLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
 	} else {
 		youAvatar.frame = CGRectMake(169, 139, 100, 100);
-//		youAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+#if TARGET_IPHONE_SIMULATOR
+		youAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+#endif
 		youLabel.frame = CGRectMake(40, 139, 76, 37);
 		youLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
 		buddyAvatar.frame = CGRectMake(50, 264, 125, 125);
@@ -82,7 +88,9 @@ static int lastReply = 0;
 	CGFloat angle = ([UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeLeft) ? 90.0f : -90.0f;
 	if ([UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeLeft) {
 		youAvatar.frame = CGRectMake(147, 108, 90, 90);
-//		youAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+#if TARGET_IPHONE_SIMULATOR
+		youAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+#endif
 		youLabel.frame = CGRectMake(54, 108, 76, 37);
 		youLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
 		buddyAvatar.frame = CGRectMake(25, 254, 100, 100);
@@ -91,7 +99,9 @@ static int lastReply = 0;
 		buddyLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
 	}else {
 		youAvatar.frame = CGRectMake(200, 108, 90, 90);
-//		youAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+#if TARGET_IPHONE_SIMULATOR
+		youAvatar.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
+#endif
 		youLabel.frame = CGRectMake(72, 125, 76, 37);
 		youLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(angle));
 		buddyAvatar.frame = CGRectMake(80, 264, 95, 95);
@@ -237,6 +247,7 @@ static int lastReply = 0;
 #pragma mark Video management logic
 -(void) startVideoCapture:(UIView*)theVideoPreview
 {
+#if ! TARGET_IPHONE_SIMULATOR
 	NSLog(@"Go Video!");
 	CALayer *previewLayer = theVideoPreview.layer;
 	NSLog(@"Preview on view layer %@", previewLayer);
@@ -267,15 +278,19 @@ static int lastReply = 0;
 	NSLog(@"Preview on adding layer %@", captureVideoPreviewLayer);
 	[previewLayer addSublayer:captureVideoPreviewLayer];
 	[captureSession startRunning];
+#endif
 }
 
 -(void) stopVideoCapture
 {
+#if ! TARGET_IPHONE_SIMULATOR
 	[captureSession stopRunning];
 	[captureSession release];
 	captureSession = nil;
+#endif
 }
 
+#if ! TARGET_IPHONE_SIMULATOR
 - (AVCaptureDevice *) cameraWithPosition:(AVCaptureDevicePosition) position
 {
     for (AVCaptureDevice *device in [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo]) {
@@ -295,5 +310,5 @@ static int lastReply = 0;
 {
 	return [self cameraWithPosition:AVCaptureDevicePositionFront];
 }
-
+#endif
 @end
