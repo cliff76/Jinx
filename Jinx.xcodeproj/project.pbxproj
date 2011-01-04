@@ -53,6 +53,7 @@
 		AF8B653E12B71F4A00E0C7E4 /* CCCBuddyRepository.h in Headers */ = {isa = PBXBuildFile; fileRef = AF8B653D12B71F4A00E0C7E4 /* CCCBuddyRepository.h */; };
 		AF8B654A12B7226000E0C7E4 /* CCCChatBuddy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8B62F612B5860200E0C7E4 /* CCCChatBuddy.m */; };
 		AF8B654B12B7226200E0C7E4 /* CCCChatBuddy.h in Headers */ = {isa = PBXBuildFile; fileRef = AF8B62F512B5860200E0C7E4 /* CCCChatBuddy.h */; };
+		AF9819DB12D2BC4E0030BC99 /* phoneicon.png in Resources */ = {isa = PBXBuildFile; fileRef = AF9819DA12D2BC4E0030BC99 /* phoneicon.png */; };
 		AFD3BF9A12BD7EB2009752CA /* CCCBuddySelectorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */; };
 		AFD3BFA512BD7FED009752CA /* Clint.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD3BFA212BD7FED009752CA /* Clint.png */; };
 		AFD3BFA612BD7FED009752CA /* Leeza.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD3BFA312BD7FED009752CA /* Leeza.png */; };
@@ -179,6 +180,7 @@
 		AF8B653712B71F1400E0C7E4 /* CCCBasicChatRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCBasicChatRepository.h; sourceTree = "<group>"; };
 		AF8B653812B71F1400E0C7E4 /* CCCBasicChatRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCBasicChatRepository.m; sourceTree = "<group>"; };
 		AF8B653D12B71F4A00E0C7E4 /* CCCBuddyRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCBuddyRepository.h; sourceTree = "<group>"; };
+		AF9819DA12D2BC4E0030BC99 /* phoneicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phoneicon.png; sourceTree = "<group>"; };
 		AFD3BF9812BD7EB2009752CA /* CCCBuddySelectorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCBuddySelectorCell.h; sourceTree = "<group>"; };
 		AFD3BF9912BD7EB2009752CA /* CCCBuddySelectorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCBuddySelectorCell.m; sourceTree = "<group>"; };
 		AFD3BFA212BD7FED009752CA /* Clint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Clint.png; sourceTree = "<group>"; };
@@ -319,34 +321,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AFD3C7BD12C19D96009752CA /* clear-screen.aiff */,
-				AFD3C7B712C19B99009752CA /* incoming-blip.aiff */,
-				AFD3C7B812C19B99009752CA /* outgoing-blip.aiff */,
-				AFD3C70612BFC637009752CA /* LeezaCall7.aiff */,
-				AFD3C6E912BFC57C009752CA /* ClintCall0.aiff */,
-				AFD3C32212BE8F98009752CA /* ClintCall1.aiff */,
-				AFD3C32312BE8F98009752CA /* ClintCall2.aiff */,
-				AFD3C32412BE8F98009752CA /* ClintCall3.aiff */,
-				AFD3C32512BE8F98009752CA /* ClintCall4.aiff */,
-				AFD3C6EA12BFC57C009752CA /* ClintCall5.aiff */,
-				AFD3C6EB12BFC57C009752CA /* ClintCall6.aiff */,
-				AFD3C6EC12BFC57C009752CA /* ClintCall7.aiff */,
-				AFD3C6ED12BFC57C009752CA /* LeezaCall0.aiff */,
-				AFD3C32612BE8F98009752CA /* LeezaCall1.aiff */,
-				AFD3C32712BE8F98009752CA /* LeezaCall2.aiff */,
-				AFD3C32812BE8F98009752CA /* LeezaCall3.aiff */,
-				AFD3C32912BE8F98009752CA /* LeezaCall4.aiff */,
-				AFD3C6EE12BFC57C009752CA /* LeezaCall5.aiff */,
-				AFD3C6EF12BFC57C009752CA /* LeezaCall6.aiff */,
-				AFD3C6F012BFC57C009752CA /* StuartCall0.aiff */,
-				AFD3C32A12BE8F98009752CA /* StuartCall1.aiff */,
-				AFD3C32B12BE8F98009752CA /* StuartCall2.aiff */,
-				AFD3C32C12BE8F98009752CA /* StuartCall3.aiff */,
-				AFD3C32D12BE8F98009752CA /* StuartCall4.aiff */,
-				AFD3C6F112BFC57C009752CA /* StuartCall5.aiff */,
-				AFD3C6F212BFC57C009752CA /* StuartCall6.aiff */,
-				AFD3C6F312BFC57C009752CA /* StuartCall7.aiff */,
-				AF5DBD2C12BD25BC0038295F /* ringout.wav */,
+				AF9819E612D2BFCE0030BC99 /* Audio */,
 				AF8B62C512B55D6900E0C7E4 /* images */,
 				AF8B615312B469CA00E0C7E4 /* UnitTests-Info.plist */,
 				AF5DBCED12BD22250038295F /* CCCCallScreen.xib */,
@@ -424,6 +399,7 @@
 		AF8B62C512B55D6900E0C7E4 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				AF9819DA12D2BC4E0030BC99 /* phoneicon.png */,
 				AFD3C40712BED6BD009752CA /* JinxIcon.png */,
 				AFD3C16D12BDBE21009752CA /* YouAvatar.png */,
 				AFD3C16712BDBC86009752CA /* ClintAvatar.png */,
@@ -461,6 +437,41 @@
 			children = (
 			);
 			name = Video;
+			sourceTree = "<group>";
+		};
+		AF9819E612D2BFCE0030BC99 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				AFD3C7BD12C19D96009752CA /* clear-screen.aiff */,
+				AFD3C7B712C19B99009752CA /* incoming-blip.aiff */,
+				AFD3C7B812C19B99009752CA /* outgoing-blip.aiff */,
+				AFD3C6E912BFC57C009752CA /* ClintCall0.aiff */,
+				AFD3C32212BE8F98009752CA /* ClintCall1.aiff */,
+				AFD3C32312BE8F98009752CA /* ClintCall2.aiff */,
+				AFD3C32412BE8F98009752CA /* ClintCall3.aiff */,
+				AFD3C32512BE8F98009752CA /* ClintCall4.aiff */,
+				AFD3C6EA12BFC57C009752CA /* ClintCall5.aiff */,
+				AFD3C6EB12BFC57C009752CA /* ClintCall6.aiff */,
+				AFD3C6EC12BFC57C009752CA /* ClintCall7.aiff */,
+				AFD3C6ED12BFC57C009752CA /* LeezaCall0.aiff */,
+				AFD3C32612BE8F98009752CA /* LeezaCall1.aiff */,
+				AFD3C32712BE8F98009752CA /* LeezaCall2.aiff */,
+				AFD3C32812BE8F98009752CA /* LeezaCall3.aiff */,
+				AFD3C32912BE8F98009752CA /* LeezaCall4.aiff */,
+				AFD3C6EE12BFC57C009752CA /* LeezaCall5.aiff */,
+				AFD3C6EF12BFC57C009752CA /* LeezaCall6.aiff */,
+				AFD3C70612BFC637009752CA /* LeezaCall7.aiff */,
+				AFD3C6F012BFC57C009752CA /* StuartCall0.aiff */,
+				AFD3C32A12BE8F98009752CA /* StuartCall1.aiff */,
+				AFD3C32B12BE8F98009752CA /* StuartCall2.aiff */,
+				AFD3C32C12BE8F98009752CA /* StuartCall3.aiff */,
+				AFD3C32D12BE8F98009752CA /* StuartCall4.aiff */,
+				AFD3C6F112BFC57C009752CA /* StuartCall5.aiff */,
+				AFD3C6F212BFC57C009752CA /* StuartCall6.aiff */,
+				AFD3C6F312BFC57C009752CA /* StuartCall7.aiff */,
+				AF5DBD2C12BD25BC0038295F /* ringout.wav */,
+			);
+			name = Audio;
 			sourceTree = "<group>";
 		};
 		AFD3BF9612BD7E69009752CA /* UI */ = {
@@ -640,6 +651,7 @@
 				AFD3C7B912C19B99009752CA /* incoming-blip.aiff in Resources */,
 				AFD3C7BA12C19B99009752CA /* outgoing-blip.aiff in Resources */,
 				AFD3C7BE12C19D96009752CA /* clear-screen.aiff in Resources */,
+				AF9819DB12D2BC4E0030BC99 /* phoneicon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

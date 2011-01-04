@@ -150,8 +150,9 @@ static NSString *CellIdentifier = @"Cell";
 	[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:)
 												 name:UIDeviceOrientationDidChangeNotification object:nil];
-	UIBarButtonItem *callButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"telephone.png"]
+	UIBarButtonItem *callButton = [[UIBarButtonItem alloc] initWithImage: [UIImage imageNamed:@"phoneicon.png"]
 																  style:UIBarButtonItemStyleBordered target:self action:@selector(action:)];
+	callButton.width = 28;
 	callButton.action = @selector(onCallButton:);
 	self.navigationItem.rightBarButtonItem = callButton;
 }

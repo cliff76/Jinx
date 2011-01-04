@@ -219,9 +219,9 @@
 	};
 	AF5DBCEC12BD22250038295F /* CCCCallScreen.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1143, 4095}}";
-			sepNavSelRange = "{342, 0}";
-			sepNavVisRange = "{312, 785}";
+			sepNavIntBoundsRect = "{{0, 0}, {1377, 4095}}";
+			sepNavSelRange = "{4604, 0}";
+			sepNavVisRange = "{9930, 624}";
 		};
 	};
 	AF5DBCEE12BD22250038295F /* JinxApplicationGlobal.h */ = {
