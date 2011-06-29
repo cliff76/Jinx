@@ -15,6 +15,7 @@
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
 		28F335F11007B36200424DE2 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
+		91FD969C13BB933B008E68A9 /* TVOutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FD969B13BB933B008E68A9 /* TVOutManager.m */; };
 		AF5DBCD812BD219A0038295F /* SharedFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = AF5DBCD612BD219A0038295F /* SharedFunctions.h */; };
 		AF5DBCD912BD219A0038295F /* SharedFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5DBCD712BD219A0038295F /* SharedFunctions.m */; };
 		AF5DBCF012BD22250038295F /* CCCAudioFileReader.h in Headers */ = {isa = PBXBuildFile; fileRef = AF5DBCE412BD22250038295F /* CCCAudioFileReader.h */; };
@@ -139,6 +140,8 @@
 		28F335F01007B36200424DE2 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Jinx-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Jinx-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		91FD969A13BB933B008E68A9 /* TVOutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVOutManager.h; sourceTree = "<group>"; };
+		91FD969B13BB933B008E68A9 /* TVOutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVOutManager.m; sourceTree = "<group>"; };
 		AF5DBCD612BD219A0038295F /* SharedFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedFunctions.h; sourceTree = "<group>"; };
 		AF5DBCD712BD219A0038295F /* SharedFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedFunctions.m; sourceTree = "<group>"; };
 		AF5DBCE412BD22250038295F /* CCCAudioFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCAudioFileReader.h; sourceTree = "<group>"; };
@@ -278,6 +281,8 @@
 				AF8B629312B557A300E0C7E4 /* CCCChatViewController.m */,
 				AF5DBCEB12BD22250038295F /* CCCCallScreen.h */,
 				AF5DBCEC12BD22250038295F /* CCCCallScreen.m */,
+				91FD969A13BB933B008E68A9 /* TVOutManager.h */,
+				91FD969B13BB933B008E68A9 /* TVOutManager.m */,
 			);
 			name = Classes;
 			path = source/Classes;
@@ -691,6 +696,7 @@
 				AF8B629512B557A300E0C7E4 /* CCCChatViewController.m in Sources */,
 				AF5DBCFE12BD227B0038295F /* CCCCallScreen.m in Sources */,
 				AFD3BF9A12BD7EB2009752CA /* CCCBuddySelectorCell.m in Sources */,
+				91FD969C13BB933B008E68A9 /* TVOutManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -862,8 +868,9 @@
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.1;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
