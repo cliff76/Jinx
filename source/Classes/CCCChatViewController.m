@@ -26,14 +26,13 @@ static NSString *CellIdentifier = @"Cell";
 -(void) removeLastMessageFromSpeaker: (NSString*)speaker;
 -(void) onMessageAdded;
 - (BOOL)textFieldShouldReturn:(UITextField *)textField;
--(void) resizeView;
 -(void) saveConversation;
 -(void) loadConversationForBuddy:(NSString*)aChatBuddy;
 
 @end
 
 @implementation CCCChatViewController
-@synthesize tableView, messageToSend, toolbar, chatBuddy;
+@synthesize tableView, messageToSend, toolbar, chatBuddy = _chatBuddy, keyboardFrameRect;
 
 #pragma mark -
 #pragma mark Public API
@@ -41,6 +40,65 @@ static NSString *CellIdentifier = @"Cell";
 + (CCCChatViewController*) chatViewForBuddy:(NSString*)aChatBuddy andConversation:(NSArray*)existingMessages
 {
 	return [[[CCCChatViewController alloc] initWithBuddy:aChatBuddy andMessages:existingMessages] autorelease];
+}
+
+- (void)prepare
+{
+    messages = [[NSMutableArray  alloc] init];
+    [CCCSoundServices loadClipFromFile:[[NSBundle mainBundle] pathForResource:@"outgoing-blip" ofType:@"aiff"] asSoundId: &outgoingMessageClip];
+    [CCCSoundServices loadClipFromFile:[[NSBundle mainBundle] pathForResource:@"incoming-blip" ofType:@"aiff"] asSoundId: &incomingMessageClip];
+    [CCCSoundServices loadClipFromFile:[[NSBundle mainBundle] pathForResource:@"clear-screen" ofType:@"aiff"] asSoundId: &clearScreenClip];
+    // This could be in an init method.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keypadNotificationMethod:) name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keypadNotificationMethod:) name:UIKeyboardDidHideNotification object:nil];
+
+}
+
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self prepare];
+    }
+    return self;
+}
+
+-(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+	self = [super initWithNibName:nibNameOrNil bundle:nil];
+	if (self != nil) {
+        [self prepare];
+	}
+	return self;
+}
+
+- (void)keypadNotificationMethod:(NSNotification*)notification
+{
+    NSDictionary* keyboardInfo = [notification userInfo];
+    NSValue* beginKeyboardValue = [keyboardInfo valueForKey:UIKeyboardFrameBeginUserInfoKey];
+    NSValue* endKeyboardValue = [keyboardInfo valueForKey:UIKeyboardFrameEndUserInfoKey];
+    CGRect keyboardRect = [endKeyboardValue CGRectValue];
+    self.keyboardFrameRect = keyboardRect;
+    int adjust = beginKeyboardValue.CGRectValue.origin.y < endKeyboardValue.CGRectValue.origin.y ? 1 : -1;
+    adjust = keyboardFrameRect.size.height*adjust;
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.3];
+    self.toolbar.frame = CGRectOffset(self.toolbar.frame, 0, adjust);
+    CGRect frame = self.tableView.frame;
+    self.tableView.frame = CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height + adjust);
+    [UIView commitAnimations];
+}
+
+-(void)setChatBuddy:(CCCChatBuddy *)chatBuddy
+{
+    [_chatBuddy release];
+    _chatBuddy = [chatBuddy retain];
+    self.navigationItem.title = [NSString stringWithFormat:@"Chat with %@...", self.chatBuddy.buddyName];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kJinxNotificationCoversationStarted object:self userInfo:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      self.chatBuddy, kJinxNotificationKeyChatBuddy, self.chatBuddy.buddyName, kJinxNotificationKeyChatBuddyName, messages, kJinxNotificationKeyMessages,
+      nil]];
+    [self loadConversationForBuddy:self.chatBuddy.buddyName];
 }
 
 - (id)initWithBuddy:(NSString *)aChatBuddy
@@ -60,20 +118,9 @@ static NSString *CellIdentifier = @"Cell";
 
 - (id)initWithBuddy:(NSString *)aChatBuddy andNibName:(NSString *)nibName bundle:(NSBundle *)nibBundle
 {
-	self = [super initWithNibName:nibName bundle:nibBundle];
+	self = [self initWithNibName:nibName bundle:nibBundle];
 	if (self != nil) {
-		messages = [[NSMutableArray  alloc] init];
 		self.chatBuddy = [[CCCChatBuddy alloc] initWithBuddy:aChatBuddy loadedFromRepository: [[[CCCBasicChatRepository alloc] init] autorelease] ];
-		self.navigationItem.title = [NSString stringWithFormat:@"Chat with %@...", self.chatBuddy.buddyName];
-		[[NSNotificationCenter defaultCenter] postNotificationName:kJinxNotificationCoversationStarted object:self userInfo:
-		 [NSDictionary dictionaryWithObjectsAndKeys:
-		  chatBuddy, kJinxNotificationKeyChatBuddy, chatBuddy.buddyName, kJinxNotificationKeyChatBuddyName, messages, kJinxNotificationKeyMessages,
-		  nil]];
-		
-		[CCCSoundServices loadClipFromFile:[[NSBundle mainBundle] pathForResource:@"outgoing-blip" ofType:@"aiff"] asSoundId: &outgoingMessageClip];
-		[CCCSoundServices loadClipFromFile:[[NSBundle mainBundle] pathForResource:@"incoming-blip" ofType:@"aiff"] asSoundId: &incomingMessageClip];
-		[CCCSoundServices loadClipFromFile:[[NSBundle mainBundle] pathForResource:@"clear-screen" ofType:@"aiff"] asSoundId: &clearScreenClip];
-		[self loadConversationForBuddy:chatBuddy.buddyName];
 	}
 	return self;
 }
@@ -81,7 +128,7 @@ static NSString *CellIdentifier = @"Cell";
 - (void)addMessage:(NSString*) aNewMessage
 {
 	NSString *youInitialMessage = [YOU stringByAppendingString:@": ..."];
-	NSString *buddyInitialMessage = [chatBuddy.buddyName stringByAppendingString:@": ..."];
+	NSString *buddyInitialMessage = [self.chatBuddy.buddyName stringByAppendingString:@": ..."];
 	if (! [aNewMessage isEqualToString:youInitialMessage] && ! [aNewMessage isEqualToString:buddyInitialMessage])
 	{
 		DLog(@"Do chime...");
@@ -99,13 +146,13 @@ static NSString *CellIdentifier = @"Cell";
 -(void) completeTheBuddyReply:(NSString*)aMessageToBuddy
 {
 	NSString *reply = [self.chatBuddy tellBuddy:aMessageToBuddy];
-	[self removeLastMessageFromSpeaker:chatBuddy.buddyName];
-	[self addMessage:[NSString stringWithFormat:@"%@: %@", chatBuddy.buddyName, reply]];
+	[self removeLastMessageFromSpeaker:self.chatBuddy.buddyName];
+	[self addMessage:[NSString stringWithFormat:@"%@: %@", self.chatBuddy.buddyName, reply]];
 }
 
 -(void) buddyReplyForMessage:(NSString*) aMessageToBuddy
 {
-	[self addMessage:[NSString stringWithFormat:@"%@: ...", chatBuddy.buddyName]];
+	[self addMessage:[NSString stringWithFormat:@"%@: ...", self.chatBuddy.buddyName]];
 	[self performSelector:@selector(completeTheBuddyReply:) withObject:aMessageToBuddy afterDelay:1];
 }
 
@@ -160,7 +207,7 @@ static NSString *CellIdentifier = @"Cell";
 - (void)viewWillAppear:(BOOL)animated {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) 
 												 name:UIKeyboardWillShowNotification object:self.view.window]; 
-	[self resizeView];
+    self.tableView.transform = CGAffineTransformMakeRotation(M_PI);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -172,7 +219,7 @@ static NSString *CellIdentifier = @"Cell";
 	[self saveConversation];
 	[[NSNotificationCenter defaultCenter] postNotificationName:kJinxNotificationCoversationEnded object:self userInfo:
 	 [NSDictionary dictionaryWithObjectsAndKeys:
-	  chatBuddy, kJinxNotificationKeyChatBuddy, chatBuddy.buddyName, kJinxNotificationKeyChatBuddyName, messages, kJinxNotificationKeyMessages,
+	  self.chatBuddy, kJinxNotificationKeyChatBuddy, self.chatBuddy.buddyName, kJinxNotificationKeyChatBuddyName, messages, kJinxNotificationKeyMessages,
 	  nil]];
 }
 
@@ -184,31 +231,6 @@ static NSString *CellIdentifier = @"Cell";
 
 #pragma mark -
 #pragma mark Orientation methods
--(void) resizeView
-{
-    UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
-    if (UIDeviceOrientationIsLandscape(deviceOrientation) || isShowingLandscape)
-	{
-		isShowingLandscape = YES;
-		[UIView beginAnimations:nil context:NULL];
-		[UIView setAnimationDuration:0.3];
-		CGFloat y = isInEditMode ? 62.0f: 224.0f;
-		toolbar.frame = CGRectMake(0, y, 480, 44);
-		tableView.frame = CGRectMake(0, 0, 480, y);
-		messageToSend.frame = CGRectMake(messageToSend.frame.origin.x, messageToSend.frame.origin.y, 339.0f, messageToSend.frame.size.height);
-		[UIView commitAnimations];
-	} else if (UIDeviceOrientationIsPortrait(deviceOrientation) || ! isShowingLandscape) {
-		isShowingLandscape = NO;
-		[UIView beginAnimations:nil context:NULL];
-		[UIView setAnimationDuration:0.3];	
-		CGFloat y = isInEditMode ? 156.0f: 372.0f;
-		toolbar.frame = CGRectMake(0, y, 320, 44);
-		tableView.frame = CGRectMake(0, 0, 320, y);
-		messageToSend.frame = CGRectMake(messageToSend.frame.origin.x, messageToSend.frame.origin.y, 183.0f, messageToSend.frame.size.height);
-		[UIView commitAnimations];
-	}
-	[tableView reloadData];
-}
 
 -(void) updateView
 {
@@ -216,10 +238,8 @@ static NSString *CellIdentifier = @"Cell";
     if (UIDeviceOrientationIsLandscape(deviceOrientation) && !isShowingLandscape)
 	{
 		isShowingLandscape = YES;
-		[self resizeView];
 	} else if (UIDeviceOrientationIsPortrait(deviceOrientation) && isShowingLandscape) {
 		isShowingLandscape = NO;
-		[self resizeView];
 	}
 }
 
@@ -236,7 +256,6 @@ static NSString *CellIdentifier = @"Cell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	isInEditMode = NO;
 	[messageToSend resignFirstResponder];
-	[self resizeView];
 }
 
 #pragma mark -
@@ -258,7 +277,10 @@ static NSString *CellIdentifier = @"Cell";
 {
     UITableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) { cell = [self createReusableTableCellForChatMessageView:[self createMessageView:cell.frame]]; }
-	[self addRawMessage:[messages objectAtIndex:indexPath.row] toMessageView:[cell.contentView viewWithTag:kCCCMessageTag]];
+    int messageIndex = messages.count - indexPath.row - 1;
+	[self addRawMessage:[messages objectAtIndex:messageIndex] toMessageView:[cell.contentView viewWithTag:kCCCMessageTag]];
+    [cell setBackgroundColor:[UIColor clearColor]];
+    cell.transform =     self.tableView.transform = CGAffineTransformMakeRotation(M_PI);
 
     return cell;
 }
@@ -334,26 +356,25 @@ static NSString *CellIdentifier = @"Cell";
 -(void) onMessagesUpdated
 {
 	[tableView reloadData];
-	NSUInteger index = [messages count] - 1;
-	[tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+	[tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
 }
 
 -(void) saveConversation
 {
 	@try { ensureDirectoryExistsAtPath(JinxArchivePath); }
 	@catch (NSException * e) { return; } //Errors are propgated to NSNotificationCenter for application-wide handling, it's safe to return here...
-	[NSKeyedArchiver archiveRootObject:messages toFile:JinxArchiveFileForBuddy(chatBuddy.buddyName)];
+	[NSKeyedArchiver archiveRootObject:messages toFile:JinxArchiveFileForBuddy(self.chatBuddy.buddyName)];
 }
 
 -(void) loadConversationForBuddy:(NSString*)aChatBuddy
 {
-	if ([[NSFileManager defaultManager] fileExistsAtPath:JinxArchiveFileForBuddy(chatBuddy.buddyName)]) {
-		[messages addObjectsFromArray:[NSKeyedUnarchiver unarchiveObjectWithFile:JinxArchiveFileForBuddy(chatBuddy.buddyName)]];
+	if ([[NSFileManager defaultManager] fileExistsAtPath:JinxArchiveFileForBuddy(self.chatBuddy.buddyName)]) {
+		[messages addObjectsFromArray:[NSKeyedUnarchiver unarchiveObjectWithFile:JinxArchiveFileForBuddy(self.chatBuddy.buddyName)]];
 	}
 }
 -(void)onCallButton:(id)sender
 {
-	[self.navigationController pushViewController: [[CCCCallScreen alloc] initWithBuddy:chatBuddy.buddyName] animated:YES];
+	[self.navigationController pushViewController: [[CCCCallScreen alloc] initWithBuddy:self.chatBuddy.buddyName] animated:YES];
 	if (isShowingLandscape && [UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeLeft) {
 		self.navigationController.visibleViewController.view.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(-90));
 	} else if(isShowingLandscape && [UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeRight) {
@@ -382,7 +403,6 @@ static NSString *CellIdentifier = @"Cell";
 
 - (void)keyboardWillShow:(NSNotification *)notif {
 	isInEditMode = YES;
-	[self resizeView];
 	
 	if([messages count] > 0)
 	{
@@ -415,7 +435,7 @@ static NSString *CellIdentifier = @"Cell";
 	[messageToSend release];
 	[messages release];
 	[toolbar release];
-	[chatBuddy release];
+	[_chatBuddy release];
     [super dealloc];
 }
 

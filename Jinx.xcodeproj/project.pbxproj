@@ -16,6 +16,7 @@
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
 		28F335F11007B36200424DE2 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
 		91FD969C13BB933B008E68A9 /* TVOutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FD969B13BB933B008E68A9 /* TVOutManager.m */; };
+		AF0F583F1841BF310092915C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0F583E1841BF310092915C /* MainStoryboard.storyboard */; };
 		AF5DBCD812BD219A0038295F /* SharedFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = AF5DBCD612BD219A0038295F /* SharedFunctions.h */; };
 		AF5DBCD912BD219A0038295F /* SharedFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5DBCD712BD219A0038295F /* SharedFunctions.m */; };
 		AF5DBCF012BD22250038295F /* CCCAudioFileReader.h in Headers */ = {isa = PBXBuildFile; fileRef = AF5DBCE412BD22250038295F /* CCCAudioFileReader.h */; };
@@ -142,6 +143,7 @@
 		8D1107310486CEB800E47090 /* Jinx-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Jinx-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		91FD969A13BB933B008E68A9 /* TVOutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVOutManager.h; sourceTree = "<group>"; };
 		91FD969B13BB933B008E68A9 /* TVOutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVOutManager.m; sourceTree = "<group>"; };
+		AF0F583E1841BF310092915C /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		AF5DBCD612BD219A0038295F /* SharedFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedFunctions.h; sourceTree = "<group>"; };
 		AF5DBCD712BD219A0038295F /* SharedFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedFunctions.m; sourceTree = "<group>"; };
 		AF5DBCE412BD22250038295F /* CCCAudioFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCAudioFileReader.h; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 				28F335F01007B36200424DE2 /* RootViewController.xib */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Jinx-Info.plist */,
+				AF0F583E1841BF310092915C /* MainStoryboard.storyboard */,
 			);
 			name = Resources;
 			path = source/Resources;
@@ -577,6 +580,8 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Jinx" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -646,6 +651,7 @@
 				AFD3C6F612BFC57C009752CA /* ClintCall6.aiff in Resources */,
 				AFD3C6F712BFC57C009752CA /* ClintCall7.aiff in Resources */,
 				AFD3C6F812BFC57C009752CA /* LeezaCall0.aiff in Resources */,
+				AF0F583F1841BF310092915C /* MainStoryboard.storyboard in Resources */,
 				AFD3C6F912BFC57C009752CA /* LeezaCall5.aiff in Resources */,
 				AFD3C6FA12BFC57C009752CA /* LeezaCall6.aiff in Resources */,
 				AFD3C6FB12BFC57C009752CA /* StuartCall0.aiff in Resources */,
@@ -756,6 +762,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = "source/Resources/Jinx-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = Jinx;
 			};
 			name = Debug;
@@ -767,6 +774,7 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = "source/Resources/Jinx-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = Jinx;
 				VALIDATE_PRODUCT = YES;
 			};

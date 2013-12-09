@@ -12,6 +12,8 @@
 #import "CCCBuddySelectorCell.h"
 #import "JinxMath.h"
 #import "BackgroundRotation.h"
+#import "CCCChatBuddy.h"
+#import "CCCBasicChatRepository.h"
 
 @implementation RootViewController
 @synthesize buddyList, backgroundImage, backgroundImageLandscape;
@@ -40,7 +42,6 @@
 	if (self != nil) {
 		CCCJinxAppLoadLogic *appLoadLogic = [[CCCJinxAppLoadLogic alloc] init];
 		self.buddyList = appLoadLogic.buddyList;
-		self.tableView.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(-90.0f));
 		[appLoadLogic release];
 	}
 	return self;
@@ -54,6 +55,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(-90.0f));
+    [self.tableView setNeedsDisplay];
 	[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:)
 												 name:UIDeviceOrientationDidChangeNotification object:nil];
@@ -113,10 +116,10 @@
     if (cell == nil) {
 		NSString *buddyName = [self.buddyList objectAtIndex:indexPath.row];
 		cell = [[[CCCBuddySelectorCell alloc] initWithIndex:indexPath.row forBuddy:buddyName andStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-
     }
     
 	// Configure the cell.
+    [cell setBackgroundColor:[UIColor clearColor]];
 
     return cell;
 }
@@ -165,18 +168,18 @@
 }
 */
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    CCCChatViewController *detailViewController = segue.destinationViewController;
+    CCCChatBuddy *buddy = [[CCCChatBuddy alloc] initWithBuddy:[buddyList objectAtIndex:self.tableView.indexPathForSelectedRow.row] loadedFromRepository: [[[CCCBasicChatRepository alloc] init] autorelease]];
+    detailViewController.chatBuddy = buddy;
+}
+
 #pragma mark -
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-	CCCChatViewController *detailViewController = [[CCCChatViewController alloc] initWithBuddy:[buddyList objectAtIndex:indexPath.row] 
-																					andNibName:@"CCCChatViewController" bundle:nil];
-	
-     // ...
-     // Pass the selected object to the new view controller.
-	 [self.navigationController pushViewController:detailViewController animated:YES];
-	 [detailViewController release];
+    [self performSegueWithIdentifier:@"buddySelect" sender:self];
 }
 
 

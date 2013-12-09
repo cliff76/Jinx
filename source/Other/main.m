@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "JinxAppDelegate.h"
 int main(int argc, char *argv[]) {
     
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-    int retVal = UIApplicationMain(argc, argv, nil, nil);
+    id aClass = [JinxAppDelegate class];
+    int retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass(aClass));
     [pool release];
     return retVal;
 }

@@ -52,9 +52,9 @@
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newConversationStarted:) name:kJinxNotificationCoversationStarted object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(aConversationEnded:) name:kJinxNotificationCoversationEnded object:nil];
     // Add the navigation controller's view to the window and display.
-    [window addSubview:navigationController.view];
+//    [window addSubview:navigationController.view];
 	[self loadConversations];
-	[self doSplash];
+//	[self doSplash];
 
     return YES;
 }

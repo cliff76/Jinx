@@ -15,7 +15,7 @@
 	UITextField *messageToSend;
 	NSMutableArray *messages;
 	UIToolbar *toolbar;
-	CCCChatBuddy *chatBuddy;
+	CCCChatBuddy *_chatBuddy;
 	BOOL isShowingLandscape;
 	BOOL isInEditMode;
 	BOOL youWereTypingSomething;
@@ -28,6 +28,7 @@
 @property (nonatomic, retain) IBOutlet UITextField *messageToSend;
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
 @property (nonatomic, retain) CCCChatBuddy *chatBuddy;
+@property(nonatomic) CGRect keyboardFrameRect;
 
 + (CCCChatViewController*) chatViewForBuddy:(NSString*)aChatBuddy andConversation:(NSArray*)existingMessages;
 - (id)initWithBuddy:(NSString *)aChatBuddy;
