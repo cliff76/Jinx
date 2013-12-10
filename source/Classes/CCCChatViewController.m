@@ -49,9 +49,8 @@ static NSString *CellIdentifier = @"Cell";
     [CCCSoundServices loadClipFromFile:[[NSBundle mainBundle] pathForResource:@"incoming-blip" ofType:@"aiff"] asSoundId: &incomingMessageClip];
     [CCCSoundServices loadClipFromFile:[[NSBundle mainBundle] pathForResource:@"clear-screen" ofType:@"aiff"] asSoundId: &clearScreenClip];
     // This could be in an init method.
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keypadNotificationMethod:) name:UIKeyboardDidShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keypadNotificationMethod:) name:UIKeyboardDidHideNotification object:nil];
-
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keypadWillToggle:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keypadWillToggle:) name:UIKeyboardWillHideNotification object:nil];
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder
@@ -72,7 +71,7 @@ static NSString *CellIdentifier = @"Cell";
 	return self;
 }
 
-- (void)keypadNotificationMethod:(NSNotification*)notification
+- (void)keypadWillToggle:(NSNotification*)notification
 {
     NSDictionary* keyboardInfo = [notification userInfo];
     NSValue* beginKeyboardValue = [keyboardInfo valueForKey:UIKeyboardFrameBeginUserInfoKey];
