@@ -17,6 +17,7 @@
 		28F335F11007B36200424DE2 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
 		91FD969C13BB933B008E68A9 /* TVOutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FD969B13BB933B008E68A9 /* TVOutManager.m */; };
 		AF0F583F1841BF310092915C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0F583E1841BF310092915C /* MainStoryboard.storyboard */; };
+		AF23D23A1857749B00C662BD /* CCCInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF23D2391857749B00C662BD /* CCCInitialViewController.m */; };
 		AF5DBCD812BD219A0038295F /* SharedFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = AF5DBCD612BD219A0038295F /* SharedFunctions.h */; };
 		AF5DBCD912BD219A0038295F /* SharedFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5DBCD712BD219A0038295F /* SharedFunctions.m */; };
 		AF5DBCF012BD22250038295F /* CCCAudioFileReader.h in Headers */ = {isa = PBXBuildFile; fileRef = AF5DBCE412BD22250038295F /* CCCAudioFileReader.h */; };
@@ -144,6 +145,8 @@
 		91FD969A13BB933B008E68A9 /* TVOutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVOutManager.h; sourceTree = "<group>"; };
 		91FD969B13BB933B008E68A9 /* TVOutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVOutManager.m; sourceTree = "<group>"; };
 		AF0F583E1841BF310092915C /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		AF23D2381857749B00C662BD /* CCCInitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCInitialViewController.h; sourceTree = "<group>"; };
+		AF23D2391857749B00C662BD /* CCCInitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCInitialViewController.m; sourceTree = "<group>"; };
 		AF5DBCD612BD219A0038295F /* SharedFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedFunctions.h; sourceTree = "<group>"; };
 		AF5DBCD712BD219A0038295F /* SharedFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedFunctions.m; sourceTree = "<group>"; };
 		AF5DBCE412BD22250038295F /* CCCAudioFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCAudioFileReader.h; sourceTree = "<group>"; };
@@ -285,6 +288,8 @@
 				AF5DBCEC12BD22250038295F /* CCCCallScreen.m */,
 				91FD969A13BB933B008E68A9 /* TVOutManager.h */,
 				91FD969B13BB933B008E68A9 /* TVOutManager.m */,
+				AF23D2381857749B00C662BD /* CCCInitialViewController.h */,
+				AF23D2391857749B00C662BD /* CCCInitialViewController.m */,
 			);
 			name = Classes;
 			path = source/Classes;
@@ -703,6 +708,7 @@
 				AF5DBCFE12BD227B0038295F /* CCCCallScreen.m in Sources */,
 				AFD3BF9A12BD7EB2009752CA /* CCCBuddySelectorCell.m in Sources */,
 				91FD969C13BB933B008E68A9 /* TVOutManager.m in Sources */,
+				AF23D23A1857749B00C662BD /* CCCInitialViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

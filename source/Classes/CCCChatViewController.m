@@ -207,6 +207,7 @@ static NSString *CellIdentifier = @"Cell";
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) 
 												 name:UIKeyboardWillShowNotification object:self.view.window]; 
     self.tableView.transform = CGAffineTransformMakeRotation(M_PI);
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -220,6 +221,10 @@ static NSString *CellIdentifier = @"Cell";
 	 [NSDictionary dictionaryWithObjectsAndKeys:
 	  self.chatBuddy, kJinxNotificationKeyChatBuddy, self.chatBuddy.buddyName, kJinxNotificationKeyChatBuddyName, messages, kJinxNotificationKeyMessages,
 	  nil]];
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 // Override to allow orientations other than the default portrait orientation.

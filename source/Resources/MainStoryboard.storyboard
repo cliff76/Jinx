@@ -43,7 +43,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EqV-D6-B3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1534" y="67"/>
+            <point key="canvasLocation" x="1538" y="99"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="bnh-QP-ZZi">
@@ -125,12 +125,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0xJ-IP-BRz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2023" y="67"/>
+            <point key="canvasLocation" x="2026" y="99"/>
         </scene>
-        <!--View Controller-->
+        <!--Initial View Controller-->
         <scene sceneID="f65-cX-A4K">
             <objects>
-                <viewController id="tct-Ab-Ywh" sceneMemberID="viewController">
+                <viewController id="tct-Ab-Ywh" customClass="CCCInitialViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OrU-OD-M0T"/>
                         <viewControllerLayoutGuide type="bottom" id="ixY-vc-1fp"/>
