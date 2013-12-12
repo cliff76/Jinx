@@ -27,8 +27,6 @@
 
 @implementation TVOutManager
 
-@synthesize tvSafeMode;
-
 + (TVOutManager *)sharedInstance
 {
 	static TVOutManager *sharedInstance;
@@ -84,6 +82,11 @@
 		}
 	}
 	tvSafeMode = val;
+}
+
+-(BOOL)tvSafeMode
+{
+    return tvSafeMode;
 }
 
 - (void) startTVOut

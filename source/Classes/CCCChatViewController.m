@@ -289,10 +289,16 @@ static NSString *CellIdentifier = @"Cell";
     return cell;
 }
 
+- (CGRect)chatBubbleSize:(NSString *)body {
+    CGRect rect = [body boundingRectWithSize:CGSizeMake(240.0, 480.0) options:NSStringDrawingTruncatesLastVisibleLine|NSStringDrawingUsesLineFragmentOrigin attributes: [NSDictionary dictionaryWithObject:[UIFont systemFontOfSize:15] forKey: NSFontAttributeName] context:nil];
+    return rect;
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 	NSString *body = [messages objectAtIndex:indexPath.row];
-	CGSize size = [body sizeWithFont:[UIFont systemFontOfSize:14.0] constrainedToSize:CGSizeMake(240.0, 480.0) lineBreakMode:UILineBreakModeWordWrap];
-	return size.height + 20;
+    CGRect rect;
+    rect = [self chatBubbleSize:body];
+	return rect.size.height + 40;
 }
 
 #pragma mark -
@@ -306,7 +312,7 @@ static NSString *CellIdentifier = @"Cell";
 	label.backgroundColor = [UIColor clearColor];
 	label.tag = kCCCLabelTag;
 	label.numberOfLines = 0;
-	label.lineBreakMode = UILineBreakModeWordWrap;
+	label.lineBreakMode = NSLineBreakByWordWrapping;
 	label.font = [UIFont systemFontOfSize:14.0];
 	
 	UIView *message = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, cellFrame.size.width, cellFrame.size.height)];
@@ -335,7 +341,7 @@ static NSString *CellIdentifier = @"Cell";
 	
 	NSString *text = [raw substringFromIndex:[raw rangeOfString:@":"].location + 2];
 	NSString *speaker = [raw substringToIndex:[raw rangeOfString:@":"].location];
-	CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:14.0] constrainedToSize:CGSizeMake(240.0f, 480.0f) lineBreakMode:UILineBreakModeWordWrap];
+	CGSize size = [self chatBubbleSize:text].size;
 	
 	UIImage *balloon;
 	

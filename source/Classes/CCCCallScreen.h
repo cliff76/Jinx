@@ -39,4 +39,5 @@
 @property (nonatomic, retain) UIImageView *buddyAvatar;
 @property (nonatomic, retain) IBOutlet UILabel *buddyLabel;
 
+- (id) initWithBuddy:(NSString*)aChatBuddy;
 @end
